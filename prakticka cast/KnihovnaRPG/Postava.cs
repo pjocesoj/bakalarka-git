@@ -82,6 +82,13 @@ namespace KnihovnaRPG
         }
         #endregion
 
+
+        /// <summary>
+        /// odečte od zranění obranu a zavolá eventhandlery "Zranen","utocnik.Zabil" a metodu "smrt"
+        /// </summary>
+        /// <param name="utocnik">postava, která způsobila zranění</param>
+        /// <param name="DMG">hodnota poškození</param>
+        /// <param name="obrana">typ obrany, kterým je možné poškození snížit</param>
         public void zraneni(Postava utocnik,double DMG, string obrana)
         {
             if(!nezranitelny && zivoty>0)
@@ -98,7 +105,10 @@ namespace KnihovnaRPG
                 }
             }
         }
-
+        /// <summary>
+        /// tato metoda je zavolána při smrti (tato je abstraktní a je třeba ji přetížit
+        /// </summary>
+        /// <exception cref="NotImplementedException">nepřetížená abstract</exception>
         protected virtual void smrt()
         {
             throw new NotImplementedException("pouzita metoda z knihovnaRPG.Postava přetěžte v GFX");

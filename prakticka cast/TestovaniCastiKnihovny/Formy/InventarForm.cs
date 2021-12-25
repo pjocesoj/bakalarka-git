@@ -25,7 +25,9 @@ namespace TestovaniCastiKnihovny
 
             Bitmap obr2 = (Bitmap)Image.FromFile("obrazky//mec.png");
             Bitmap obr3 = (Bitmap)Image.FromFile("obrazky//elik.png");
-
+            VybaveniGFX eqip1 = new VybaveniGFX("mec", 100, 2, null, obr2);
+            //Zobraz(eqip1, 100);
+            
         }
 
         void Zobraz(PredmetGFX item, int left)
