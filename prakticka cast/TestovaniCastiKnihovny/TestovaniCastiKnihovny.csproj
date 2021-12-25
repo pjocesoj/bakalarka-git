@@ -71,6 +71,8 @@
     <Compile Include="GFX\PostavaGFXv3.cs" />
     <Compile Include="GFX\PredmetGFX.cs" />
     <Compile Include="GFX\VybaveniGFX.cs" />
+    <Compile Include="komponentni\HracKomp.cs" />
+    <Compile Include="komponentni\PostavaKomp.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Formy\VypisPostava.cs">

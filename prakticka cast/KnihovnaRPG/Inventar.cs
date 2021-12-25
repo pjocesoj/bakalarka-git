@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace KnihovnaRPG
 {
+    /// <summary>
+    /// logika pro inventář
+    /// </summary>
     public class Inventar
     {
         List<Predmet> obsah; 

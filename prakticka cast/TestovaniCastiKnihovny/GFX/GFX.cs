@@ -19,6 +19,11 @@ namespace TestovaniCastiKnihovny
             pictureBox.BackColor = Color.White;
         }
 
+        public GFX(int sirka, int vyska, Bitmap obr) : this(sirka, vyska)
+        {
+            pictureBox.Image = obr;
+        }
+
         public PictureBox grafika
         {
             get
