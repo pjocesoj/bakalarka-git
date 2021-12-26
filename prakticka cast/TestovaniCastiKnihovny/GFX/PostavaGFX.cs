@@ -27,10 +27,10 @@ namespace TestovaniCastiKnihovny
             }
         }        
 
-        protected override void smrt()
+        /*protected override void smrt()
         {
             obr = new Bitmap(obr.Width, obr.Height);
            
-        }
+        }*/
     }
 }

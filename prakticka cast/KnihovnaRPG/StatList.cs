@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace KnihovnaRPG
 {
+    /// <summary>
+    /// seznam statů
+    /// </summary>
     public class StatList
     {
         Stat[] list;
@@ -90,6 +93,9 @@ namespace KnihovnaRPG
             return new StatList(list);
         }
 
+        /// <summary>
+        /// vypíše všechny staty v seznamu
+        /// </summary>
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();

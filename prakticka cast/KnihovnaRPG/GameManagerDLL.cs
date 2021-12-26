@@ -6,8 +6,14 @@ using System.Threading.Tasks;
 
 namespace KnihovnaRPG
 {
+    /// <summary>
+    /// správce starající se vytváření postav a obsahující všechny globální hodnoty
+    /// </summary>
     public class GameManagerDLL
     {
+        /// <summary>
+        /// 
+        /// </summary>
         public GameManagerDLL()
         {
             vytvorStatListy();

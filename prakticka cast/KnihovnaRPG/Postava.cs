@@ -6,17 +6,60 @@ using System.Threading.Tasks;
 
 namespace KnihovnaRPG
 {
+    /// <summary>
+    /// logika pro postavy (rodičovská třída)
+    /// </summary>
     public class Postava
     {
+        #region eventy
+        /// <summary>
+        /// informace o hodnotě zranění pro výpis (zraneny, hodnota zranění)
+        /// </summary>
         public event EventHandler<int> Zranen;
+
+        /// <summary>
+        /// informace kdo koho zabil(utocnik, zabity)
+        /// </summary>
         public event EventHandler<Postava> Zabil;
 
-        string jmeno;
-        protected int lv;
-        protected int zivoty;
-        protected int maxHP;
-        bool nezranitelny = false;
-        StatList StatList;
+        /// <summary>
+        /// pro zpracovani smrti implementací třídy()
+        /// </summary>
+        public event EventHandler<EventArgs> Smrt;
+        #endregion
+
+        #region properties
+        /// <summary>
+        /// jméno postavy
+        /// </summary>
+        public string Jmeno { get; private set; }
+
+        /// <summary>
+        /// úroveň postavy
+        /// </summary>
+        public int LV { get; private set; }
+
+        /// <summary>
+        /// aktuální stav životů postavy
+        /// </summary>
+        public int HP { get; set; }
+
+        /// <summary>
+        /// maximální počet životů postavy
+        /// </summary>
+        public int MaxHP { get; private set; }
+
+        /// <summary>
+        /// seznam všech statů postavy
+        /// </summary>
+        public StatList Staty { get; private set; }
+        #endregion
+ 
+        /// <summary>
+        /// zda je možno postavu zranit
+        /// </summary>
+        protected bool nezranitelny = false;
+
         #region konstruktory
         /// <summary>
         /// vytvoří nezranitelné NPC
@@ -24,94 +67,72 @@ namespace KnihovnaRPG
         /// <param name="jmeno">jméno postavy</param>
         public Postava(string jmeno)
         {
-            this.jmeno = jmeno;
+            this.Jmeno = jmeno;
             nezranitelny = true;
         }
 
+        ///<summary>vytvoří zranitelnou postavu</summary>
         /// <param name="jmeno">jméno postavy</param>
         /// <param name="lv">level postavy</param>
         /// <param name="HP">aktualní HP=maxHP</param>
         /// <exception cref="PostavaHPException">HP menší než 0</exception>
         public Postava(string jmeno, int lv, int HP)
         {
-            this.jmeno = jmeno;
-            this.lv = lv;
+            this.Jmeno = jmeno;
+            this.LV = lv;
             if (HP < 0)
             {
                 throw new PostavaHPException("HP nesmí být menší než 0");
             }
-            this.zivoty = HP;
-            this.maxHP = HP;
+            this.HP = HP;
+            this.MaxHP = HP;
         }
-                
+
+        ///<summary>vytvoří zranitelnou postavu, která má staty</summary>
         /// <param name="jmeno">jméno postavy</param>
         /// <param name="lv">level postavy</param>
         /// <param name="HP">aktualní HP=maxHP</param>
         /// <param name="statList">staty postavy</param>
+        /// <exception cref="PostavaHPException">HP menší než 0</exception>
         public Postava(string jmeno, int lv, int HP, StatList statList) : this(jmeno, lv, HP)
         {
             //this.StatList = statList.Clone();
-            this.StatList = statList;
+            this.Staty = statList;
         }
         #endregion
+
+        /// <summary>
+        /// výpis informací o postavě
+        /// </summary>
         public override string ToString()
         {
-            return $"{jmeno}\nLV{lv}\nHP:{zivoty}/{maxHP}\n{StatList}";
+            return $"{Jmeno}\nLV{LV}\nHP:{HP}/{MaxHP}\n{Staty}";
         }
-        #region get set
-        public string Jmeno
-        {
-            get { return jmeno; }
-        }
-        public int LV
-        {
-            get { return lv; }
-        }
-        public int HP
-        {
-            get { return zivoty; }
-            set { zivoty = value; }
-        }
-        public int MaxHP
-        {
-            get { return maxHP; }
-        }
-        public StatList Staty
-        {
-            get { return StatList; }
-        }
-        #endregion
+
 
 
         /// <summary>
-        /// odečte od zranění obranu a zavolá eventhandlery "Zranen","utocnik.Zabil" a metodu "smrt"
+        /// odečte od zranění obranu a zavolá eventhandlery "Zranen","utocnik.Zabil" a "smrt"
         /// </summary>
         /// <param name="utocnik">postava, která způsobila zranění</param>
         /// <param name="DMG">hodnota poškození</param>
         /// <param name="obrana">typ obrany, kterým je možné poškození snížit</param>
-        public void zraneni(Postava utocnik,double DMG, string obrana)
+        public void Zraneni(Postava utocnik, double DMG, string obrana)
         {
-            if(!nezranitelny && zivoty>0)
+            if (!nezranitelny && HP > 0)
             {
                 double uber = DMG - Staty[obrana].Hodnota;
-                HP -=(int) uber;
+                HP -= (int)uber;
 
-                Zranen?.Invoke(this,HP);//? testuje zda není null
-                if(HP<=0)
+                Zranen?.Invoke(this, HP);//? zkrácený zápis testu zda není null
+                if (HP <= 0)
                 {
-                    utocnik.Zabil?.Invoke(utocnik,this);
+                    utocnik.Zabil?.Invoke(utocnik, this);
 
-                    smrt();
+                    Smrt?.Invoke(this, null);
                 }
             }
         }
-        /// <summary>
-        /// tato metoda je zavolána při smrti (tato je abstraktní a je třeba ji přetížit
-        /// </summary>
-        /// <exception cref="NotImplementedException">nepřetížená abstract</exception>
-        protected virtual void smrt()
-        {
-            throw new NotImplementedException("pouzita metoda z knihovnaRPG.Postava přetěžte v GFX");
-        }
+
     }
 }

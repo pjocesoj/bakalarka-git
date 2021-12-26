@@ -25,9 +25,9 @@ namespace TestovaniCastiKnihovny
         {
             get { return grafika; }
         }
-        protected override void smrt()
+        /*protected override void smrt()
         {
             grafika.grafika.Image=new Bitmap(grafika.Width, grafika.Height);
-        }
+        }*/
     }
 }

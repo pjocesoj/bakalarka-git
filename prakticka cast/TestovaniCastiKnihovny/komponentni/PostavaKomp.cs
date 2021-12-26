@@ -23,12 +23,16 @@ namespace TestovaniCastiKnihovny
         {
             this.grafika = GFX;
             this.postava = logika;
+
+            postava.Smrt += smrt;
         }
 
         public PostavaKomp(string jmeno, int lv, int HP, StatList statList, Bitmap obr, int sirka = 100, int vyska = 100)
         {
             grafika = new GFX(sirka, vyska, obr);
             postava = new Postava(jmeno, lv, HP, statList);
+
+            postava.Smrt += smrt;
         }
 
         public GFX GFX
@@ -44,9 +48,10 @@ namespace TestovaniCastiKnihovny
         {
             return postava.ToString();
         }
-        /*protected override void smrt()
+        
+        protected void smrt(Object sender,EventArgs e)
         {
             grafika.grafika.Image = new Bitmap(grafika.Width, grafika.Height);
-        }*/
+        }
     }
 }

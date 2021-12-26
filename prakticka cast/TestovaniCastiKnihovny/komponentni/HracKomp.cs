@@ -10,7 +10,7 @@ namespace TestovaniCastiKnihovny
 {
     class HracKomp:PostavaKomp
     {
-        public HracKomp(GFX GFX, Postava logika) : base(GFX, logika) { }
+        public HracKomp(GFX GFX, Hrac logika) : base(GFX, logika) { }
         public HracKomp(string jmeno, int lv, int HP, StatList statList, Bitmap obr, int sirka = 100, int vyska = 100)
         {
             grafika = new GFX(sirka, vyska, obr);

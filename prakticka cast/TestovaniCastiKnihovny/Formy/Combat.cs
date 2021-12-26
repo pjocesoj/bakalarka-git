@@ -17,8 +17,6 @@ namespace TestovaniCastiKnihovny
             InitializeComponent();
         }
         HracGFX hrac;
-        //PostavaGFX souper;
-        //PostavaGFXv2 souper;
         PostavaGFXv3 souper;
         private void Combat_Load(object sender, EventArgs e)
         {
@@ -60,13 +58,13 @@ namespace TestovaniCastiKnihovny
 
         private void button1_Click(object sender, EventArgs e)
         {
-            souper.zraneni(hrac,hrac.Staty["DMG"].Hodnota,"DEF");
+            souper.Zraneni(hrac,hrac.Staty["DMG"].Hodnota,"DEF");
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             //hrac.zraneni(souper.postava,souper.Staty["DMG"].Hodnota, "DEF");
-            hrac.zraneni(souper, souper.Staty["DMG"].Hodnota, "DEF");
+            hrac.Zraneni(souper, souper.Staty["DMG"].Hodnota, "DEF");
         }
     }
 }
