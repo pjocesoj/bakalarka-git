@@ -13,12 +13,8 @@ namespace TestovaniCastiKnihovny
         //podle rady knihy "Game Engine Architecture" změněno na celek tvořený komponentami
         protected GFX grafika;
         protected Postava postava;
-
-        //protože úplný HracKomp nemá co předat
-        public PostavaKomp()
-        { 
-        
-        }
+       
+        public PostavaKomp(){}//protože úplný HracKomp nemá co předat
         public PostavaKomp(GFX GFX, Postava logika)
         {
             this.grafika = GFX;
@@ -27,6 +23,11 @@ namespace TestovaniCastiKnihovny
             postava.Smrt += smrt;
         }
 
+        public PostavaKomp(Bitmap obr, string jmeno)
+        {
+            this.grafika = new GFX(100,100,obr);
+            this.postava = new Postava(jmeno);
+        }
         public PostavaKomp(string jmeno, int lv, int HP, StatList statList, Bitmap obr, int sirka = 100, int vyska = 100)
         {
             grafika = new GFX(sirka, vyska, obr);

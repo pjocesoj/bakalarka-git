@@ -20,17 +20,22 @@ namespace TestovaniCastiKnihovny
         private void Inventar_Load(object sender, EventArgs e)
         {
             Bitmap obr = (Bitmap)Image.FromFile("obrazky//gem.png");
-            PredmetGFX item1 = new PredmetGFX("gem", 10, 1,obr);
+            PredmetKomp item1 = new PredmetKomp("gem", 10, 1, obr);
             Zobraz(item1,0);
 
             Bitmap obr2 = (Bitmap)Image.FromFile("obrazky//mec.png");
+            List<KnihovnaRPG.Stat> temp = new List<KnihovnaRPG.Stat>();
+            temp.Add(new KnihovnaRPG.Stat("DMG", 5));
+            KnihovnaRPG.StatList list = new KnihovnaRPG.StatList(temp);
+            VybaveniKomp eqip1 = new VybaveniKomp("mec", 100, 2, list, obr2);
+            Zobraz(eqip1, 100);
+
             Bitmap obr3 = (Bitmap)Image.FromFile("obrazky//elik.png");
-            VybaveniGFX eqip1 = new VybaveniGFX("mec", 100, 2, null, obr2);
+            
             //Zobraz(eqip1, 100);
             
         }
-
-        void Zobraz(PredmetGFX item, int left)
+        void Zobraz(PredmetKomp item, int left)
         {
             #region vytvoreni controls
             Panel p = new Panel();

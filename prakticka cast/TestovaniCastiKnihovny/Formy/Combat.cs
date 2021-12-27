@@ -16,34 +16,31 @@ namespace TestovaniCastiKnihovny
         {
             InitializeComponent();
         }
-        HracGFX hrac;
-        PostavaGFXv3 souper;
+        HracKomp hrac;
+        PostavaKomp souper;
         private void Combat_Load(object sender, EventArgs e)
         {
             KnihovnaRPG.GameManagerDLL gm = new KnihovnaRPG.GameManagerDLL();
             string[] skupiny = { "combat" };
 
             Bitmap obr = (Bitmap)Image.FromFile("obrazky//stickman.png");
-            hrac = new HracGFX("player", 1, 100, gm.GetStatListy(skupiny),obr);
-            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox1.Image = hrac.vzhled;
-            progressBar1.Maximum = hrac.MaxHP;
-            progressBar1.Value = hrac.HP;
-            label1.Text = hrac.ToString();
+            hrac = new HracKomp("player", 1, 100, gm.GetStatListy(skupiny), obr);
+            nastavUI(hrac, panel1, progressBar1,label1);
 
-            souper = new PostavaGFXv3("NPC", 1, 100, gm.GetStatListy(skupiny), obr);
-            //souper = new PostavaGFXv2("NPC", 1, 100, gm.GetStatListy(skupiny), obr);
-            //souper = new PostavaGFX("NPC", 1, 100, gm.GetStatListy(skupiny), obr);
-            //panel2.Controls.Add(souper.GFX);     
-            panel2.Controls.Add(souper.GFX.grafika);   
-            progressBar2.Maximum = souper.MaxHP;
-            progressBar2.Value = souper.HP;
-            label2.Text = souper.ToString();
+            souper = new PostavaKomp("NPC", 1, 100, gm.GetStatListy(skupiny), obr);
+            nastavUI(souper, panel2, progressBar2, label2);
 
-            souper.Staty["DMG"].BoostKonst = -2;
+            souper.Postava.Staty["DMG"].BoostKonst = -2;
 
-            hrac.Zranen += Hrac_Zranen;
-            souper.Zranen += Souper_Zranen;
+            hrac.Postava.Zranen += Hrac_Zranen;
+            souper.Postava.Zranen += Souper_Zranen;
+        }
+        void nastavUI(PostavaKomp postava, Panel panel, ProgressBar bar,Label lab)
+        {
+            panel.Controls.Add(postava.GFX.grafika);
+            bar.Maximum = postava.Postava.MaxHP;
+            bar.Value = postava.Postava.HP;
+            lab.Text = postava.ToString();
         }
 
         private void Souper_Zranen(object sender, int e)
@@ -58,13 +55,12 @@ namespace TestovaniCastiKnihovny
 
         private void button1_Click(object sender, EventArgs e)
         {
-            souper.Zraneni(hrac,hrac.Staty["DMG"].Hodnota,"DEF");
+            souper.Postava.Zraneni(hrac.Postava, hrac.Postava.Staty["DMG"].Hodnota, "DEF");
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            //hrac.zraneni(souper.postava,souper.Staty["DMG"].Hodnota, "DEF");
-            hrac.Zraneni(souper, souper.Staty["DMG"].Hodnota, "DEF");
+            hrac.Postava.Zraneni(souper.Postava, souper.Postava.Staty["DMG"].Hodnota, "DEF");
         }
     }
 }

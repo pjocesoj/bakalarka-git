@@ -66,7 +66,7 @@ namespace TestovaniCastiKnihovny
 
         public void zraneni(Postava utocnik, double DMG, string obrana)
         {
-            logika.zraneni(utocnik, DMG, obrana);
+            logika.Zraneni(utocnik, DMG, obrana);
         }
     }
 }
