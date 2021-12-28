@@ -8,12 +8,12 @@ using KnihovnaRPG;
 
 namespace TestovaniCastiKnihovny
 {
-    class PredmetKomp
+    class PredmetKomp:Sebratelne
     {
         protected GFX grafika;
         protected Predmet predmet;
 
-        public PredmetKomp() { }//protože úplný HracKomp nemá co předat
+        public PredmetKomp() { }//protože úplný konstruktor potomka nemá co předat
 
         public PredmetKomp(GFX GFX, Predmet logika)
         {

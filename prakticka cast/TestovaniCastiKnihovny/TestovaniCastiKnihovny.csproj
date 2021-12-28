@@ -46,6 +46,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="compose\inventare\InventarKomp.cs" />
+    <Compile Include="compose\inventare\InventarKompV2.cs" />
+    <Compile Include="compose\itemy\KonzumovatelneKomp.cs" />
     <Compile Include="compose\itemy\PredmetKomp.cs" />
     <Compile Include="compose\itemy\VybaveniKomp.cs" />
     <Compile Include="Formy\Combat.cs">
@@ -66,15 +69,17 @@
     <Compile Include="Formy\InventarForm.Designer.cs">
       <DependentUpon>InventarForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="GFX\GFX.cs" />
-    <Compile Include="GFX\legacy\postavy\HracGFX.cs" />
-    <Compile Include="GFX\legacy\postavy\PostavaGFX.cs" />
-    <Compile Include="GFX\legacy\postavy\PostavaGFXv2.cs" />
-    <Compile Include="GFX\legacy\postavy\PostavaGFXv3.cs" />
-    <Compile Include="GFX\legacy\item\PredmetGFX.cs" />
-    <Compile Include="GFX\legacy\item\VybaveniGFX.cs" />
+    <Compile Include="grafika\GFX.cs" />
+    <Compile Include="grafika\legacy\postavy\HracGFX.cs" />
+    <Compile Include="grafika\legacy\postavy\PostavaGFX.cs" />
+    <Compile Include="grafika\legacy\postavy\PostavaGFXv2.cs" />
+    <Compile Include="grafika\legacy\postavy\PostavaGFXv3.cs" />
+    <Compile Include="grafika\legacy\item\PredmetGFX.cs" />
+    <Compile Include="grafika\legacy\item\VybaveniGFX.cs" />
     <Compile Include="compose\postavy\HracKomp.cs" />
     <Compile Include="compose\postavy\PostavaKomp.cs" />
+    <Compile Include="grafika\UI.cs" />
+    <Compile Include="grafika\UIVypis.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Formy\VypisPostava.cs">

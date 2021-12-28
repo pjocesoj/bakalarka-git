@@ -17,6 +17,9 @@ namespace TestovaniCastiKnihovny
             InitializeComponent();
         }
 
+        List<PredmetKomp> itemy = new List<PredmetKomp>();
+        //InventarKomp invent;
+        InventarKompV2 invent2;
         private void Inventar_Load(object sender, EventArgs e)
         {
             Bitmap obr = (Bitmap)Image.FromFile("obrazky//gem.png");
@@ -31,16 +34,27 @@ namespace TestovaniCastiKnihovny
             Zobraz(eqip1, 100);
 
             Bitmap obr3 = (Bitmap)Image.FromFile("obrazky//elik.png");
-            
-            //Zobraz(eqip1, 100);
-            
+            temp = new List<KnihovnaRPG.Stat>();
+            temp.Add(new KnihovnaRPG.Stat("HP", 20));
+            list = new KnihovnaRPG.StatList(temp);
+            VybaveniKomp elik1 = new VybaveniKomp("HP elik", 5, 0.1, list, obr3);
+            Zobraz(elik1, 200);
+
+            itemy.Add(item1);
+            itemy.Add(eqip1);
+            itemy.Add(elik1);
+
+            //invent = new InventarKomp(300,0);
+            //this.Controls.Add(invent.GFX.pozadi);
+            invent2 = new InventarKompV2(300, 0);
+            this.Controls.Add(invent2.GFX.pozadi);
         }
         void Zobraz(PredmetKomp item, int left)
         {
             #region vytvoreni controls
             Panel p = new Panel();
             p.Width = 100;
-            p.Height = 300;
+            p.Height = 400;
             p.BorderStyle = BorderStyle.FixedSingle;
 
             PictureBox pb = item.GFX.grafika;
@@ -58,6 +72,31 @@ namespace TestovaniCastiKnihovny
             #endregion
 
             lab.Text = item.ToString();
+
+            Button but = new Button();
+            but.Text = "přidej";
+            but.Width = 80;
+            but.Height = 20;
+            but.Left = 10;
+            but.Top = lab.Bottom + 10;
+            but.Click += pridej_Click;
+            p.Controls.Add(but);
+        }
+
+        private void pridej_Click(object sender, EventArgs e)
+        {
+            int i = (sender as Button).Parent.TabIndex;
+            invent2.Pridej(itemy[i]);
+        }
+
+        private void InventarForm_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Delete)
+            {
+                MessageBox.Show("del");
+                PredmetKomp temp = (PredmetKomp)invent2.Invent.GetAt(1);
+                invent2.Odeber(temp);
+            }
         }
     }
 }
