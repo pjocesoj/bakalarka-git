@@ -9,7 +9,7 @@ namespace KnihovnaRPG
     /// <summary>
     /// rodičovská třída pro vše co lze vložit do inventáře
     /// </summary>
-    public class Predmet
+    public class Predmet:Sebratelne
     {
         #region properties
         /// <summary>

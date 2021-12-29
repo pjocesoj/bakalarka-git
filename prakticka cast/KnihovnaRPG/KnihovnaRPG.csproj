@@ -45,19 +45,20 @@
     <Compile Include="Exceptions\StatExceptions.cs" />
     <Compile Include="Exceptions\StatListExceptions.cs" />
     <Compile Include="GameManagerDLL.cs" />
-    <Compile Include="Hrac.cs" />
+    <Compile Include="inventare\has\InventarHmotnostV2.cs" />
+    <Compile Include="postavy\Hrac.cs" />
     <Compile Include="Exceptions\PostavaExceptions.cs" />
-    <Compile Include="Inventar.cs" />
-    <Compile Include="InventarHmotnost.cs" />
-    <Compile Include="InventarV2.cs" />
-    <Compile Include="Konzumovatelne.cs" />
-    <Compile Include="Postava.cs" />
-    <Compile Include="Predmet.cs" />
+    <Compile Include="inventare\is\Inventar.cs" />
+    <Compile Include="inventare\is\InventarHmotnost.cs" />
+    <Compile Include="inventare\has\InventarV2.cs" />
+    <Compile Include="predmety\Konzumovatelne.cs" />
+    <Compile Include="postavy\Postava.cs" />
+    <Compile Include="predmety\Predmet.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Sebratelne.cs" />
-    <Compile Include="Stat.cs" />
-    <Compile Include="StatList.cs" />
-    <Compile Include="Vybaveni.cs" />
+    <Compile Include="predmety\Sebratelne.cs" />
+    <Compile Include="staty\Stat.cs" />
+    <Compile Include="staty\StatList.cs" />
+    <Compile Include="predmety\Vybaveni.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

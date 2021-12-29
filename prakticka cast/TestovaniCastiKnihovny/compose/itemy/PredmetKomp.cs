@@ -8,7 +8,7 @@ using KnihovnaRPG;
 
 namespace TestovaniCastiKnihovny
 {
-    class PredmetKomp:Sebratelne
+    class PredmetKomp : Sebratelne
     {
         protected GFX grafika;
         protected Predmet predmet;
@@ -24,7 +24,7 @@ namespace TestovaniCastiKnihovny
         public PredmetKomp(string jmeno, int cena, double hmotnost, Bitmap obr, int sirka = 100, int vyska = 100, bool stackovatelne = true)
         {
             grafika = new GFX(sirka, vyska, obr);
-            predmet = new Predmet(jmeno, cena, hmotnost,stackovatelne);
+            predmet = new Predmet(jmeno, cena, hmotnost, stackovatelne);
         }
 
         public GFX GFX
@@ -40,5 +40,36 @@ namespace TestovaniCastiKnihovny
         {
             return predmet.ToString();
         }
+
+        #region properties-interface
+        public double Hmotnost
+        {
+            get
+            {
+                return predmet.Hmotnost;
+            }
+        }
+        public string Jmeno
+        {
+            get
+            {
+                return predmet.Jmeno;
+            }
+        }
+        public int Cena
+        {
+            get
+            {
+                return predmet.Cena;
+            }
+        }
+        public bool Stackovatelne
+        {
+            get
+            {
+                return predmet.Stackovatelne;
+            }
+        }
+        #endregion
     }
 }

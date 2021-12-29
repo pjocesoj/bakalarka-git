@@ -46,8 +46,11 @@ namespace TestovaniCastiKnihovny
 
             //invent = new InventarKomp(300,0);
             //this.Controls.Add(invent.GFX.pozadi);
-            invent2 = new InventarKompV2(300, 0);
+            //invent2 = new InventarKompV2(300, 0);
+            invent2 = new InventarKompV2(5.0,300,0);
+
             this.Controls.Add(invent2.GFX.pozadi);
+
         }
         void Zobraz(PredmetKomp item, int left)
         {
@@ -86,7 +89,8 @@ namespace TestovaniCastiKnihovny
         private void pridej_Click(object sender, EventArgs e)
         {
             int i = (sender as Button).Parent.TabIndex;
-            invent2.Pridej(itemy[i]);
+            bool b=invent2.Pridej(itemy[i]);
+            if (!b) { MessageBox.Show("plný"); }
         }
 
         private void InventarForm_KeyUp(object sender, KeyEventArgs e)

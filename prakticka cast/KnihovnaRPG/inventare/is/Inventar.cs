@@ -8,7 +8,7 @@ namespace KnihovnaRPG
 {
     /// <summary>
     /// inventář s neomezenou kapacitou (rodič pro omezenou kapacitu)
-    /// <br/>potomci Predmet
+    /// <br/> Predmet implementován jako IS
     /// </summary>
     public class Inventar
     {

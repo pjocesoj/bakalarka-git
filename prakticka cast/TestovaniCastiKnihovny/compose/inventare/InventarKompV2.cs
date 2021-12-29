@@ -26,6 +26,12 @@ namespace TestovaniCastiKnihovny
             invent = new InventarV2();
         }
 
+        public InventarKompV2(double kapacita,int left = 0, int top = 0, int sirka = 100, int vyska = 400)
+        {
+            grafika = new UIVypis(left, top, sirka, vyska);
+            invent = new InventarHmotnostV2(kapacita);
+        }
+
         public UI GFX
         {
             get { return grafika; }
