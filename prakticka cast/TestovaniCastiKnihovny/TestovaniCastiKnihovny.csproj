@@ -52,6 +52,7 @@
     <Compile Include="compose\itemy\KonzumovatelneKomp.cs" />
     <Compile Include="compose\itemy\PredmetKomp.cs" />
     <Compile Include="compose\itemy\VybaveniKomp.cs" />
+    <Compile Include="compose\mapa\LokaceKomp.cs" />
     <Compile Include="Formy\Combat.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -69,6 +70,12 @@
     </Compile>
     <Compile Include="Formy\InventarForm.Designer.cs">
       <DependentUpon>InventarForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formy\MapaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formy\MapaForm.Designer.cs">
+      <DependentUpon>MapaForm.cs</DependentUpon>
     </Compile>
     <Compile Include="grafika\GFX.cs" />
     <Compile Include="grafika\legacy\postavy\HracGFX.cs" />
@@ -98,6 +105,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formy\InventarForm.resx">
       <DependentUpon>InventarForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formy\MapaForm.resx">
+      <DependentUpon>MapaForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
