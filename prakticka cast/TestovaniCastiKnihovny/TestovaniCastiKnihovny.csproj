@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="compose\inventare\InventarGridKomp.cs" />
     <Compile Include="compose\inventare\InventarKomp.cs" />
     <Compile Include="compose\inventare\InventarKompV2.cs" />
     <Compile Include="compose\itemy\KonzumovatelneKomp.cs" />
@@ -79,6 +80,7 @@
     <Compile Include="compose\postavy\HracKomp.cs" />
     <Compile Include="compose\postavy\PostavaKomp.cs" />
     <Compile Include="grafika\UI.cs" />
+    <Compile Include="grafika\UIGrid.cs" />
     <Compile Include="grafika\UIVypis.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

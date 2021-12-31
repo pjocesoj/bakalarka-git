@@ -48,5 +48,24 @@ namespace KnihovnaRPG
                 return false;
             }
         }
+
+        /// <summary>
+        /// odebere předmět z inventáře
+        /// </summary>
+        /// <param name="item">odebíraný předmět</param>
+        public override void Odeber(Sebratelne item)
+        {
+            Neseno -= item.Hmotnost;
+            obsah.Remove(item);
+        }
+
+        /// <summary>
+        /// aktualní stav zaplnění inventáře
+        /// </summary>
+        /// <returns>aktualni hmotnost/kapacita</returns>
+        public override string Stav()
+        {
+            return $"{Neseno}/{Kapacita}";
+        }
     }
 }

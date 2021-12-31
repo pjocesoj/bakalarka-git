@@ -68,11 +68,72 @@ namespace KnihovnaRPG
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
+            sb.Append(Stav());
+            sb.Append("\n");
             foreach (Sebratelne p in obsah)
             {
                 sb.Append($"----------\n{p}\n");
             }
             return sb.ToString();
         }
+
+        /// <summary>
+        /// aktualní stav zaplnění inventáře
+        /// </summary>
+        /// <returns>počet předmětů a jejich celková hmotnost</returns>
+        public virtual string Stav()
+        {
+            double hmot = 0;
+            double pocet = 0;
+            foreach (Sebratelne p in obsah)
+            {
+                hmot += p.Hmotnost;
+                pocet++;
+            }
+
+            return $"{pocet}ks, vaha:{hmot}";
+        }
+
+        #region hledani
+
+       /// <summary>
+       /// vrátí index předmětu v inventáři
+       /// <br/>porovnává data ne reference
+       /// </summary>
+       /// <param name="item">hledaný předmět</param>
+        protected int indexOf(Sebratelne item)
+        {
+            for (int i = 0; i < obsah.Count; i++)
+            {
+                if (obsah[i].Stejne(item))
+                {
+                    return i;
+                }
+            }
+
+            return -1;
+        }
+
+        /// <summary>
+        /// vrátí index stacku předmětů (-1 pokud v inventáři nejsou)
+        /// </summary>
+        /// <param name="item">hledaný předmět</param>
+        public virtual int IndexOfStack(Sebratelne item)
+        {
+            return indexOf(item);
+        }
+
+        /// <summary>
+        /// řekne zda se předmět již nachází v inventáři
+        /// </summary>
+        /// <param name="item">hledaný předmět</param>
+        public bool UzJeVInventu(Sebratelne item)
+        {
+            int ret = indexOf(item);
+            if (ret != -1) { return true; }
+            else { return false; }
+        }
+        #endregion
+
     }
 }

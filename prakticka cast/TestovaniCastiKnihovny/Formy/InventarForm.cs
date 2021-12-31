@@ -37,7 +37,7 @@ namespace TestovaniCastiKnihovny
             temp = new List<KnihovnaRPG.Stat>();
             temp.Add(new KnihovnaRPG.Stat("HP", 20));
             list = new KnihovnaRPG.StatList(temp);
-            VybaveniKomp elik1 = new VybaveniKomp("HP elik", 5, 0.1, list, obr3);
+            KonzumovatelneKomp elik1 = new KonzumovatelneKomp("HP elik", 5, 0.1, list, obr3);
             Zobraz(elik1, 200);
 
             itemy.Add(item1);
@@ -47,7 +47,8 @@ namespace TestovaniCastiKnihovny
             //invent = new InventarKomp(300,0);
             //this.Controls.Add(invent.GFX.pozadi);
             //invent2 = new InventarKompV2(300, 0);
-            invent2 = new InventarKompV2(5.0,300,0);
+            //invent2 = new InventarKompV2(5.0,300,0);
+            invent2 = new InventarGridKomp(6,2,3,300,0);
 
             this.Controls.Add(invent2.GFX.pozadi);
 

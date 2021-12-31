@@ -41,6 +41,11 @@ namespace TestovaniCastiKnihovny
             return predmet.ToString();
         }
 
+        public bool Stejne(Sebratelne s)
+        {
+            return predmet.Stejne((s as PredmetKomp).predmet);
+        }
+
         #region properties-interface
         public double Hmotnost
         {

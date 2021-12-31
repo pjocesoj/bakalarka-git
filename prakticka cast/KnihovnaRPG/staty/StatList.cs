@@ -23,7 +23,7 @@ namespace KnihovnaRPG
             this.list = new Stat[list.Count];
             for (int i = 0; i < list.Count; i++)
             {
-                if (uzUbsahujeZkratku(list[i].zkratka,i)) { throw new StatListTentoPrvekUzExistujeException(); }
+                if (uzUbsahujeZkratku(list[i].Zkratka,i)) { throw new StatListTentoPrvekUzExistujeException(); }
 
                 this.list[i] = list[i].clone();
             }
@@ -44,7 +44,7 @@ namespace KnihovnaRPG
         {
             for(int i=0;i<n;i++)
             {
-                if (this.list[i].zkratka == zkratka)
+                if (this.list[i].Zkratka == zkratka)
                 {
                     return true;
                 }
@@ -56,7 +56,7 @@ namespace KnihovnaRPG
         {
             for(int i=0;i<list.Length;i++)
             {
-                if (list[i].zkratka == zkratka)
+                if (list[i].Zkratka == zkratka)
                 {
                     return i;
                 }
@@ -105,5 +105,53 @@ namespace KnihovnaRPG
             }
             return sb.ToString();
         }
+
+        /// <summary>
+        /// zda se StatListy shodují
+        /// </summary>
+        /// <param name="L">levá strana</param>
+        /// <param name="P">pravá strana</param>
+        public static bool operator ==(StatList L, StatList P)
+        {
+            if (L.list.Length!=P.list.Length){ return false; }
+
+            for (int i = 0; i < L.list.Length; i++)
+            {
+                if (L.list[i] != P.list[i]) { return false; }
+            }
+
+            return true;
+        }
+
+        /// <summary>
+        /// zda se StatListy liší
+        /// </summary>
+        /// <param name="L">levá strana</param>
+        /// <param name="P">pravá strana</param>
+        public static bool operator !=(StatList L, StatList P)
+        {
+            return !(L == P);
+        }
+
+        #region jen aby VS dalo pokoj
+        /// <summary>
+        /// vyhodnotí zda jsou objekty identické
+        /// </summary>
+        /// <param name="obj">porovnávaný objekt</param>
+        public override bool Equals(object obj)
+        {
+            if (!(obj is StatList)) { return false; }
+            return this == (StatList)obj;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns>base.GetHashCode()</returns>
+        public override int GetHashCode()
+        {
+            return base.GetHashCode();
+        }
+        #endregion
     }
 }

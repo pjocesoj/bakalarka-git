@@ -32,5 +32,11 @@ namespace KnihovnaRPG
         /// </summary>
         bool Stackovatelne{get; }
         #endregion
+
+        /// <summary>
+        /// porovnává shodnost objektů
+        /// </summary>
+        /// <param name="s">s čím chcete porovnat</param>
+        bool Stejne(Sebratelne s);
     }
 }

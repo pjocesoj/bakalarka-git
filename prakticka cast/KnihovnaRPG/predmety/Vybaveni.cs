@@ -39,5 +39,25 @@ namespace KnihovnaRPG
         {
             return $"{base.ToString()}\n{Staty.ToString()}";
         }
+
+        /// <summary>
+        /// porovnává shodnost objektů
+        /// </summary>
+        /// <param name="p">s čím chcete porovnat (Vybaveni nebo jeho potomek)</param>
+        public override bool Stejne(Sebratelne p)
+        {
+            //pokud je jiného typu nemá smysl pokračovat
+            Vybaveni v;
+            try
+            {
+                v = (Vybaveni)p;
+            }
+            catch { return false; }
+
+            if (!base.Stejne(p)) { return false; }
+            if (this.Staty != v.Staty) { return false; }
+
+            return true;
+        }
     }
 }

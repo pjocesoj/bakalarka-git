@@ -102,7 +102,7 @@ namespace KnihovnaRPG
         /// <summary>
         /// celý název statu
         /// </summary>
-        public string nazev
+        public string Nazev
         {
             get { return jmeno; }
         }
@@ -110,7 +110,7 @@ namespace KnihovnaRPG
         /// <summary>
         /// zkratka názvu statu (4 znaky) 
         /// </summary>
-        public string zkratka
+        public string Zkratka
         {
             get { return zkrat; }
         }
@@ -249,6 +249,55 @@ namespace KnihovnaRPG
         public Stat clone()
         {
             return new Stat(jmeno, zkrat, zaklad, boostKonst, boostProc);
+        }
+
+
+        #endregion
+
+        /// <summary>
+        /// zda se Staty shodují
+        /// </summary>
+        /// <param name="L">levá strana</param>
+        /// <param name="P">pravá strana</param>
+        public static bool operator ==(Stat L, Stat P)
+        {
+            if (L.jmeno != P.jmeno) { return false; }
+            if (L.zkrat != P.zkrat) { return false; }
+            if (L.Zaklad != P.Zaklad) { return false; }
+            if (L.BoostKonst != P.BoostKonst) { return false; }
+            if (L.BoostProc != P.BoostProc) { return false; }
+
+            return true;
+        }
+
+        /// <summary>
+        /// zda se Staty liší
+        /// </summary>
+        /// <param name="L">levá strana</param>
+        /// <param name="P">pravá strana</param>
+        public static bool operator !=(Stat L, Stat P)
+        {
+            return !(L == P);
+        }
+
+        #region jen aby VS dalo pokoj
+        /// <summary>
+        /// vyhodnotí zda jsou objekty identické
+        /// </summary>
+        /// <param name="obj">porovnávaný objekt</param>
+        public override bool Equals(object obj)
+        {
+            if (!(obj is Stat)) { return false; }
+            return this == (Stat)obj;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns>base.GetHashCode()</returns>
+        public override int GetHashCode()
+        {
+            return base.GetHashCode();
         }
         #endregion
     }

@@ -19,7 +19,7 @@ namespace KnihovnaRPG
         /// <param name="hmotnost">hmotnost vybavení (pro inventář s kapacitou podle hmotnosti)</param>
         /// <param name="boosty">co zlepšuje (DMG) nebo doplňuje (HP)</param>
         /// <param name="stackovatelne">zda je možné umístit více kusů do 1 slotu v inventáři</param>
-        public Konzumovatelne(string jmeno, int cena, double hmotnost, StatList boosty, bool stackovatelne = false) : base(jmeno, cena, hmotnost, stackovatelne)
+        public Konzumovatelne(string jmeno, int cena, double hmotnost, StatList boosty, bool stackovatelne = true) : base(jmeno, cena, hmotnost, stackovatelne)
         {
             this.Boosty = boosty;
         }
@@ -38,6 +38,25 @@ namespace KnihovnaRPG
         public override string ToString()
         {
             return $"{base.ToString()}\n{Boosty.ToString()}";
+        }
+
+        /// <summary>
+        /// porovnává shodnost objektů
+        /// </summary>
+        /// <param name="p">s čím chcete porovnat (Konzumovatelne nebo potomek)</param>
+        public override bool Stejne(Sebratelne p)
+        {
+            Konzumovatelne k;
+            try
+            {
+                k = (Konzumovatelne)p;
+            }
+            catch { return false; }
+
+            if (!base.Stejne(p)) { return false; }
+            if (this.Boosty != k.Boosty) { return false; }
+
+            return true;
         }
     }
 }

@@ -60,5 +60,20 @@ namespace KnihovnaRPG
         {
             return $"{Jmeno}\ncena:{Cena}\nhmotnost:{Hmotnost}";
         }
+
+        /// <summary>
+        /// porovnává shodnost objektů
+        /// </summary>
+        /// <param name="p">s čím chcete porovnat</param>
+        public virtual bool Stejne(Sebratelne p)
+        {
+            if (this.Jmeno != p.Jmeno){ return false; }
+            if (this.Hmotnost != p.Hmotnost){ return false; }
+            if (this.Cena != p.Cena) { return false; }
+            if (this.Stackovatelne != p.Stackovatelne) { return false; }
+
+            return true;
+        }
+        //interface nepovoluje operator a override
     }
 }

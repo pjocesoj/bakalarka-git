@@ -46,6 +46,9 @@
     <Compile Include="Exceptions\StatListExceptions.cs" />
     <Compile Include="GameManagerDLL.cs" />
     <Compile Include="inventare\has\InventarHmotnostV2.cs" />
+    <Compile Include="inventare\InventarPocet.cs" />
+    <Compile Include="mapa\Chunk.cs" />
+    <Compile Include="mapa\Lokace.cs" />
     <Compile Include="postavy\Hrac.cs" />
     <Compile Include="Exceptions\PostavaExceptions.cs" />
     <Compile Include="inventare\is\Inventar.cs" />
