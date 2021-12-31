@@ -18,7 +18,6 @@ namespace TestovaniCastiKnihovny
         }
 
         List<PredmetKomp> itemy = new List<PredmetKomp>();
-        //InventarKomp invent;
         InventarKompV2 invent2;
         private void Inventar_Load(object sender, EventArgs e)
         {
@@ -44,11 +43,10 @@ namespace TestovaniCastiKnihovny
             itemy.Add(eqip1);
             itemy.Add(elik1);
 
-            //invent = new InventarKomp(300,0);
-            //this.Controls.Add(invent.GFX.pozadi);
             //invent2 = new InventarKompV2(300, 0);
             //invent2 = new InventarKompV2(5.0,300,0);
-            invent2 = new InventarGridKomp(6,2,3,300,0);
+            invent2 = new InventarGridKomp(6, 2, 3, 300, 0);
+            //invent2 = new InventarGridKomp(6,2,3,300,0,50,50);
 
             this.Controls.Add(invent2.GFX.pozadi);
 

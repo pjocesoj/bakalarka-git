@@ -36,20 +36,6 @@ namespace KnihovnaRPG
             Kapacita = kapacita;
             pocetVeStacku = new List<int>();
         }
-
-        //funguje jen pro stackovatelne
-        /*private int indexOf(Sebratelne item)
-        {
-            for (int i = 0; i < obsah.Count; i++)
-            {
-                if (obsah[i].Stejne(item))
-                {
-                    return i;
-                }
-            }
-
-            return -1;
-        }*/
         
         /// <summary>
         /// přidá předmět do inventáře
@@ -123,12 +109,22 @@ namespace KnihovnaRPG
         }
 
         /// <summary>
-        /// vrátí index předmětu který je již v inventáří (-1 pokud není)
+        /// počet předmětů ve stacku na indexu
         /// </summary>
-        /// <param name="item">hledaný předmět</param>
-        public int UzJeVInventu(Sebratelne item)
+        /// <param name="i">index</param>
+        public int Pocet(int i)
         {
-            return indexOf(item);
+           return pocetVeStacku[i];
+        }
+
+        /// <summary>
+        /// počet předmětů ve stacku
+        /// </summary>
+        /// <param name="item">předmět kterého chci vědět počet</param>
+        public int Pocet(Sebratelne item)
+        {
+            int i = indexOf(item);
+            return pocetVeStacku[i];
         }
     }
 }

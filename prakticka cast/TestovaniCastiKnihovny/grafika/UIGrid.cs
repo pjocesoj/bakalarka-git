@@ -62,5 +62,14 @@ namespace TestovaniCastiKnihovny
         {
             bunky[x, y].grafika.Image = g.grafika.Image;
         }
+        public void SetBunku(Bitmap obr, int x, int y)
+        {
+            bunky[x, y].grafika.Image = obr;
+        }
+
+        public void prazdny(int x, int y)
+        {          
+            bunky[x, y].grafika.Image=new Bitmap(rozmerBunky.X, rozmerBunky.Y);
+        }
     }
 }

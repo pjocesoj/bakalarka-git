@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace KnihovnaRPG
 {
+
     class Lokace
     {
         public string Nazev { get; private set; }
