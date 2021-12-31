@@ -8,6 +8,7 @@ prakticka
 |-|-|
 |6.5.2021 | Postava, Stat |
 |8.6.2021 | základ pro inventář |
+|31.12.2021 | hotové inventáře |
 
 
 resersni
@@ -17,3 +18,4 @@ resersni
 |léto|přepis kap3 podle zdroju + žánry|
 |tábor|MSIL|
 |září|3/4 dop lit|
+|vánoce | rešeršní více méně hotova |
