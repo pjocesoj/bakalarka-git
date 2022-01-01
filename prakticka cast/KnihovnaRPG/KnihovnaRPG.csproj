@@ -49,6 +49,7 @@
     <Compile Include="inventare\InventarPocet.cs" />
     <Compile Include="mapa\Chunk.cs" />
     <Compile Include="mapa\Lokace.cs" />
+    <Compile Include="mapa\Mapa.cs" />
     <Compile Include="postavy\Hrac.cs" />
     <Compile Include="Exceptions\PostavaExceptions.cs" />
     <Compile Include="inventare\legacy\Inventar.cs" />

@@ -52,6 +52,8 @@
     <Compile Include="compose\itemy\KonzumovatelneKomp.cs" />
     <Compile Include="compose\itemy\PredmetKomp.cs" />
     <Compile Include="compose\itemy\VybaveniKomp.cs" />
+    <Compile Include="compose\mapa\ChunkKomp.cs" />
+    <Compile Include="compose\mapa\LokaceGFX.cs" />
     <Compile Include="compose\mapa\LokaceKomp.cs" />
     <Compile Include="Formy\Combat.cs">
       <SubType>Form</SubType>

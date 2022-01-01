@@ -34,5 +34,11 @@ namespace TestovaniCastiKnihovny
             InventarForm f4 = new InventarForm();
             f4.Show();
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            MapaForm f5 = new MapaForm();
+            f5.Show();
+        }
     }
 }

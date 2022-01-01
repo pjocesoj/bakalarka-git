@@ -1,5 +1,5 @@
 ﻿
-namespace TestovaniCastiKnihovny.Formy
+namespace TestovaniCastiKnihovny
 {
     partial class MapaForm
     {
