@@ -37,8 +37,14 @@ namespace TestovaniCastiKnihovny
 
         private void button4_Click(object sender, EventArgs e)
         {
-            MapaForm f5 = new MapaForm();
+            ChunkForm f5 = new ChunkForm();
             f5.Show();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            MapaForm f6 = new MapaForm();
+            f6.Show();
         }
     }
 }

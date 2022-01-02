@@ -1,7 +1,7 @@
 ﻿
 namespace TestovaniCastiKnihovny
 {
-    partial class MapaForm
+    partial class ChunkForm
     {
         /// <summary>
         /// Required designer variable.
@@ -29,20 +29,34 @@ namespace TestovaniCastiKnihovny
         /// </summary>
         private void InitializeComponent()
         {
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // MapaForm
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(663, 291);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(100, 50);
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
+            // ChunkForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Name = "MapaForm";
-            this.Text = "MapaForm";
-            this.Load += new System.EventHandler(this.MapaForm_Load);
+            this.Controls.Add(this.pictureBox1);
+            this.Name = "ChunkForm";
+            this.Text = "Mapa";
+            this.Load += new System.EventHandler(this.Mapa_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
+
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

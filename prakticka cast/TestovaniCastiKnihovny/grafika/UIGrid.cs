@@ -71,5 +71,13 @@ namespace TestovaniCastiKnihovny
         {          
             bunky[x, y].grafika.Image=new Bitmap(rozmerBunky.X, rozmerBunky.Y);
         }
+
+        public Point RozmerBunka
+        {
+            get
+            {
+                return rozmerBunky;
+            }
+        }
     }
 }

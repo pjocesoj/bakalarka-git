@@ -55,6 +55,7 @@
     <Compile Include="compose\mapa\ChunkKomp.cs" />
     <Compile Include="compose\mapa\LokaceGFX.cs" />
     <Compile Include="compose\mapa\LokaceKomp.cs" />
+    <Compile Include="compose\mapa\MapaKomp.cs" />
     <Compile Include="Formy\Combat.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -72,6 +73,12 @@
     </Compile>
     <Compile Include="Formy\InventarForm.Designer.cs">
       <DependentUpon>InventarForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formy\ChunkForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formy\ChunkForm.Designer.cs">
+      <DependentUpon>ChunkForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Formy\MapaForm.cs">
       <SubType>Form</SubType>
@@ -107,6 +114,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formy\InventarForm.resx">
       <DependentUpon>InventarForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formy\ChunkForm.resx">
+      <DependentUpon>ChunkForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formy\MapaForm.resx">
       <DependentUpon>MapaForm.cs</DependentUpon>

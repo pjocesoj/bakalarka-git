@@ -18,29 +18,21 @@ namespace TestovaniCastiKnihovny
         }
 
         List<LokaceGFX> lokace = new List<LokaceGFX>();
-
-        private void Mapa_Load(object sender, EventArgs e)
+        #region lokace
+        void lokaceInit()
         {
-            vytvorLokaci("les",'↑');
-            vytvorLokaci("vesnice",'A');
-            vytvorLokaci("cesta",'|');
+            vytvorLokaci("les", '↑');
+            vytvorLokaci("vesnice", 'A');
+            vytvorLokaci("cesta", '|');
 
             sousedi();
-
-            ChunkKomp chunk1 = new ChunkKomp(6, 5);
-            this.Controls.Add(chunk1.GFX.pozadi);
-            chunk1.Vygeneruj(lokace[0], 2, 2);
-
-            this.Width = 600;
-            this.Height = 600;
         }
-        void vytvorLokaci(string jmeno,char symbol)
+        void vytvorLokaci(string jmeno, char symbol)
         {
             Bitmap obr = (Bitmap)Image.FromFile($"obrazky//{jmeno}.png");
 
-            lokace.Add(new LokaceGFX(jmeno, obr,symbol));
+            lokace.Add(new LokaceGFX(jmeno, obr, symbol));
         }
-
         void sousedi()
         {
             lokace[0].PridejSouseda(lokace[2]);
@@ -50,5 +42,27 @@ namespace TestovaniCastiKnihovny
             lokace[2].PridejSouseda(lokace[1]);
             lokace[2].PridejSouseda(lokace[0]);
         }
+        #endregion
+        private void MapaForm_Load(object sender, EventArgs e)
+        {
+            lokaceInit();
+
+            ChunkKomp c1 = new ChunkKomp(5, 5);
+            c1.Vygeneruj(lokace[1],3,3);
+
+            ChunkKomp c2 = new ChunkKomp(5, 5);
+            c2.Vygeneruj(c1, null, c1, null);
+
+            ChunkKomp[,] temp = new ChunkKomp[3, 3];
+            temp[1, 1] = c1;
+            temp[2, 0] = c1;
+            temp[2, 1] = c2;
+
+            MapaKomp map = new MapaKomp(3, 3, temp);
+            this.Controls.Add(map.GFX.pozadi);
+            map.vykresli();
+
+        }
+
     }
 }
