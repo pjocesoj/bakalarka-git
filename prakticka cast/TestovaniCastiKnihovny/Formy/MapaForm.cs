@@ -26,6 +26,9 @@ namespace TestovaniCastiKnihovny
             vytvorLokaci("cesta", '|');
 
             sousedi();
+
+            Bitmap obr = (Bitmap)Image.FromFile($"obrazky//hrad.png");
+            lokace.Add(new LokaceGFX("hrad", lokace,obr,'H',100,100));
         }
         void vytvorLokaci(string jmeno, char symbol)
         {
@@ -47,21 +50,23 @@ namespace TestovaniCastiKnihovny
         {
             lokaceInit();
 
-            ChunkKomp c1 = new ChunkKomp(5, 5);
-            c1.Vygeneruj(lokace[1],3,3);
-
-            ChunkKomp c2 = new ChunkKomp(5, 5);
-            c2.Vygeneruj(c1, null, c1, null);
-
-            ChunkKomp[,] temp = new ChunkKomp[3, 3];
-            temp[1, 1] = c1;
-            temp[2, 0] = c1;
-            temp[2, 1] = c2;
-
-            MapaKomp map = new MapaKomp(3, 3, temp);
+            MapaKomp map = new MapaKomp(6, 6);
+            map.Vygeneruj(lokace[3],3,3,5,5,4,3,2);
             this.Controls.Add(map.GFX.pozadi);
             map.vykresli();
 
+            minimap(map, 600,600);
+        }
+
+        void minimap(MapaKomp map,int w,int h)
+        {
+            PictureBox pb = new PictureBox();
+            pb.Left = this.Controls[0].Right+10;
+            pb.Width=w;
+            pb.Height = h;
+
+            pb.Image = map.ObrMapy(w,h);
+            this.Controls.Add(pb);
         }
 
     }

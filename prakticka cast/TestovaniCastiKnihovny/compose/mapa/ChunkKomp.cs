@@ -69,9 +69,9 @@ namespace TestovaniCastiKnihovny
             }
         }
 
-        public Bitmap ObrChunku()
+        public Bitmap ObrChunku(int w,int h)
         {
-            Bitmap ret = new Bitmap(grafika.Width, grafika.Height);
+            Bitmap ret = new Bitmap(w,h);
             using (Graphics g = Graphics.FromImage(ret))
             {
                 for (int y = 0; y < chunk.Y; y++)
@@ -80,14 +80,23 @@ namespace TestovaniCastiKnihovny
                     {
                         if (chunk[x, y] != null)
                         {
-                            int X = x * grafika.RozmerBunka.X;
-                            int Y = y * grafika.RozmerBunka.Y;
-                            g.DrawImage((chunk[x, y] as LokaceGFX).GFX.grafika.Image, X, Y, grafika.RozmerBunka.X, grafika.RozmerBunka.Y);
+                            //int X = x * grafika.RozmerBunka.X;
+                            //int Y = y * grafika.RozmerBunka.Y;
+                            int bx=w / chunk.X;
+                            int by=h / chunk.Y;
+                            int X = x * bx;
+                            int Y = y * by;
+                            //g.DrawImage((chunk[x, y] as LokaceGFX).GFX.grafika.Image, X, Y, grafika.RozmerBunka.X, grafika.RozmerBunka.Y);
+                            g.DrawImage((chunk[x, y] as LokaceGFX).GFX.grafika.Image, X, Y, bx, by);
                         }
                     }
                 }
             }
             return ret;
+        }
+        public Bitmap ObrChunku()
+        {            
+            return ObrChunku(grafika.Width, grafika.Height);
         }
 
     }

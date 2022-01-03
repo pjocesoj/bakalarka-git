@@ -21,6 +21,12 @@ namespace TestovaniCastiKnihovny
             gfx = new GFX(sirka, vyska, obr);
             this.symbol = symbol;
         }
+
+        public LokaceGFX(string nazev, List<LokaceGFX> sousedi, Bitmap obr,char symbol ,int sirka = 100, int vyska = 100) :base(nazev,cast(sousedi))
+        {
+            gfx = new GFX(sirka, vyska, obr);
+            this.symbol = symbol;
+        }
         public GFX GFX
         {
             get { return gfx; }
@@ -30,6 +36,21 @@ namespace TestovaniCastiKnihovny
         public override char Symbol()
         {
             return symbol;
+        }
+
+        //z důvodu bezpečnosti C# neumožňuje přímý převod listu na list rodičů
+        static List<Lokace> cast(List<LokaceGFX> orig)
+        {
+            List<Lokace> ret=new List<Lokace>();
+            foreach (LokaceGFX l in orig)
+            {
+                ret.Add(l);
+            }
+            return ret;
+        }
+        public void ojeb()
+        {
+            this.MuzeSousedit.RemoveAt(0);
         }
     }
 }

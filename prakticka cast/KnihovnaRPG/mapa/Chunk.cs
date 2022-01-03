@@ -154,7 +154,7 @@ namespace KnihovnaRPG
             return -1;
         }
         #endregion
-       
+
         #region podle sousednich chunku
         /// <summary>
         /// vygeneruje lokace v chunku podle sousedního chunku a dovolených sousedů
@@ -191,7 +191,7 @@ namespace KnihovnaRPG
         {
             if (vRozsahu(X, Y))
             {
-                List<Lokace> mozne = prunikSousedu(X, Y,L,R,U,D);
+                List<Lokace> mozne = prunikSousedu(X, Y, L, R, U, D);
                 if (mozne != null)
                 {
                     int r = rng.Next(mozne.Count);
@@ -210,17 +210,17 @@ namespace KnihovnaRPG
             }
             else
             {
-                levo = L[L.X - 1, y];
+                levo = L != null ? L[L.X - 1, y] : null;
             }
             #endregion
             #region pravo
-            if (x + 1 >= 0)
+            if (x + 1 < X)
             {
                 pravo = lokace[x + 1, y];
             }
             else
             {
-                pravo = R[0, y];
+                pravo = R != null ? R[0, y] : null;
             }
             #endregion
             #region nad
@@ -230,17 +230,17 @@ namespace KnihovnaRPG
             }
             else
             {
-                nad = U[x, U.Y-1];
+                nad = U != null ? U[x, U.Y - 1] : null;
             }
             #endregion
             #region pod
-            if (y + 1 >= 0)
+            if (y + 1 < Y)
             {
-                pod = lokace[x, y+1];
+                pod = lokace[x, y + 1];
             }
             else
             {
-                pod = D[x, 0];
+                pod = D != null ? D[x, 0] : null;
             }
             #endregion
 
@@ -252,7 +252,7 @@ namespace KnihovnaRPG
         }
 
         #region smer pruchodu
-        void urciSmer(out FOR X, out FOR Y, out poradi p, Chunk levo, Chunk pravo, Chunk nad, Chunk pod)
+        void urciSmer(out FOR A, out FOR B, out poradi p, Chunk levo, Chunk pravo, Chunk nad, Chunk pod)
         {
             #region init
             bool L = levo != null;
@@ -264,29 +264,29 @@ namespace KnihovnaRPG
             #region 2 sousedi
             if (L && U)
             {
-                X = new FOR(0, this.X, FOR.Smer.inkrement);
-                Y = new FOR(0, this.Y, FOR.Smer.inkrement);
+                A = new FOR(0, this.X, FOR.Smer.inkrement);
+                B = new FOR(0, this.Y, FOR.Smer.inkrement);
                 p = poradi.XY;
                 return;
             }
             if (L && D)
             {
-                X = new FOR(0, this.X, FOR.Smer.inkrement);
-                Y = new FOR(this.Y, 0, FOR.Smer.dekrement);
+                A = new FOR(0, this.X, FOR.Smer.inkrement);
+                B = new FOR(this.Y, 0, FOR.Smer.dekrement);
                 p = poradi.XY;
                 return;
             }
             if (R && U)
             {
-                X = new FOR(this.X, 0, FOR.Smer.dekrement);
-                Y = new FOR(0, this.Y, FOR.Smer.inkrement);
+                A = new FOR(this.X, 0, FOR.Smer.dekrement);
+                B = new FOR(0, this.Y, FOR.Smer.inkrement);
                 p = poradi.XY;
                 return;
             }
             if (R && D)
             {
-                X = new FOR(this.X, 0, FOR.Smer.dekrement);
-                Y = new FOR(this.Y, 0, FOR.Smer.dekrement);
+                A = new FOR(this.X, 0, FOR.Smer.dekrement);
+                B = new FOR(this.Y, 0, FOR.Smer.dekrement);
                 p = poradi.XY;
                 return;
             }
@@ -294,37 +294,37 @@ namespace KnihovnaRPG
             #region 1 soused
             if (L)
             {
-                X = new FOR(0, this.X, FOR.Smer.inkrement);
-                Y = new FOR(0, this.Y, FOR.Smer.inkrement);
-                p = poradi.YX;
+                A = new FOR(0, this.X, FOR.Smer.inkrement);
+                B = new FOR(0, this.Y, FOR.Smer.inkrement);
+                p = poradi.XY;
                 return;
             }
             if (R)
             {
-                X = new FOR(this.X, 0, FOR.Smer.dekrement);
-                Y = new FOR(0, this.Y, FOR.Smer.inkrement);
-                p = poradi.YX;
+                A = new FOR(this.X, 0, FOR.Smer.dekrement);
+                B = new FOR(0, this.Y, FOR.Smer.inkrement);
+                p = poradi.XY;
                 return;
             }
             if (U)
             {
-                X = new FOR(0, this.X, FOR.Smer.inkrement);
-                Y = new FOR(this.Y, 0, FOR.Smer.dekrement);
+                A = new FOR(0, this.X, FOR.Smer.inkrement);
+                B = new FOR(this.Y, 0, FOR.Smer.dekrement);
                 p = poradi.YX;
                 return;
             }
             if (D)
             {
-                X = new FOR(0, this.X, FOR.Smer.inkrement);
-                Y = new FOR(0, this.Y, FOR.Smer.inkrement);
-                p = poradi.YX;
+                A = new FOR(0, this.X, FOR.Smer.inkrement);
+                B = new FOR( this.Y,0, FOR.Smer.dekrement);
+                p = poradi.XY;
                 return;
             }
             #endregion
 
             //něco se pokazilo
-            X = new FOR(-1, -1, FOR.Smer.inkrement);
-            Y = new FOR(-1, -1, FOR.Smer.dekrement);
+            A = new FOR(-1, -1, FOR.Smer.inkrement);
+            B = new FOR(-1, -1, FOR.Smer.dekrement);
             p = poradi.XY;
         }
         enum poradi { XY, YX }
@@ -339,8 +339,44 @@ namespace KnihovnaRPG
             y = a;
         }
         #endregion
-        
+
         #endregion
+
+        #region static
+
+        /// <summary>
+        /// vygeneruje nový chunku podle startovní lokace
+        /// </summary>
+        /// <param name="X">rozměr X</param>
+        /// <param name="Y">rozměr Y</param>
+        /// <param name="start">výchozí lokace pro generování</param>
+        /// <param name="xs">X souřadnice startu</param>
+        /// <param name="ys">Y souřadnice startu</param>
+        /// <returns></returns>
+        public static Chunk Vygeneruj(int X, int Y, Lokace start, int xs, int ys)
+        {
+            Chunk ret = new Chunk(X, Y);
+            ret.Vygeneruj(start, xs, ys);
+            return ret;
+        }
+
+        /// <summary>
+        /// vygeneruje lokace v chunku podle sousedního chunku a dovolených sousedů
+        /// </summary>
+        /// <param name="X">rozměr X</param>
+        /// <param name="Y">rozměr Y</param>
+        /// <param name="levo">chunk nalevo od tohoto</param>
+        /// <param name="pravo">chunk naprovo od tohoto</param>
+        /// <param name="nad">chunk nad tímto</param>
+        /// <param name="pod">chunk pod tímto</param>
+        public static Chunk Vygeneruj(int X, int Y, Chunk levo, Chunk pravo, Chunk nad, Chunk pod)
+        {
+            Chunk ret = new Chunk(X, Y);
+            ret.Vygeneruj(levo, pravo, nad, pod);
+            return ret;
+        }
+        #endregion
+
         #endregion
 
         /// <summary>
@@ -377,7 +413,17 @@ namespace KnihovnaRPG
             this.stop = stop;
             this.podminka = podminka;
 
-            stav = start;
+            //1. iterace vrací to co by vrátila deklarace -> potřebuji o průchod víc
+            if (podminka == Smer.inkrement)
+            {
+                this.start--;
+            }
+            else
+            {
+                this.stop--;
+            }
+
+            stav = this.start;
         }
 
         bool Inkrementace()
@@ -399,13 +445,15 @@ namespace KnihovnaRPG
         {
             if (podminka == Smer.inkrement)
             {
+                bool ret = Inkrementace();
                 stav = this.stav;
-                return Inkrementace();
+                return ret;
             }
             else
             {
+                bool ret = Dekrementace();
                 stav = this.stav;
-                return Dekrementace();
+                return ret;
             }
         }
     }
