@@ -50,12 +50,12 @@ namespace TestovaniCastiKnihovny
         {
             lokaceInit();
 
-            MapaKomp map = new MapaKomp(6, 6);
-            map.Vygeneruj(lokace[3],3,3,5,5,4,3,2);
+            MapaKomp map = new MapaKomp(5, 5);
+            map.Vygeneruj(lokace[3],2,2,5,5,2,2,2);
             this.Controls.Add(map.GFX.pozadi);
             map.vykresli();
 
-            minimap(map, 600,600);
+            minimap(map, 500,500);
         }
 
         void minimap(MapaKomp map,int w,int h)

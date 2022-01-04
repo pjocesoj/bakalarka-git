@@ -86,6 +86,7 @@
     <Compile Include="Formy\MapaForm.Designer.cs">
       <DependentUpon>MapaForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="GameManager.cs" />
     <Compile Include="grafika\GFX.cs" />
     <Compile Include="grafika\legacy\postavy\HracGFX.cs" />
     <Compile Include="grafika\legacy\postavy\PostavaGFX.cs" />

@@ -165,14 +165,12 @@ namespace KnihovnaRPG
         /// <param name="pod">chunk pod tímto</param>
         public virtual void Vygeneruj(Chunk levo, Chunk pravo, Chunk nad, Chunk pod)
         {
-            FOR X;
-            FOR Y;
+            FOR A;
+            FOR B;
             poradi p;
-            urciSmer(out X, out Y, out p, levo, pravo, nad, pod);
+            urciSmer(out A, out B, out p, levo, pravo, nad, pod);
             Random rng = new Random();
 
-            FOR A = X;
-            FOR B = Y;
             int a;
             int b;
             while (A.Iterace(out a))

@@ -182,5 +182,23 @@ namespace KnihovnaRPG
             }
             return sb.ToString();
         }
+
+        /// <summary>
+        /// vygeneruje startovní chunk a chunky v určeném raduisu
+        /// </summary>
+        /// <param name="X">rozměr X</param>
+        /// <param name="Y">rozměr Y</param>
+        /// <param name="start">startovní lokace</param>
+        /// <param name="lokace">souřadnice startovní lokace v chunku</param>
+        /// <param name="velikostChunk">rozměr chunku</param>
+        /// <param name="chunk">souřadnice startovního chunku</param>      
+        /// <param name="radius">kolik chunků od startovního se má generovat</param>
+        /// <returns></returns>
+        public static Mapa Vygeneruj(int X,int Y, Lokace start, Point lokace, Point velikostChunk, Point chunk, int radius)
+        {
+            Mapa ret = new Mapa(X, Y);
+            ret.Vygeneruj(start, lokace, velikostChunk, chunk, radius);
+            return ret;
+        }
     }
 }

@@ -12,6 +12,11 @@ namespace KnihovnaRPG
     public class GameManagerDLL
     {
         /// <summary>
+        /// kategorie statListů (např souboj, obchod,...)
+        /// </summary>
+        protected Dictionary<string, List<Stat>> staty = new Dictionary<string, List<Stat>>();
+
+        /// <summary>
         /// 
         /// </summary>
         public GameManagerDLL()
@@ -19,30 +24,28 @@ namespace KnihovnaRPG
             vytvorStatListy();
         }
 
-        void vytvorStatListy()
+        #region staty
+        /// <summary>
+        /// vytvoří StatListy a seskupí do skupin (boj, obchod, ...)
+        /// </summary>
+        protected virtual void vytvorStatListy()
         {
-            //ve finalu bude prázdný a bude házet exception aby pri implementaci byli vytvoreny seznamy
-
-            List<Stat> combat = new List<Stat>();
-            combat.Add(new Stat("utok", "DMG", 10));
-            combat.Add(new Stat("obrana", "DEF", 5));
-
-            staty.Add("combat",combat);
+            throw new NotImplementedException("nejde vytvořit obecná a je proto potřeba přetížit a nasvit vlastní hodnoty");
         }
 
         /// <summary>
         /// spoji všechny statlisty zvolenych skupin a vrátí je jako 1 seznam
         /// </summary>
         /// <param name="skupiny">názvy skupin, které chcete</param>
-        public StatList GetStatListy(string[]skupiny)
+        public StatList GetStatListy(string[] skupiny)
         {
             List<Stat> ret = new List<Stat>();
-            for(int i=0;i<skupiny.Length;i++)
+            for (int i = 0; i < skupiny.Length; i++)
             {
                 ret.AddRange(staty[skupiny[i]]);
             }
-            return new StatList(ret); 
+            return new StatList(ret);
         }
-        Dictionary<string, List<Stat>> staty = new Dictionary<string, List<Stat>>();
+        #endregion
     }
 }
