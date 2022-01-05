@@ -9,7 +9,7 @@ namespace KnihovnaRPG
     /// <summary>
     /// rodičovská třída pro vše co lze vložit do inventáře
     /// </summary>
-    public class Predmet:Sebratelne
+    public class Predmet:IPredmet
     {
         #region properties
         /// <summary>
@@ -65,7 +65,7 @@ namespace KnihovnaRPG
         /// porovnává shodnost objektů
         /// </summary>
         /// <param name="p">s čím chcete porovnat</param>
-        public virtual bool Stejne(Sebratelne p)
+        public virtual bool Stejne(IPredmet p)
         {
             if (this.Jmeno != p.Jmeno){ return false; }
             if (this.Hmotnost != p.Hmotnost){ return false; }

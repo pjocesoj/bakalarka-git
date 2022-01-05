@@ -41,7 +41,7 @@ namespace TestovaniCastiKnihovny
             get { return invent; }
         }
 
-        public virtual bool Pridej(Sebratelne item)
+        public virtual bool Pridej(IPredmet item)
         {
             bool ret = invent.Pridej(item);
             UIVypis temp = (UIVypis)grafika;

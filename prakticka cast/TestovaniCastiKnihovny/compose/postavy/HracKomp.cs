@@ -15,6 +15,8 @@ namespace TestovaniCastiKnihovny
         {
             grafika = new GFX(sirka, vyska, obr);
             postava = new Hrac(jmeno, lv, HP, statList);
+
+            postava.Smrt += smrt;
         }
     }
 }

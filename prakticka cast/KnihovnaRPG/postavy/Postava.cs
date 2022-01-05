@@ -54,11 +54,12 @@ namespace KnihovnaRPG
         /// </summary>
         public StatList Staty { get; private set; }
         #endregion
- 
+
         /// <summary>
         /// zda je možno postavu zranit
         /// </summary>
         protected bool nezranitelny = false;
+
 
         #region konstruktory
         /// <summary>
@@ -117,11 +118,12 @@ namespace KnihovnaRPG
         /// <param name="utocnik">postava, která způsobila zranění</param>
         /// <param name="DMG">hodnota poškození</param>
         /// <param name="obrana">typ obrany, kterým je možné poškození snížit</param>
-        public void Zraneni(Postava utocnik, double DMG, string obrana)
+        public virtual void Zraneni(Postava utocnik, double DMG, string obrana)
         {
             if (!nezranitelny && HP > 0)
             {
-                double uber = DMG - Staty[obrana].Hodnota;
+                double uber = DMG;
+                uber-=obrana!=null? Staty[obrana].Hodnota:0;
                 HP -= (int)uber;
 
                 Zranen?.Invoke(this, HP);//? zkrácený zápis testu zda není null
@@ -134,5 +136,68 @@ namespace KnihovnaRPG
             }
         }
 
+        #region buff
+        /// <summary>
+        /// aktuální buffy a debuffy působící na postavu
+        /// </summary>
+        protected List<Buff> buffy = new List<Buff>();
+
+        /// <summary>
+        /// aktualizuje zbyvajicí dobu trvání buffů a projeví jejich efekt
+        /// </summary>
+        public virtual void EfektyBuffu()
+        {
+            //foreach (Buff efekt in buffy)
+            for(int i=buffy.Count-1;i>=0;i--)
+            {
+                Buff efekt = buffy[i];
+
+                efekt.ZkratDobu();
+                if (!efekt.Plati)
+                {
+                    //buffy.Remove(efekt);
+                    odeberBuff(efekt);
+                }
+                else if (efekt.Druh == BuffType.Zraneni)
+                {
+                    Zraneni(efekt.Sesilatel, efekt.Efekt.Hodnota,efekt.Obrana);
+                }
+            }
+        }
+
+        /// <summary>
+        /// přidá nový Buff a pokud je typ buff/debuff provede efekt
+        /// </summary>
+        public void PridejBuff(Buff buff)
+        {
+            buffy.Add(buff);
+            if(buff.Druh==BuffType.Buff || buff.Druh==BuffType.Debuff)
+            {
+                buff.Pouzij(Staty[buff.Efekt.Zkratka], 1);
+            }
+        }
+        private void odeberBuff(Buff buff)
+        {
+            buffy.Remove(buff);
+            if (buff.Druh == BuffType.Buff || buff.Druh == BuffType.Debuff)
+            {
+                buff.Pouzij(Staty[buff.Efekt.Zkratka], -1);
+            }
+        }
+
+        /// <summary>
+        /// vypíše všechny působící buffy
+        /// </summary>
+        public string SeznamBuffu()
+        {
+            StringBuilder sb = new StringBuilder();
+            foreach(Buff b in buffy)
+            {
+                sb.Append(b);
+                sb.Append("\n------------\n");
+            }
+            return sb.ToString();
+        }
+        #endregion
     }
 }

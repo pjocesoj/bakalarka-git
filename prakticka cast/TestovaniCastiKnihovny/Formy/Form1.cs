@@ -46,5 +46,11 @@ namespace TestovaniCastiKnihovny
             MapaForm f6 = new MapaForm();
             f6.Show();
         }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            BuffForm f7 = new BuffForm();
+            f7.Show();
+        }
     }
 }

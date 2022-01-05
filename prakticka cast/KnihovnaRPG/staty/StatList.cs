@@ -77,6 +77,10 @@ namespace KnihovnaRPG
                 if (i < 0) { throw new StatNenalezenException(); }
                 return list[i];
             }
+            set
+            {
+
+            }
         }
 
         /// <summary>

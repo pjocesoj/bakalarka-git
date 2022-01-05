@@ -21,7 +21,7 @@ namespace TestovaniCastiKnihovny
             this.radku = radku;
         }
 
-        public override bool Pridej(Sebratelne item)
+        public override bool Pridej(IPredmet item)
         {
             bool ret = invent.Pridej(item);
 

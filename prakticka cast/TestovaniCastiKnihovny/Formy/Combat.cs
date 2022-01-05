@@ -20,7 +20,7 @@ namespace TestovaniCastiKnihovny
         PostavaKomp souper;
         private void Combat_Load(object sender, EventArgs e)
         {
-            KnihovnaRPG.GameManagerDLL gm = new KnihovnaRPG.GameManagerDLL();
+            GameManager gm = new GameManager();
             string[] skupiny = { "combat" };
 
             Bitmap obr = (Bitmap)Image.FromFile("obrazky//stickman.png");

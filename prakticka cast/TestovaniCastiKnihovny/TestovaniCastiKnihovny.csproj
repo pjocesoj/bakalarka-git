@@ -56,6 +56,12 @@
     <Compile Include="compose\mapa\LokaceGFX.cs" />
     <Compile Include="compose\mapa\LokaceKomp.cs" />
     <Compile Include="compose\mapa\MapaKomp.cs" />
+    <Compile Include="Formy\BuffForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formy\BuffForm.Designer.cs">
+      <DependentUpon>BuffForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formy\Combat.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -107,6 +113,9 @@
     <Compile Include="Formy\VypisPostava.Designer.cs">
       <DependentUpon>VypisPostava.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Formy\BuffForm.resx">
+      <DependentUpon>BuffForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formy\Combat.resx">
       <DependentUpon>Combat.cs</DependentUpon>
     </EmbeddedResource>

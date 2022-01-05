@@ -15,14 +15,14 @@ namespace KnihovnaRPG
         /// <summary>
         /// seznam předmětů v inventáři
         /// </summary>
-        protected List<Sebratelne> obsah;
+        protected List<IPredmet> obsah;
 
         /// <summary>
         /// vytvoří nový inventář s neomezenou kapacitou
         /// </summary>
         public InventarV2()
         {
-            obsah = new List<Sebratelne>();
+            obsah = new List<IPredmet>();
         }
 
         /// <summary>
@@ -30,7 +30,7 @@ namespace KnihovnaRPG
         /// </summary>
         /// <param name="item">přidávaný předmět</param>
         /// <returns>zda je možné předmět vložit</returns>
-        public virtual bool Pridej(Sebratelne item)
+        public virtual bool Pridej(IPredmet item)
         {
             obsah.Add(item);
             return true;
@@ -39,7 +39,7 @@ namespace KnihovnaRPG
         /// odebere předmět z inventáře
         /// </summary>
         /// <param name="item">odebíraný předmět</param>
-        public virtual void Odeber(Sebratelne item)
+        public virtual void Odeber(IPredmet item)
         {
             obsah.Remove(item);
         }
@@ -48,7 +48,7 @@ namespace KnihovnaRPG
         /// vrtátí předmět na indexu i
         /// </summary>
         /// <param name="i">index</param>
-        public Sebratelne GetAt(int i)
+        public IPredmet GetAt(int i)
         {
             return obsah[i];
         }
@@ -57,7 +57,7 @@ namespace KnihovnaRPG
         /// vrtátí předmět na indexu i
         /// </summary>
         /// <param name="i">index</param>
-        public Sebratelne this[int i]
+        public IPredmet this[int i]
         {
             get { return obsah[i]; }
         }
@@ -70,7 +70,7 @@ namespace KnihovnaRPG
             StringBuilder sb = new StringBuilder();
             sb.Append(Stav());
             sb.Append("\n");
-            foreach (Sebratelne p in obsah)
+            foreach (IPredmet p in obsah)
             {
                 sb.Append($"----------\n{p}\n");
             }
@@ -85,7 +85,7 @@ namespace KnihovnaRPG
         {
             double hmot = 0;
             double pocet = 0;
-            foreach (Sebratelne p in obsah)
+            foreach (IPredmet p in obsah)
             {
                 hmot += p.Hmotnost;
                 pocet++;
@@ -101,7 +101,7 @@ namespace KnihovnaRPG
        /// <br/>porovnává data ne reference
        /// </summary>
        /// <param name="item">hledaný předmět</param>
-        protected int indexOf(Sebratelne item)
+        protected int indexOf(IPredmet item)
         {
             for (int i = 0; i < obsah.Count; i++)
             {
@@ -118,7 +118,7 @@ namespace KnihovnaRPG
         /// vrátí index stacku předmětů (-1 pokud v inventáři nejsou)
         /// </summary>
         /// <param name="item">hledaný předmět</param>
-        public virtual int IndexOfStack(Sebratelne item)
+        public virtual int IndexOfStack(IPredmet item)
         {
             return indexOf(item);
         }
@@ -127,7 +127,7 @@ namespace KnihovnaRPG
         /// řekne zda se předmět již nachází v inventáři
         /// </summary>
         /// <param name="item">hledaný předmět</param>
-        public bool UzJeVInventu(Sebratelne item)
+        public bool UzJeVInventu(IPredmet item)
         {
             int ret = indexOf(item);
             if (ret != -1) { return true; }

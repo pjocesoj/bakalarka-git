@@ -44,7 +44,7 @@ namespace KnihovnaRPG
         /// porovnává shodnost objektů
         /// </summary>
         /// <param name="p">s čím chcete porovnat (Konzumovatelne nebo potomek)</param>
-        public override bool Stejne(Sebratelne p)
+        public override bool Stejne(IPredmet p)
         {
             Konzumovatelne k;
             try

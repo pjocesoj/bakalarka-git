@@ -8,7 +8,7 @@ using KnihovnaRPG;
 
 namespace TestovaniCastiKnihovny
 {
-    class PredmetKomp : Sebratelne
+    class PredmetKomp : IPredmet
     {
         protected GFX grafika;
         protected Predmet predmet;
@@ -41,7 +41,7 @@ namespace TestovaniCastiKnihovny
             return predmet.ToString();
         }
 
-        public bool Stejne(Sebratelne s)
+        public bool Stejne(IPredmet s)
         {
             return predmet.Stejne((s as PredmetKomp).predmet);
         }

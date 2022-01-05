@@ -9,7 +9,7 @@ namespace KnihovnaRPG
     /// <summary>
     /// umožňuje vložit objekt do Inventáře
     /// </summary>
-    public interface Sebratelne
+    public interface IPredmet
     {
         #region properties
         /// <summary>
@@ -37,6 +37,6 @@ namespace KnihovnaRPG
         /// porovnává shodnost objektů
         /// </summary>
         /// <param name="s">s čím chcete porovnat</param>
-        bool Stejne(Sebratelne s);
+        bool Stejne(IPredmet s);
     }
 }

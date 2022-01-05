@@ -42,7 +42,7 @@ namespace KnihovnaRPG
         /// </summary>
         /// <param name="item">přidávaný předmět</param>
         /// <returns>zda je možné předmět vložit</returns>
-        public override bool Pridej(Sebratelne item)
+        public override bool Pridej(IPredmet item)
         {
             if (item.Stackovatelne)
             {
@@ -71,7 +71,7 @@ namespace KnihovnaRPG
         /// odebere předmět z inventáře
         /// </summary>
         /// <param name="item">odebíraný předmět</param>
-        public override void Odeber(Sebratelne item)
+        public override void Odeber(IPredmet item)
         {
             int i = indexOf(item);
 
@@ -121,7 +121,7 @@ namespace KnihovnaRPG
         /// počet předmětů ve stacku
         /// </summary>
         /// <param name="item">předmět kterého chci vědět počet</param>
-        public int Pocet(Sebratelne item)
+        public int Pocet(IPredmet item)
         {
             int i = indexOf(item);
             return pocetVeStacku[i];
