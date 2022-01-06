@@ -17,10 +17,10 @@ namespace TestovaniCastiKnihovny
             InitializeComponent();
         }
         PostavaKomp postava;
-        GameManager gm;
+        GameManager gm = GameManager.Singleton;
         private void BuffForm_Load(object sender, EventArgs e)
         {
-            gm = new GameManager();
+            //gm = new GameManager();
             string[] skupiny = { "combat" };
 
             Bitmap obr = (Bitmap)Image.FromFile("obrazky//stickman.png");

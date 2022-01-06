@@ -9,6 +9,20 @@ namespace TestovaniCastiKnihovny
 {
     class GameManager:GameManagerDLL
     {
+        private static GameManager singleton;
+        public static GameManager Singleton
+        {
+            get
+            {
+                if (singleton == null)
+                {
+                    singleton = new GameManager();
+                }
+                return singleton;
+            }
+        }
+        private GameManager() : base() { }
+
         protected override void VytvorSezanamZkratekStatu()
         {
             ZkratkyStatu =new string[]{"DMG","DEF" };

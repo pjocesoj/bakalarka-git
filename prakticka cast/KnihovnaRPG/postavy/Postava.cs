@@ -18,6 +18,11 @@ namespace KnihovnaRPG
         public event EventHandler<int> Zranen;
 
         /// <summary>
+        /// informace o hodnotě uzdravení pro výpis
+        /// </summary>
+        public event EventHandler<int> Uzdraven;
+
+        /// <summary>
         /// informace kdo koho zabil(utocnik, zabity)
         /// </summary>
         public event EventHandler<Postava> Zabil;
@@ -42,7 +47,7 @@ namespace KnihovnaRPG
         /// <summary>
         /// aktuální stav životů postavy
         /// </summary>
-        public int HP { get; set; }
+        public int HP { get; private set; }
 
         /// <summary>
         /// maximální počet životů postavy
@@ -199,5 +204,16 @@ namespace KnihovnaRPG
             return sb.ToString();
         }
         #endregion
+
+        /// <summary>
+        /// přidá HP a zajistí, že nepřesáhnou maximum
+        /// </summary>
+        /// <param name="HP">kolik HP je přidáno</param>
+        public void PridejHP(int HP)
+        {
+            this.HP += HP;
+            if (this.HP > MaxHP) { this.HP = MaxHP; }
+            Uzdraven?.Invoke(this, this.HP);
+        }
     }
 }

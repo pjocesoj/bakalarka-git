@@ -49,6 +49,8 @@
     <Compile Include="GameManagerDLL.cs" />
     <Compile Include="inventare\InventarHmotnostV2.cs" />
     <Compile Include="inventare\InventarPocet.cs" />
+    <Compile Include="Kouzla\KouzloBuff.cs" />
+    <Compile Include="Kouzla\KouzloLeceni.cs" />
     <Compile Include="mapa\Chunk.cs" />
     <Compile Include="mapa\Lokace.cs" />
     <Compile Include="mapa\Mapa.cs" />
@@ -62,8 +64,9 @@
     <Compile Include="predmety\Predmet.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="predmety\IPredmet.cs" />
-    <Compile Include="Quest.cs" />
-    <Compile Include="Skill.cs" />
+    <Compile Include="Kouzla\KouzloUtok.cs" />
+    <Compile Include="Ukoly\Ukol.cs" />
+    <Compile Include="Kouzla\Kouzlo.cs" />
     <Compile Include="staty\Stat.cs" />
     <Compile Include="staty\StatList.cs" />
     <Compile Include="predmety\Vybaveni.cs" />

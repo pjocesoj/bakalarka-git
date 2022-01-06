@@ -11,6 +11,7 @@ namespace KnihovnaRPG
     /// </summary>
     public class GameManagerDLL
     {
+
         /// <summary>
         /// seznam zkratek statů vyskytujících se ve hře
         /// </summary>
@@ -24,7 +25,7 @@ namespace KnihovnaRPG
         /// <summary>
         /// 
         /// </summary>
-        public GameManagerDLL()
+        protected GameManagerDLL()
         {
             VytvorSezanamZkratekStatu();
             VytvorStatListy();

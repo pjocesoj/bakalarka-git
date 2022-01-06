@@ -52,6 +52,7 @@
     <Compile Include="compose\itemy\KonzumovatelneKomp.cs" />
     <Compile Include="compose\itemy\PredmetKomp.cs" />
     <Compile Include="compose\itemy\VybaveniKomp.cs" />
+    <Compile Include="compose\KouzloKomp.cs" />
     <Compile Include="compose\mapa\ChunkKomp.cs" />
     <Compile Include="compose\mapa\LokaceGFX.cs" />
     <Compile Include="compose\mapa\LokaceKomp.cs" />
@@ -95,8 +96,6 @@
     <Compile Include="GameManager.cs" />
     <Compile Include="grafika\GFX.cs" />
     <Compile Include="grafika\legacy\postavy\HracGFX.cs" />
-    <Compile Include="grafika\legacy\postavy\PostavaGFX.cs" />
-    <Compile Include="grafika\legacy\postavy\PostavaGFXv2.cs" />
     <Compile Include="grafika\legacy\postavy\PostavaGFXv3.cs" />
     <Compile Include="grafika\legacy\item\PredmetGFX.cs" />
     <Compile Include="grafika\legacy\item\VybaveniGFX.cs" />

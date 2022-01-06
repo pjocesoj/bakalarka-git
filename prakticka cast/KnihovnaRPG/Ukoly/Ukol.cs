@@ -9,7 +9,7 @@ namespace KnihovnaRPG
     /// <summary>
     /// úkol pro hráče
     /// </summary>
-    public class Quest
+    public class Ukol
     {
         /// <summary>
         /// název úkolu
