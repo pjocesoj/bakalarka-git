@@ -52,5 +52,11 @@ namespace TestovaniCastiKnihovny
             BuffForm f7 = new BuffForm();
             f7.Show();
         }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            UkolForm f8 = new UkolForm();
+            f8.Show();
+        }
     }
 }

@@ -57,6 +57,7 @@
     <Compile Include="compose\mapa\LokaceGFX.cs" />
     <Compile Include="compose\mapa\LokaceKomp.cs" />
     <Compile Include="compose\mapa\MapaKomp.cs" />
+    <Compile Include="compose\UkolKomp.cs" />
     <Compile Include="Formy\BuffForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -92,6 +93,12 @@
     </Compile>
     <Compile Include="Formy\MapaForm.Designer.cs">
       <DependentUpon>MapaForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formy\UkolForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formy\UkolForm.Designer.cs">
+      <DependentUpon>UkolForm.cs</DependentUpon>
     </Compile>
     <Compile Include="GameManager.cs" />
     <Compile Include="grafika\GFX.cs" />
@@ -129,6 +136,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formy\MapaForm.resx">
       <DependentUpon>MapaForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formy\UkolForm.resx">
+      <DependentUpon>UkolForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

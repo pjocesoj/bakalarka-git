@@ -70,6 +70,7 @@
     <Compile Include="staty\Stat.cs" />
     <Compile Include="staty\StatList.cs" />
     <Compile Include="predmety\Vybaveni.cs" />
+    <Compile Include="Ukoly\UkolPolozka.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
