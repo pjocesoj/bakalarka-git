@@ -35,5 +35,14 @@ namespace TestovaniCastiKnihovny
 
             UI.Text = Ukol.ToString();
         }
+
+        public void PridejZabiti(string cil, int pocet)
+        {
+            Ukol.Polozky.Add(new UkolPolozka(pocet, cil, UkolTyp.Zabit));
+        }
+        public void PridejSebrani(string cil, int pocet)
+        {
+            Ukol.Polozky.Add(new UkolPolozka(pocet, cil, UkolTyp.Sebrat));
+        }
     }
 }

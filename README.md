@@ -11,6 +11,7 @@ prakticka
 |31.12.2021 | hotové inventáře |
 |3.1.2022 | hotové generování mapy |
 |5.1.2022 | hotové buffy |
+|6.1.2022 | hotové kouzla |
 
 
 resersni

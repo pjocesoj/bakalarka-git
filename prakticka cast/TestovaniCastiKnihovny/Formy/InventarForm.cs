@@ -50,7 +50,27 @@ namespace TestovaniCastiKnihovny
 
             this.Controls.Add(invent2.GFX.pozadi);
 
+            invent2.Invent.Pridan += Invent_Pridan;
+            invent2.Invent.Odebran += Invent_Odebran;
+            invent2.Invent.Plny += Invent_Plny;
         }
+        #region test event
+        private void Invent_Plny(object sender, KnihovnaRPG.IPredmet e)
+        {
+            MessageBox.Show("plny event");
+        }
+
+        private void Invent_Odebran(object sender, KnihovnaRPG.IPredmet e)
+        {
+            MessageBox.Show("odebran event");
+        }
+
+        private void Invent_Pridan(object sender, KnihovnaRPG.IPredmet e)
+        {
+            MessageBox.Show("pridan event");
+        }
+        #endregion
+
         void Zobraz(PredmetKomp item, int left)
         {
             #region vytvoreni controls
@@ -88,15 +108,17 @@ namespace TestovaniCastiKnihovny
         private void pridej_Click(object sender, EventArgs e)
         {
             int i = (sender as Button).Parent.TabIndex;
-            bool b=invent2.Pridej(itemy[i]);
-            if (!b) { MessageBox.Show("plný"); }
+            //bool b=invent2.Pridej(itemy[i]);
+            //if (!b) { MessageBox.Show("plný"); }
+
+            invent2.Pridej(itemy[i]);
         }
 
         private void InventarForm_KeyUp(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Delete)
             {
-                MessageBox.Show("del");
+                //MessageBox.Show("del");
                 PredmetKomp temp = (PredmetKomp)invent2.Invent.GetAt(1);
                 invent2.Odeber(temp);
             }

@@ -35,7 +35,7 @@ namespace KnihovnaRPG
         /// </summary>
         /// <param name="item">přidávaný předmět</param>
         /// <returns>zda je možné předmět vložit</returns>
-        public override bool Pridej(IPredmet item)
+        protected override bool pridej(IPredmet item)
         {
             if (Neseno + item.Hmotnost <= Kapacita)
             {
@@ -56,7 +56,8 @@ namespace KnihovnaRPG
         public override void Odeber(IPredmet item)
         {
             Neseno -= item.Hmotnost;
-            obsah.Remove(item);
+            //obsah.Remove(item);
+            base.Odeber(item);
         }
 
         /// <summary>

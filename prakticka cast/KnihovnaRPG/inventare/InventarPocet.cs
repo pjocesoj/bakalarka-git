@@ -42,7 +42,7 @@ namespace KnihovnaRPG
         /// </summary>
         /// <param name="item">přidávaný předmět</param>
         /// <returns>zda je možné předmět vložit</returns>
-        public override bool Pridej(IPredmet item)
+        protected override bool pridej(IPredmet item)
         {
             if (item.Stackovatelne)
             {

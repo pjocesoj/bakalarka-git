@@ -8,10 +8,27 @@ namespace KnihovnaRPG
 {
     /// <summary>
     /// inventář s neomezenou kapacitou (rodič pro omezenou kapacitu)
-    /// <br/> Predmet implementován jako HAS (nutno implementovat interface Sebratelne)
     /// </summary>
     public class InventarV2
     {
+        #region eventy
+        /// <summary>
+        /// do inventáře byl přidán předmět
+        /// </summary>
+        public event EventHandler<IPredmet> Pridan;
+
+
+        /// <summary>
+        /// z inventáře byl odebrán předmět
+        /// </summary>
+        public event EventHandler<IPredmet> Odebran;
+
+        /// <summary>
+        /// pokus přidat předmět do plného inventáře
+        /// </summary>
+        public event EventHandler<IPredmet> Plny;
+        #endregion
+
         /// <summary>
         /// seznam předmětů v inventáři
         /// </summary>
@@ -30,11 +47,31 @@ namespace KnihovnaRPG
         /// </summary>
         /// <param name="item">přidávaný předmět</param>
         /// <returns>zda je možné předmět vložit</returns>
-        public virtual bool Pridej(IPredmet item)
+        protected virtual bool pridej(IPredmet item)
         {
             obsah.Add(item);
+            Pridan?.Invoke(this, item);
             return true;
         }
+
+        /// <summary>
+        /// zavolá bool pridej() a podle výsledku zavolá EventHandlery Pridan a Plny
+        /// </summary>
+        /// <param name="item"></param>
+        public bool Pridej(IPredmet item)
+        {
+            bool ret = pridej(item);
+            if(ret)
+            {
+                Pridan?.Invoke(this, item);
+            }
+            else
+            {
+                Plny?.Invoke(this, item);
+            }
+            return ret;
+        }
+
         /// <summary>
         /// odebere předmět z inventáře
         /// </summary>
@@ -42,6 +79,7 @@ namespace KnihovnaRPG
         public virtual void Odeber(IPredmet item)
         {
             obsah.Remove(item);
+            Odebran?.Invoke(this, item);
         }
 
         /// <summary>
