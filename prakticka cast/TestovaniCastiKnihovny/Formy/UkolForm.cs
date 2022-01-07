@@ -22,37 +22,54 @@ namespace TestovaniCastiKnihovny
         InventarKompV2 inventar;
         private void UkolForm_Load(object sender, EventArgs e)
         {
+            KnihovnaRPG.UkolOdmena odmena = new KnihovnaRPG.UkolOdmena(250, 100, new PredmetKomp("odmena", 1000, 1, null));
+
             //ukol = new UkolKomp("zabit", "vzorový úkol bla\nbla\nbla",10,"cil");
             string[] cile = { "cil", "nepodstatny" };
             int[] pocet = { 10, 20 };
-            ukol = new UkolKomp("zabit", "vzorový úkol bla\nbla\nbla", pocet, cile);
+            ukol = new UkolKomp("zabit", "vzorový úkol bla\nbla\nbla", pocet, cile, odmena);
             ukol.PridejSebrani("dulezity", 5);
 
+            ukol.Ukol.Dokoncen += Ukol_Dokoncen;
             this.Controls.Add(ukol.UI.pozadi);
 
-            hrac = new PostavaKomp("hrac", 2, 100, null, null);
+            hrac = new HracKomp("hrac", 2, 100, null, null);
             hrac.Postava.Zabil += Zabil; ;
+            label1.Text = hrac.ToString();
 
-            inventar = new InventarKompV2(20.0,button4.Right+50,0);
+            inventar = new InventarKompV2(20.0, button4.Right + 50, 0);
             this.Controls.Add(inventar.GFX.pozadi);
             inventar.Invent.Pridan += Sebran;
         }
 
+        private void Ukol_Dokoncen(object sender, KnihovnaRPG.IUkolOdmena e)
+        {
+            (hrac.Postava as KnihovnaRPG.Hrac).PridejExp(e.Exp);
+            (hrac.Postava as KnihovnaRPG.Hrac).Penize += (e as KnihovnaRPG.UkolOdmena).Penize;
+            inventar.Pridej((e as KnihovnaRPG.UkolOdmena).Predmet);
+            
+            label1.Text = hrac.ToString();
+        }
+
+        void ukolUpdate(string s)
+        {
+            ukol.Ukol.UpdateStav(s);
+            ukol.UI.Text = ukol.Ukol.ToString();     
+        }
+
         private void Sebran(object sender, KnihovnaRPG.IPredmet e)
         {
-            ukol.Ukol.UpdateStav(e.Jmeno);
-            ukol.UI.Text = ukol.Ukol.ToString();
+            ukolUpdate(e.Jmeno);
         }
 
         private void Zabil(object sender, KnihovnaRPG.Postava e)
         {
-            ukol.Ukol.UpdateStav(e.Jmeno);
-            ukol.UI.Text = ukol.Ukol.ToString();
-        }        
+            ukolUpdate(e.Jmeno);
+        }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            PostavaKomp cil = new PostavaKomp("cil", 1, 10, null, null);            
+            PostavaKomp cil = new PostavaKomp("cil", 1, 10, null, null);
             cil.Postava.Zraneni(hrac.Postava, 20, null);
         }
 

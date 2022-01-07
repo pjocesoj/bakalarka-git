@@ -42,22 +42,22 @@ namespace KnihovnaRPG
         /// <summary>
         /// úroveň postavy
         /// </summary>
-        public int LV { get; private set; }
+        public int LV { get; protected set; }
 
         /// <summary>
         /// aktuální stav životů postavy
         /// </summary>
-        public int HP { get; private set; }
+        public int HP { get; protected set; }
 
         /// <summary>
         /// maximální počet životů postavy
         /// </summary>
-        public int MaxHP { get; private set; }
+        public int MaxHP { get; protected set; }
 
         /// <summary>
         /// seznam všech statů postavy
         /// </summary>
-        public StatList Staty { get; private set; }
+        public StatList Staty { get; protected set; }
         #endregion
 
         /// <summary>

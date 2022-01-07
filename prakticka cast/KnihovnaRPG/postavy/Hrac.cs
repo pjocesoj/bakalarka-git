@@ -34,14 +34,36 @@ namespace KnihovnaRPG
         /// <summary>
         /// počet zkušeností
         /// </summary>
-        public int Exp { get; set; }
+        public int Exp { get; protected set; }
+
+        /// <summary>
+        /// kolik peněz hráč má
+        /// </summary>
+        public int Penize { get; set; }
+
 
         /// <summary>
         /// vypíše všechny informace o hráčově postavě
         /// </summary>
         public override string ToString()
         {
-            return $"{Jmeno}\nLV{LV}\nExp{Exp}/{100*LV}\nHP:{HP}/{MaxHP}\n{Staty}";
+            return $"{Jmeno}\nLV{LV}\nExp{Exp}/{100*LV}\nHP:{HP}/{MaxHP}\n{Staty}\n{Penize}G";
+        }
+
+        /// <summary>
+        /// přidá zkušenosti a po překročení hranice (100*LV) zvýší LV
+        /// </summary>
+        /// <param name="exp">počet získaných zkušeností</param>
+        public virtual void PridejExp(int exp)
+        {
+            int LvUp = 100 * LV;
+
+            Exp += exp;
+            if(Exp>LvUp)
+            {
+                Exp -= LvUp;
+                LV++;
+            }
         }
     }
 }

@@ -65,11 +65,13 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="predmety\IPredmet.cs" />
     <Compile Include="Kouzla\KouzloUtok.cs" />
+    <Compile Include="Ukoly\IUkolOdmena.cs" />
     <Compile Include="Ukoly\Ukol.cs" />
     <Compile Include="Kouzla\Kouzlo.cs" />
     <Compile Include="staty\Stat.cs" />
     <Compile Include="staty\StatList.cs" />
     <Compile Include="predmety\Vybaveni.cs" />
+    <Compile Include="Ukoly\UkolOdmena.cs" />
     <Compile Include="Ukoly\UkolPolozka.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -76,7 +76,7 @@ namespace KnihovnaRPG
                     dokoncena = true;
                     return true;
                 }
-                return true;
+                return false;
             }
             return true;
         }

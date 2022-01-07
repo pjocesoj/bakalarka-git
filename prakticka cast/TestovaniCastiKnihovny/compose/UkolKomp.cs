@@ -13,16 +13,16 @@ namespace TestovaniCastiKnihovny
 
         public UIVypis UI { get; private set; }
 
-        public UkolKomp(string jmeno, string popis,int kolik, string cil,int sirka=100,int vyska=400)
+        public UkolKomp(string jmeno, string popis,int kolik, string cil,KnihovnaRPG.UkolOdmena odmena,int sirka=100,int vyska=400)
         {
             UkolPolozka p = new UkolPolozka(kolik, cil, UkolTyp.Zabit);
 
-            Ukol = new Ukol(jmeno, popis,p);
+            Ukol = new Ukol(jmeno, popis,p,odmena);
             UI = new UIVypis(sirka, vyska);
 
             UI.Text = Ukol.ToString();
         }
-        public UkolKomp(string jmeno, string popis, int[] kolik, string[] cil, int sirka = 100, int vyska = 400)
+        public UkolKomp(string jmeno, string popis, int[] kolik, string[] cil, KnihovnaRPG.UkolOdmena odmena, int sirka = 100, int vyska = 400)
         {
             List<UkolPolozka> polozky = new List<UkolPolozka>();
             for(int i=0;i<kolik.Length;i++)
@@ -30,7 +30,7 @@ namespace TestovaniCastiKnihovny
                 polozky.Add(new UkolPolozka(kolik[i], cil[i], UkolTyp.Zabit));
             }
 
-            Ukol = new Ukol(jmeno, popis, polozky);
+            Ukol = new Ukol(jmeno, popis, polozky,odmena);
             UI = new UIVypis(sirka, vyska);
 
             UI.Text = Ukol.ToString();
