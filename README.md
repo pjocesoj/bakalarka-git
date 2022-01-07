@@ -12,6 +12,7 @@ prakticka
 |3.1.2022 | hotové generování mapy |
 |5.1.2022 | hotové buffy |
 |6.1.2022 | hotové kouzla |
+|7.1.2022 | hotový quest |
 
 
 resersni
