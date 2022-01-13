@@ -39,6 +39,7 @@ namespace KnihovnaRPG
                 this.list[i]=list[i].clone();
             }
         }
+        
         #endregion
         private bool uzUbsahujeZkratku(string zkratka,int n)
         {
@@ -135,6 +136,31 @@ namespace KnihovnaRPG
         public static bool operator !=(StatList L, StatList P)
         {
             return !(L == P);
+        }
+
+        /// <summary>
+        /// sloučí StatListy do 1
+        /// </summary>
+        /// <param name="statListy">StatListy k sloučení</param>
+        public static StatList SlucStatListy(List<StatList> statListy)
+        {
+            int delka = 0;
+            foreach (StatList s in statListy)
+            {
+                delka += s.list.Length;
+            }
+            Stat[] ret = new Stat[delka];
+
+            int i = 0;
+            foreach (StatList SL in statListy)
+            {
+                for (int j = 0; j < SL.list.Length; j++)
+                {
+                    ret[i] = SL.list[j];
+                    i++;
+                }
+            }
+            return new StatList(ret);
         }
 
         #region jen aby VS dalo pokoj
