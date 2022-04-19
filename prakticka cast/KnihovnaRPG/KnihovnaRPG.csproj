@@ -47,6 +47,7 @@
     <Compile Include="Exceptions\StatExceptions.cs" />
     <Compile Include="Exceptions\StatListExceptions.cs" />
     <Compile Include="GameManagerDLL.cs" />
+    <Compile Include="INastaveni.cs" />
     <Compile Include="inventare\InventarHmotnostV2.cs" />
     <Compile Include="inventare\InventarPocet.cs" />
     <Compile Include="Kouzla\KouzloBuff.cs" />

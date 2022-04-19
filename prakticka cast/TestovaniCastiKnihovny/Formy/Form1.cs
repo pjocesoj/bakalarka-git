@@ -58,5 +58,10 @@ namespace TestovaniCastiKnihovny
             UkolForm f8 = new UkolForm();
             f8.Show();
         }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            new NastaveniForm().Show();
+        }
     }
 }

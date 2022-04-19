@@ -11,6 +11,10 @@ namespace KnihovnaRPG
     /// </summary>
     public abstract class GameManagerDLL
     {
+        /// <summary>
+        /// veškerá nastavení hry, jako je ovládání, zvuk, grafika, ...
+        /// </summary>
+        public Dictionary<string, INastaveni> Nastaveni { get; protected set; }
 
         /// <summary>
         /// seznam zkratek statů vyskytujících se ve hře
@@ -32,6 +36,8 @@ namespace KnihovnaRPG
         /// </summary>
         protected GameManagerDLL()
         {
+            VytvorNastaveni();
+
             VytvorSezanamZkratekStatu();
             VytvorStatListy();
 
@@ -131,5 +137,10 @@ namespace KnihovnaRPG
         /// vytvoří seznam všech lokací ve hře a jejich vazeb, které spolu mohou sousedit
         /// </summary>
         protected abstract void VytvorLokace();
+
+        /// <summary>
+        /// vytvoří slovník všech nastavení [nazev,INastaveni]
+        /// </summary>
+        protected abstract void VytvorNastaveni();
     }
 }

@@ -24,6 +24,14 @@ namespace TestovaniCastiKnihovny
         }
         private GameManager() : base() { }
 
+        protected override void VytvorNastaveni()
+        {
+            Nastaveni = new Dictionary<string, INastaveni>();
+
+            Nastaveni.Add("ovladani", new NastaveniOvladani());
+            Nastaveni.Add("grafika", new NastaveniGrafika(70,70));
+        }
+
         protected override void VytvorSezanamZkratekStatu()
         {
             ZkratkyStatu = new string[] { "DMG", "DEF" };
