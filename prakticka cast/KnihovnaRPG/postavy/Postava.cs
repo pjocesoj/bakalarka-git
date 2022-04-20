@@ -105,6 +105,16 @@ namespace KnihovnaRPG
             //this.StatList = statList.Clone();
             this.Staty = statList;
         }
+
+        ///<summary>vytvoří nezranitelnou postavu, která má staty</summary>
+        /// <param name="jmeno">jméno postavy</param>
+        /// <param name="lv">level postavy</param>
+        /// <param name="statList">staty postavy</param>
+        public Postava(string jmeno, int lv, StatList statList) : this(jmeno)
+        {
+            this.LV = lv;
+            this.Staty = statList;
+        }
         #endregion
 
         /// <summary>

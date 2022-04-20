@@ -77,6 +77,12 @@
     <Compile Include="Formy\Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formy\GMPostavyForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formy\GMPostavyForm.Designer.cs">
+      <DependentUpon>GMPostavyForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formy\InventarForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -136,6 +142,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formy\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formy\GMPostavyForm.resx">
+      <DependentUpon>GMPostavyForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formy\InventarForm.resx">
       <DependentUpon>InventarForm.cs</DependentUpon>

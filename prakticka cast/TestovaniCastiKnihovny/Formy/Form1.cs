@@ -63,5 +63,10 @@ namespace TestovaniCastiKnihovny
         {
             new NastaveniForm().Show();
         }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            new GMPostavyForm().Show();
+        }
     }
 }

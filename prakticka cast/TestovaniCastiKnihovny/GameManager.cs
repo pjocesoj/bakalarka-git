@@ -29,9 +29,9 @@ namespace TestovaniCastiKnihovny
             Nastaveni = new Dictionary<string, INastaveni>();
 
             Nastaveni.Add("ovladani", new NastaveniOvladani());
-            Nastaveni.Add("grafika", new NastaveniGrafika(70,70));
+            Nastaveni.Add("grafika", new NastaveniGrafika(70, 70));
         }
-
+        #region staty
         protected override void VytvorSezanamZkratekStatu()
         {
             ZkratkyStatu = new string[] { "DMG", "DEF" };
@@ -49,7 +49,26 @@ namespace TestovaniCastiKnihovny
             staty.Add("combat", combat);
             staty.Add("magie", magie);
         }
+        #endregion
+        #region postavy
+        public PostavaKomp NovaPostavaGFX(string jmeno, int lv, int HP, string[] skupinaStatu)
+        {
+            Postava logika = NovaPostava(jmeno, lv, HP, skupinaStatu);
+            Bitmap obr = (Bitmap)Image.FromFile("obrazky//stickman.png");
+            GFX gfx = new GFX(100, 100, obr);
+            return new PostavaKomp(gfx, logika);
+        }
+        public HracKomp NovyHracGFX(string jmeno, int lv, int HP, string[] skupinaStatu)
+        {
+            Hrac logika = NovyHrac(jmeno, lv, HP, skupinaStatu);
+            Bitmap obr = (Bitmap)Image.FromFile("obrazky//stickman.png");
+            GFX gfx = new GFX(100, 100, obr);
+            return new HracKomp(gfx, logika);
+        }
+        #endregion
 
+        #region mapa
+        #region lokace
         protected override void VytvorLokace()
         {
             vytvorLokaci("les", '↑');
@@ -64,7 +83,7 @@ namespace TestovaniCastiKnihovny
             int[] vaz2 = { 0, 1 };
             vytvorVazbyLokaci(lokace[2], vaz2);
 
-            int[] vaz3 = { 0, 1 ,2};
+            int[] vaz3 = { 0, 1, 2 };
             vytvorVazbyLokaci(lokace[3], vaz3);
         }
         void vytvorLokaci(string jmeno, char symbol)
@@ -80,5 +99,9 @@ namespace TestovaniCastiKnihovny
                 lokace.PridejSouseda(this.lokace[i]);
             }
         }
+        #endregion
+
+
+        #endregion
     }
 }
