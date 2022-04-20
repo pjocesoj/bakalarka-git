@@ -26,8 +26,6 @@ namespace TestovaniCastiKnihovny
 
         protected override void VytvorNastaveni()
         {
-            Nastaveni = new Dictionary<string, INastaveni>();
-
             Nastaveni.Add("ovladani", new NastaveniOvladani());
             Nastaveni.Add("grafika", new NastaveniGrafika(70, 70));
         }
@@ -100,7 +98,11 @@ namespace TestovaniCastiKnihovny
             }
         }
         #endregion
-
+        protected override void MapaConf()
+        {
+            //mapaConf(5, 5, 5, 5, 1);
+            mapaConf(5, 5, 5, 5, 1,lokace[3],2,2,2,2);
+        }
 
         #endregion
     }

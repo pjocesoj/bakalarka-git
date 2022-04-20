@@ -11,10 +11,14 @@ namespace KnihovnaRPG
     /// </summary>
     public abstract class GameManagerDLL
     {
+        #region nastaveni
         /// <summary>
         /// veškerá nastavení hry, jako je ovládání, zvuk, grafika, ...
         /// </summary>
-        public Dictionary<string, INastaveni> Nastaveni { get; protected set; }
+        public Dictionary<string, INastaveni> Nastaveni { get { return nastaveni; } }     
+        //v implementaci není třeba řešit inicializaci
+        private Dictionary<string, INastaveni> nastaveni = new Dictionary<string, INastaveni>();
+        #endregion
 
         /// <summary>
         /// seznam zkratek statů vyskytujících se ve hře
@@ -34,7 +38,23 @@ namespace KnihovnaRPG
         /// <summary>
         /// herní mapa (logická část)
         /// </summary>
-        protected Mapa Mapa { get; set; }
+        public Mapa Mapa { get; protected set; }
+        
+        /// <summary>
+        /// kde se na mapě nachází všichni hráči
+        /// <br/> pro více než 1 hráčskou postavu
+        /// </summary>
+        public Point4D[] PolohaHracu { get; set; }
+
+        /// <summary>
+        /// kde se na mapě nachází hráč
+        /// <br/> pro 1 hráčskou postavu
+        /// </summary>
+        public Point4D PolohaHrac 
+        {
+            get { return PolohaHracu[0]; }
+            set { PolohaHracu[0] = value; } 
+        }
 
         /// <summary>
         /// inicializace hry (nastavení, staty, lokace)
@@ -47,14 +67,16 @@ namespace KnihovnaRPG
             VytvorStatListy();
 
             VytvorLokace();
+            MapaConf();
         }
 
         /// <summary>
-        /// vytvoří novou hru
+        /// vygeneruje mapu podle MapaConfig
         /// </summary>
         public virtual void SpustHru()
         {
-            
+            MapaConfig conf = (MapaConfig)nastaveni["mapa"];
+            Mapa=Mapa.Vygeneruj(conf);
         }
 
         #region nastaveni
@@ -160,7 +182,7 @@ namespace KnihovnaRPG
         /// <param name="HP">počet životů postavy</param>
         /// <param name="skupinaStatu">jaké skupiny statů postava bude mít (combat, obchod, ...)</param>
         /// <returns>instance KnihovnaRPG.Postava</returns>      
-        protected virtual Postava NovaPostava(string jmeno,int lv,int HP, string[] skupinaStatu)
+        protected virtual Postava NovaPostava(string jmeno, int lv, int HP, string[] skupinaStatu)
         {
             StatList staty = GetStatList(skupinaStatu, lv);
             Postava ret = new Postava(jmeno, lv, HP, staty);
@@ -189,7 +211,7 @@ namespace KnihovnaRPG
         /// <param name="HP">počet životů hráče</param>
         /// <param name="skupinaStatu">jaké skupiny statů hráč bude mít (combat, obchod, ...)</param>
         /// <returns>instance KnihovnaRPG.Hrac</returns> 
-        protected virtual Hrac NovyHrac(string jmeno, int lv,int HP, string[] skupinaStatu)
+        protected virtual Hrac NovyHrac(string jmeno, int lv, int HP, string[] skupinaStatu)
         {
             StatList staty = GetStatList(skupinaStatu, lv);
             Hrac ret = new Hrac(jmeno, lv, HP, staty);
@@ -202,5 +224,45 @@ namespace KnihovnaRPG
         /// </summary>
         protected abstract void VytvorLokace();
 
+        #region mapaConf
+        /// <summary>
+        /// metoda volaná konstruktorem, ve které je třeba zavolat mapaConf s požadoanými hodnotami
+        /// </summary>
+        protected abstract void MapaConf();
+
+        /// <summary>
+        /// vytvoří instanci MapaConfig a přidá ji do nastavení
+        /// <br/>spawn=random
+        /// </summary>
+        /// <param name="MX">X rozměr mapy</param>
+        /// <param name="MY">Y rozměr mapy</param>
+        /// <param name="CX">X rozměr chunků</param>
+        /// <param name="CY">Y rozměr chunků</param>
+        /// <param name="renderVzdalenost">jak velké okolí chunku bude načítáno do paměti</param>
+        /// <param name="lokace">v jaké lokaci se hráč spawne(les, město,...)</param>
+        protected void mapaConf(int MX, int MY, int CX, int CY,int renderVzdalenost, Lokace lokace)
+        {
+            nastaveni.Add("mapa",new MapaConfig(MX, MY, CX, CY, renderVzdalenost,lokace));
+        }
+
+        /// <summary>
+        /// vytvoří instanci MapaConfig a přidá ji do nastavení
+        /// <br/>spawn=[smx,smy,scx,scy]
+        /// </summary>
+        /// <param name="MX">X rozměr mapy</param>
+        /// <param name="MY">Y rozměr mapy</param>
+        /// <param name="CX">X rozměr chunků</param>
+        /// <param name="CY">Y rozměr chunků</param>
+        /// <param name="renderVzdalenost">jak velké okolí chunku bude načítáno do paměti</param>
+        /// <param name="lokace">v jaké lokaci se hráč spawne(les, město,...)</param>
+        /// <param name="smx">spawn mapa X</param>
+        /// <param name="smy">spawn mapa Y</param>
+        /// <param name="scx">spawn chunk X</param>
+        /// <param name="scy">spawn chunk Y</param>
+        protected void mapaConf(int MX, int MY, int CX, int CY,int renderVzdalenost, Lokace lokace, int smx, int smy, int scx, int scy)
+        {
+            nastaveni.Add("mapa",new MapaConfig(MX, MY, CX, CY, renderVzdalenost,lokace,smx,smy,scx,scy));
+        }
+        #endregion
     }
 }

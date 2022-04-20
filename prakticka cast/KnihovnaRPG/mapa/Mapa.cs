@@ -200,5 +200,17 @@ namespace KnihovnaRPG
             ret.Vygeneruj(start, lokace, velikostChunk, chunk, radius);
             return ret;
         }
+        /// <summary>
+        /// vygeneruje mapu podle MapaConfig
+        /// </summary>
+        /// <param name="conf">MapaConfig obsahující informace o generaci mapy</param>
+        /// <returns></returns>
+        public static Mapa Vygeneruj(MapaConfig conf)
+        {
+            Mapa ret = new Mapa(conf.Mapa.X, conf.Mapa.Y);
+            Point4D spawn = conf.Spawn;
+            ret.Vygeneruj(conf.SpawnLokace, spawn.CX, spawn.CY, conf.Chunk.X, conf.Chunk.Y, spawn.MX, spawn.MY, conf.RenderVzdalenost);
+            return ret;
+        }
     }
 }

@@ -52,9 +52,11 @@
     <Compile Include="inventare\InventarPocet.cs" />
     <Compile Include="Kouzla\KouzloBuff.cs" />
     <Compile Include="Kouzla\KouzloLeceni.cs" />
+    <Compile Include="MapaConfig.cs" />
     <Compile Include="mapa\Chunk.cs" />
     <Compile Include="mapa\Lokace.cs" />
     <Compile Include="mapa\Mapa.cs" />
+    <Compile Include="Point4D.cs" />
     <Compile Include="postavy\Hrac.cs" />
     <Compile Include="Exceptions\PostavaExceptions.cs" />
     <Compile Include="inventare\legacy\Inventar.cs" />
@@ -74,6 +76,9 @@
     <Compile Include="predmety\Vybaveni.cs" />
     <Compile Include="Ukoly\UkolOdmena.cs" />
     <Compile Include="Ukoly\UkolPolozka.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram1.cd" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

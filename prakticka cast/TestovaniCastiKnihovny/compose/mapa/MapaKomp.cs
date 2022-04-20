@@ -18,7 +18,11 @@ namespace TestovaniCastiKnihovny
         {
             get;private set;
         }
-
+        public MapaKomp(Mapa mapa, int left = 0, int top = 0, int sirka = 100, int vyska = 100)
+        {
+            GFX = new UIGrid(mapa.X,mapa.Y, left, top, sirka, vyska, 1);
+            Mapa = mapa;
+        }
         public MapaKomp(int x, int y, int left = 0, int top = 0, int sirka = 100, int vyska = 100)
         {
             GFX = new UIGrid(y, x, left, top, sirka, vyska, 1);
