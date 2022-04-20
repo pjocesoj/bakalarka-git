@@ -32,6 +32,11 @@ namespace KnihovnaRPG
         protected List<Lokace> lokace = new List<Lokace>();
 
         /// <summary>
+        /// herní mapa (logická část)
+        /// </summary>
+        protected Mapa Mapa { get; set; }
+
+        /// <summary>
         /// inicializace hry (nastavení, staty, lokace)
         /// </summary>
         protected GameManagerDLL()

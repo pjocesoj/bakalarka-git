@@ -13,6 +13,8 @@ prakticka
 |5.1.2022 | hotové buffy |
 |6.1.2022 | hotové kouzla |
 |7.1.2022 | hotový quest |
+|19.4.2022 | nastavení |
+|20.4.2022 | vytváření postav přes GM |
 
 
 resersni
