@@ -56,6 +56,11 @@ namespace KnihovnaRPG
         }
 
         /// <summary>
+        /// zpráva do implementace, že je třeba načíst či uvolnit chunk z paměti
+        /// </summary>
+        protected event EventHandler<LoadUnloadEventArg> ChunkLoadUnload;
+
+        /// <summary>
         /// inicializace hry (nastavení, staty, lokace)
         /// </summary>
         protected GameManagerDLL()
@@ -72,7 +77,7 @@ namespace KnihovnaRPG
         }
 
         /// <summary>
-        /// vygeneruje mapu podle MapaConfig
+        /// vygeneruje mapu podle MapaConfig a přidá polohu hráče1
         /// </summary>
         /// <param name="postav">kolik postav hráč má</param>
         public virtual void SpustHru(int postav)
@@ -85,11 +90,20 @@ namespace KnihovnaRPG
             conf.Spawn = null;
         }
         /// <summary>
+        /// pouze deklarace pro načtení uložené hry
+        /// </summary>
+        /// <param name="ulozeni">kolik postav hráč má</param>
+        public virtual void SpustHru(Ulozeni ulozeni)
+        {
+
+        }
+
+        /// <summary>
         /// při kroku hráče vyhodnocuje zda je třeba načíst či uvolnit chunk
         /// </summary>
         /// <param name="hrac">hráč který udělal krok</param>
         /// <param name="nova">nová poloha</param>
-        public void KrokHnadler(int hrac, Point4D nova)
+        public virtual void KrokHnadler(int hrac, Point4D nova)
         {
             if (nova.DalsiChunk)
             {
@@ -118,17 +132,30 @@ namespace KnihovnaRPG
             }
             PolohaHracu[hrac] = nova;
         }
+
+        /// <summary>
+        /// pokud je chunk jich vygenerovaný načte ho do paměti, v opačném případě vygeneruje nový
+        /// </summary>
+        /// <param name="X">X souřadnice</param>
+        /// <param name="Y">XY souřadnice</param>
+        /// <param name="chunk">rozměry chunků (nastaveni["mapa"].Chunk)</param>
         protected virtual void NactiChunk(int X, int Y, MapaConfig.Velikost chunk)
         {
-            if (Mapa[X, Y] == null)
+            if (X < Mapa.X && Y < Mapa.Y)
             {
-                if (Mapa.Vygeneovano(X, Y))
+                if (X >=0 && Y>=0)
                 {
-
-                }
-                else
-                {
-                    Mapa.vytvorChunk(chunk.X, chunk.Y, X, Y);
+                    if (Mapa[X, Y] == null)
+                    {
+                        if (Mapa.Vygeneovano(X, Y))
+                        {
+                            ChunkLoadUnload?.Invoke(Mapa,LoadUnloadEventArg.Load(X,Y));
+                        }
+                        else
+                        {
+                            Mapa.vytvorChunk(chunk.X, chunk.Y, X, Y);
+                        }
+                    }
                 }
             }
         }

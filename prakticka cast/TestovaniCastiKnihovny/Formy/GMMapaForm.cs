@@ -70,7 +70,6 @@ namespace TestovaniCastiKnihovny
 
             KnihovnaRPG.MapaConfig conf = (KnihovnaRPG.MapaConfig)GameManager.Singleton.Nastaveni["mapa"];
             poloha.Pohyb(x, y,conf);
-            Console.WriteLine($"mx{poloha.MX} my{poloha.MY}");
             //GameManager.Singleton.PohybHrace.Invoke(hrac,poloha);
             GameManager.Singleton.KrokHnadler(0, poloha);
             mapa.vykresli();

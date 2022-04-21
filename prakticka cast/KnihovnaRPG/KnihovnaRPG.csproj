@@ -47,12 +47,13 @@
     <Compile Include="Exceptions\StatExceptions.cs" />
     <Compile Include="Exceptions\StatListExceptions.cs" />
     <Compile Include="GameManagerDLL.cs" />
-    <Compile Include="INastaveni.cs" />
+    <Compile Include="mapa\LoadUnloadEventArg.cs" />
+    <Compile Include="nastaveni\INastaveni.cs" />
     <Compile Include="inventare\InventarHmotnostV2.cs" />
     <Compile Include="inventare\InventarPocet.cs" />
     <Compile Include="Kouzla\KouzloBuff.cs" />
     <Compile Include="Kouzla\KouzloLeceni.cs" />
-    <Compile Include="MapaConfig.cs" />
+    <Compile Include="nastaveni\MapaConfig.cs" />
     <Compile Include="mapa\Chunk.cs" />
     <Compile Include="mapa\Lokace.cs" />
     <Compile Include="mapa\Mapa.cs" />
@@ -76,6 +77,7 @@
     <Compile Include="predmety\Vybaveni.cs" />
     <Compile Include="Ukoly\UkolOdmena.cs" />
     <Compile Include="Ukoly\UkolPolozka.cs" />
+    <Compile Include="Ulozeni.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
