@@ -19,12 +19,61 @@ namespace TestovaniCastiKnihovny
 
         private void GMMapaForm_Load(object sender, EventArgs e)
         {
+            KnihovnaRPG.MapaConfig conf = (KnihovnaRPG.MapaConfig)GameManager.Singleton.Nastaveni["mapa"];
+            int chunk = 150;
+            int x = conf.Chunk.X;
+            int lok = chunk / x;
+
             GameManager gm = GameManager.Singleton;
-            gm.SpustHru();
-            MapaKomp mapa = new MapaKomp(gm.Mapa, 0, 0,150,150);
+            gm.SpustHru(1);
+            mapa = new MapaKomp(gm.Mapa, 0, 0, chunk, chunk);
             this.Controls.Add(mapa.GFX.pozadi);
             mapa.vykresli();
             this.WindowState = FormWindowState.Maximized;
+
+            KnihovnaRPG.Point4D spawn = gm.PolohaHrac;
+            int X = spawn.MX * chunk + spawn.CX * lok;
+            int Y = spawn.MY * chunk + spawn.CY * lok;
+
+            this.KeyPreview = true;
+            this.KeyUp += GMMapaForm_KeyUp;
+            hrac = new PictureBox();
+            hrac.Width = lok;
+            hrac.Height = lok;
+            hrac.Left = X;
+            hrac.Top = Y;
+            hrac.BackColor = Color.Red;
+            hrac.SizeMode = PictureBoxSizeMode.StretchImage;
+            mapa.GFX.pozadi.Controls.Add(hrac);
+            hrac.BringToFront();
+
+            policko = lok;
+        }
+        MapaKomp mapa;
+        PictureBox hrac;
+        int policko;
+
+        private void GMMapaForm_KeyUp(object sender, KeyEventArgs e)
+        {
+            NastaveniOvladani ovladani = (NastaveniOvladani)GameManager.Singleton.Nastaveni["ovladani"];
+            if (e.KeyCode == ovladani.Nahoru) { krok(0,-1); }
+            if (e.KeyCode == ovladani.Dolu) { krok(0, 1); }
+            if (e.KeyCode == ovladani.Doleva) { krok(-1, 0); }
+            if (e.KeyCode == ovladani.Doprava) { krok(1, 0); }
+        }
+
+        void krok(int x,int y)
+        {
+            hrac.Left += x * policko;
+            hrac.Top += y * policko;
+            KnihovnaRPG.Point4D poloha = GameManager.Singleton.PolohaHrac;
+
+            KnihovnaRPG.MapaConfig conf = (KnihovnaRPG.MapaConfig)GameManager.Singleton.Nastaveni["mapa"];
+            poloha.Pohyb(x, y,conf);
+            Console.WriteLine($"mx{poloha.MX} my{poloha.MY}");
+            //GameManager.Singleton.PohybHrace.Invoke(hrac,poloha);
+            GameManager.Singleton.KrokHnadler(0, poloha);
+            mapa.vykresli();
         }
     }
 }

@@ -77,8 +77,5 @@
     <Compile Include="Ukoly\UkolOdmena.cs" />
     <Compile Include="Ukoly\UkolPolozka.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <None Include="ClassDiagram1.cd" />
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

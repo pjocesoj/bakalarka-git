@@ -15,17 +15,17 @@ namespace KnihovnaRPG
         /// X souřadnice chunku v mapě
         /// </summary>
         public int MX { get; private set; }
-        
+
         /// <summary>
         /// Y souřadnice chunku v mapě
         /// </summary>
         public int MY { get; private set; }
-        
+
         /// <summary>
         /// X souřadnice lokace v chunku
         /// </summary>
         public int CX { get; private set; }
-        
+
         /// <summary>
         /// Y souřadnice lokace v chunku
         /// </summary>
@@ -53,5 +53,49 @@ namespace KnihovnaRPG
         {
             return $"mapa= {MX} ; {MY}\nchunk= {CX} ; {CY}";
         }
+
+        /// <summary>
+        /// aktualizace souřadnic na základě vzdálenosti
+        /// </summary>
+        /// <param name="X">změna v X</param>
+        /// <param name="Y">změna v Y</param>
+        /// <param name="conf">rozměry</param>
+        public void Pohyb(int X, int Y, MapaConfig conf)
+        {
+            int x = conf.Chunk.X;
+            int y = conf.Chunk.Y;
+
+            CX += X;
+            if (CX >= x)
+            {
+                MX++;
+                CX = 0;
+                DalsiChunk = true;
+            }
+            else if (CX < 0)
+            {
+                MX--;
+                CX = x - 1;
+                DalsiChunk = true;
+            }
+            CY += Y;
+            if (CY >= y)
+            {
+                MY++;
+                CY = 0;
+                DalsiChunk = true;
+            }
+            else if (CY < 0)
+            {
+                MY--;
+                CY = y - 1;
+                DalsiChunk = true;
+            }
+        }
+
+        /// <summary>
+        /// zda pohyb překročil aktuální chunk
+        /// </summary>
+        public bool DalsiChunk { get; set; }
     }
 }

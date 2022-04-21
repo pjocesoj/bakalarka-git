@@ -30,18 +30,24 @@ namespace KnihovnaRPG
             {
                 if (randomSpawn)
                 {
-                    Random rng = new Random();
-                    int MX = rng.Next(Mapa.X);
-                    int MY = rng.Next(Mapa.Y);
-                    int CX= rng.Next(Chunk.X);
-                    int CY= rng.Next(Chunk.Y);
-                    return new Point4D(MX, MY, CX, CY);
+                    if (spawn == null)
+                    {
+                        Random rng = new Random();
+                        int MX = rng.Next(Mapa.X);
+                        int MY = rng.Next(Mapa.Y);
+                        int CX = rng.Next(Chunk.X);
+                        int CY = rng.Next(Chunk.Y);
+                        spawn = new Point4D(MX, MY, CX, CY);
+                        return spawn;
+                    }
+                    else { return spawn; }
                 }
                 else
                 {
                     return spawn;
                 }
             }
+            set { spawn = value; }//aby se dal vyresetovat
         }
         bool randomSpawn = true;
         Point4D spawn;

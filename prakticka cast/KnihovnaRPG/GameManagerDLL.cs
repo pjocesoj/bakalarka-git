@@ -15,7 +15,7 @@ namespace KnihovnaRPG
         /// <summary>
         /// veškerá nastavení hry, jako je ovládání, zvuk, grafika, ...
         /// </summary>
-        public Dictionary<string, INastaveni> Nastaveni { get { return nastaveni; } }     
+        public Dictionary<string, INastaveni> Nastaveni { get { return nastaveni; } }
         //v implementaci není třeba řešit inicializaci
         private Dictionary<string, INastaveni> nastaveni = new Dictionary<string, INastaveni>();
         #endregion
@@ -39,21 +39,20 @@ namespace KnihovnaRPG
         /// herní mapa (logická část)
         /// </summary>
         public Mapa Mapa { get; protected set; }
-        
+
         /// <summary>
         /// kde se na mapě nachází všichni hráči
         /// <br/> pro více než 1 hráčskou postavu
         /// </summary>
-        public Point4D[] PolohaHracu { get; set; }
+        public Point4D[] PolohaHracu { get; protected set; }
 
         /// <summary>
         /// kde se na mapě nachází hráč
         /// <br/> pro 1 hráčskou postavu
         /// </summary>
-        public Point4D PolohaHrac 
+        public Point4D PolohaHrac
         {
             get { return PolohaHracu[0]; }
-            set { PolohaHracu[0] = value; } 
         }
 
         /// <summary>
@@ -68,16 +67,72 @@ namespace KnihovnaRPG
 
             VytvorLokace();
             MapaConf();
+
+            //PohybHrace += KrokHnadler;
         }
 
         /// <summary>
         /// vygeneruje mapu podle MapaConfig
         /// </summary>
-        public virtual void SpustHru()
+        /// <param name="postav">kolik postav hráč má</param>
+        public virtual void SpustHru(int postav)
         {
             MapaConfig conf = (MapaConfig)nastaveni["mapa"];
-            Mapa=Mapa.Vygeneruj(conf);
+            Mapa = Mapa.Vygeneruj(conf);
+
+            PolohaHracu = new Point4D[postav];
+            PolohaHracu[0] = conf.Spawn;
+            conf.Spawn = null;
         }
+        /// <summary>
+        /// při kroku hráče vyhodnocuje zda je třeba načíst či uvolnit chunk
+        /// </summary>
+        /// <param name="hrac">hráč který udělal krok</param>
+        /// <param name="nova">nová poloha</param>
+        public void KrokHnadler(int hrac, Point4D nova)
+        {
+            if (nova.DalsiChunk)
+            {
+                nova.DalsiChunk = false;
+                int radius = (nastaveni["mapa"] as MapaConfig).RenderVzdalenost;
+                MapaConfig.Velikost chunk = (nastaveni["mapa"] as MapaConfig).Chunk;
+                int MX = PolohaHracu[hrac].MX;
+                int MY = PolohaHracu[hrac].MY;
+
+                for (int a = 1; a <= radius; a++)//[x+a;y]
+                {
+                    for (int b = 1; b <= radius; b++)//[x;y+b]
+                    {
+                        NactiChunk(MX - a, MY, chunk);
+                        NactiChunk(MX + a, MY, chunk);
+
+                        NactiChunk(MX, MY - b, chunk);
+                        NactiChunk(MX, MY + b, chunk);
+
+                        NactiChunk(MX - a, MY - b, chunk);
+                        NactiChunk(MX + a, MY - b, chunk);
+                        NactiChunk(MX - a, MY + b, chunk);
+                        NactiChunk(MX + a, MY + b, chunk);
+                    }
+                }
+            }
+            PolohaHracu[hrac] = nova;
+        }
+        protected virtual void NactiChunk(int X, int Y, MapaConfig.Velikost chunk)
+        {
+            if (Mapa[X, Y] == null)
+            {
+                if (Mapa.Vygeneovano(X, Y))
+                {
+
+                }
+                else
+                {
+                    Mapa.vytvorChunk(chunk.X, chunk.Y, X, Y);
+                }
+            }
+        }
+
 
         #region nastaveni
         /// <summary>
@@ -240,9 +295,9 @@ namespace KnihovnaRPG
         /// <param name="CY">Y rozměr chunků</param>
         /// <param name="renderVzdalenost">jak velké okolí chunku bude načítáno do paměti</param>
         /// <param name="lokace">v jaké lokaci se hráč spawne(les, město,...)</param>
-        protected void mapaConf(int MX, int MY, int CX, int CY,int renderVzdalenost, Lokace lokace)
+        protected void mapaConf(int MX, int MY, int CX, int CY, int renderVzdalenost, Lokace lokace)
         {
-            nastaveni.Add("mapa",new MapaConfig(MX, MY, CX, CY, renderVzdalenost,lokace));
+            nastaveni.Add("mapa", new MapaConfig(MX, MY, CX, CY, renderVzdalenost, lokace));
         }
 
         /// <summary>
@@ -259,9 +314,9 @@ namespace KnihovnaRPG
         /// <param name="smy">spawn mapa Y</param>
         /// <param name="scx">spawn chunk X</param>
         /// <param name="scy">spawn chunk Y</param>
-        protected void mapaConf(int MX, int MY, int CX, int CY,int renderVzdalenost, Lokace lokace, int smx, int smy, int scx, int scy)
+        protected void mapaConf(int MX, int MY, int CX, int CY, int renderVzdalenost, Lokace lokace, int smx, int smy, int scx, int scy)
         {
-            nastaveni.Add("mapa",new MapaConfig(MX, MY, CX, CY, renderVzdalenost,lokace,smx,smy,scx,scy));
+            nastaveni.Add("mapa", new MapaConfig(MX, MY, CX, CY, renderVzdalenost, lokace, smx, smy, scx, scy));
         }
         #endregion
     }

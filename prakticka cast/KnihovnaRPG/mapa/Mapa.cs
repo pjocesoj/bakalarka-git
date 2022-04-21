@@ -22,6 +22,7 @@ namespace KnihovnaRPG
         public Mapa(int x, int y)
         {
             chunky = new Chunk[x, y];
+            vygenerovano = new bool[x, y];
         }
 
         /// <summary>
@@ -138,7 +139,14 @@ namespace KnihovnaRPG
             Vygeneruj(start, lokace.X, lokace.Y, velikost.X, velikost.Y, chunk.X, chunk.Y, radius);
         }
 
-        void vytvorChunk(int Sx, int Sy, int X, int Y)
+        /// <summary>
+        /// vygeneruje nový chunk na základě svých sousedů
+        /// </summary>
+        /// <param name="Sx">X rozměr chunku</param>
+        /// <param name="Sy">Y rozměr chunku</param>
+        /// <param name="X">X souřadnice chunku</param>
+        /// <param name="Y">Y souřadnice chunku</param>
+        public void vytvorChunk(int Sx, int Sy, int X, int Y)
         {
             if (X >= 0 && X < this.X)
             {
@@ -152,6 +160,7 @@ namespace KnihovnaRPG
                         Chunk D = (Y + 1) < this.Y ? chunky[X, Y + 1] : null;
 
                         chunky[X, Y] = Chunk.Vygeneruj(Sx, Sy, L, R, U, D);
+                        vygenerovano[X, Y] = true;
                     }
                 }
             }
@@ -194,7 +203,7 @@ namespace KnihovnaRPG
         /// <param name="chunk">souřadnice startovního chunku</param>      
         /// <param name="radius">kolik chunků od startovního se má generovat</param>
         /// <returns></returns>
-        public static Mapa Vygeneruj(int X,int Y, Lokace start, Point lokace, Point velikostChunk, Point chunk, int radius)
+        public static Mapa Vygeneruj(int X, int Y, Lokace start, Point lokace, Point velikostChunk, Point chunk, int radius)
         {
             Mapa ret = new Mapa(X, Y);
             ret.Vygeneruj(start, lokace, velikostChunk, chunk, radius);
@@ -212,5 +221,17 @@ namespace KnihovnaRPG
             ret.Vygeneruj(conf.SpawnLokace, spawn.CX, spawn.CY, conf.Chunk.X, conf.Chunk.Y, spawn.MX, spawn.MY, conf.RenderVzdalenost);
             return ret;
         }
+
+        bool[,] vygenerovano;
+        /// <summary>
+        /// vrátí zda již tento chunk byl generován
+        /// </summary>
+        /// <param name="X">X souřadnice</param>
+        /// <param name="Y">Y souřadnice</param>
+        public bool Vygeneovano(int X, int Y)
+        {
+            return vygenerovano[X, Y];
+        }
+
     }
 }
