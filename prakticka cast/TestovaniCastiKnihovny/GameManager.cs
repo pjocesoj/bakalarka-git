@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using KnihovnaRPG;
+using System.IO;
 
 namespace TestovaniCastiKnihovny
 {
@@ -106,11 +107,34 @@ namespace TestovaniCastiKnihovny
 
         #endregion
 
+        public override void SpustHru(int postav)
+        {
+            base.SpustHru(postav);
+           
+            Hraci[0] = new Hrac("hrac1", 1,40, 50,new StatList(staty["combat"]), 20, 100);
+            Hraci[1] = new Hrac("hrac2", 2, 60, 100, new StatList(staty["combat"]), 120, 1000);
+            PolohaHracu[1] = new Point4D(2, 2, 2, 1);
+
+            PolohaNPC.Add(new Point4D(2,2,2,3));
+            NPC.Add(new Postava("NPC"));
+        }
         public override void Uloz()
         {
-            UlozenyPostup save = new UlozenyPostup("save1",Mapa);
+            UlozenyPostup save = new UlozenyPostup("save1",Mapa,Hraci,PolohaHracu,NPC.ToArray(),PolohaNPC.ToArray());
 
             save.Uloz();
+        }
+        public override void Nacti(string nazev)
+        {
+            string saveStream;
+            using (FileStream fs = new FileStream($"{nazev}.save", FileMode.Open, FileAccess.Read))
+            {
+                StreamReader sr = new StreamReader(fs);
+                saveStream = sr.ReadToEnd();
+                sr.Close();
+            }
+            UlozenyPostup load = new UlozenyPostup();
+            load.Nacti(saveStream);
         }
     }
 }

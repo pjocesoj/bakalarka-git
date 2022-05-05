@@ -19,7 +19,7 @@ namespace KnihovnaRPG
         //v implementaci není třeba řešit inicializaci
         private Dictionary<string, INastaveni> nastaveni = new Dictionary<string, INastaveni>();
         #endregion
-
+        #region staty
         /// <summary>
         /// seznam zkratek statů vyskytujících se ve hře
         /// </summary>
@@ -29,6 +29,7 @@ namespace KnihovnaRPG
         /// kategorie statListů (např souboj, obchod,...)
         /// </summary>
         protected Dictionary<string, List<Stat>> staty = new Dictionary<string, List<Stat>>();
+        #endregion
 
         /// <summary>
         /// seznam všech lokací vyskytujících se ve hře
@@ -39,12 +40,19 @@ namespace KnihovnaRPG
         /// herní mapa (logická část)
         /// </summary>
         public Mapa Mapa { get; protected set; }
-
+       
+        #region NPC
         /// <summary>
         /// kde se na mapě nachází všichna NPC
         /// </summary>
         public List<Point4D> PolohaNPC { get; protected set; }
 
+        /// <summary>
+        /// všichna NPC
+        /// </summary>
+        public List<Postava>NPC { get; protected set; }
+        #endregion
+        #region hraci
         /// <summary>
         /// kde se na mapě nachází všichni hráči
         /// <br/> pro více než 1 hráčskou postavu
@@ -59,6 +67,12 @@ namespace KnihovnaRPG
         {
             get { return PolohaHracu[0]; }
         }
+        
+        /// <summary>
+        /// všichni hráči
+        /// </summary>
+        public Hrac[] Hraci;
+        #endregion
 
         /// <summary>
         /// zpráva do implementace, že je třeba načíst či uvolnit chunk z paměti
@@ -90,10 +104,12 @@ namespace KnihovnaRPG
             MapaConfig conf = (MapaConfig)nastaveni["mapa"];
             Mapa = Mapa.Vygeneruj(conf);
 
+            Hraci = new Hrac[postav];
             PolohaHracu = new Point4D[postav];
             PolohaHracu[0] = conf.Spawn;
             conf.Spawn = null;
 
+            NPC = new List<Postava>();
             PolohaNPC = new List<Point4D>();
         }
         /// <summary>
@@ -359,5 +375,9 @@ namespace KnihovnaRPG
         /// </summary>
         public abstract void Uloz();
 
+        /// <summary>
+        /// načte herního postupu
+        /// </summary>
+        public abstract void Nacti(string nazev);
     }
 }

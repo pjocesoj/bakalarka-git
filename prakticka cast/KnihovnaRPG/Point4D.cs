@@ -97,5 +97,13 @@ namespace KnihovnaRPG
         /// zda pohyb překročil aktuální chunk
         /// </summary>
         public bool DalsiChunk { get; set; }
+
+        /// <summary>
+        /// zkraceny zapis pro ulozeni polohy postav
+        /// </summary>
+        public string SaveStream()
+        {
+            return $"{MX};{MY};{CX};{CY}";
+        }
     }
 }

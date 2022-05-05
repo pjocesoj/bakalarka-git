@@ -175,6 +175,14 @@ namespace KnihovnaRPG
             return $"{jmeno}: {Hodnota}";
         }
 
+        /// <summary>
+        /// string sloužící k ukládání aktualniho stavu
+        /// </summary>
+        public virtual string SaveStream()
+        {
+            return $"{Zkratka};{zaklad};{boostKonst};{boostProc}";
+        }
+
         #region vytvareni zkratky
         /// <summary>
         /// vytvoření zkratky z názvu

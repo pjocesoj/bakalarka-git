@@ -163,6 +163,19 @@ namespace KnihovnaRPG
             return new StatList(ret);
         }
 
+        /// <summary>
+        /// string sloužící k ukládání aktualniho stavu
+        /// </summary>
+        public virtual string SaveStream()
+        {
+            StringBuilder sb = new StringBuilder();
+            foreach (Stat s in list)
+            {
+                sb.Append($"{s.SaveStream()}|");
+            }
+            return sb.ToString();
+        }
+
         #region jen aby VS dalo pokoj
         /// <summary>
         /// vyhodnotí zda jsou objekty identické

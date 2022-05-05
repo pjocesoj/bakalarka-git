@@ -115,6 +115,25 @@ namespace KnihovnaRPG
             this.LV = lv;
             this.Staty = statList;
         }
+
+        ///<summary>vytvoří zranitelnou postavu, která má staty a HP!=maxHP</summary>
+        /// <param name="jmeno">jméno postavy</param>
+        /// <param name="lv">level postavy</param>
+        /// <param name="HP">aktualní HP</param>
+        /// <param name="maxHP">maximalní počet HP</param>
+        /// <param name="statList">staty postavy</param>
+        /// <exception cref="PostavaHPException">HP menší než 0</exception>
+        public Postava(string jmeno, int lv, int HP, int maxHP, StatList statList)
+        {
+            this.Jmeno = jmeno;
+            this.LV = lv;
+            if (HP < 0)
+            {
+                throw new PostavaHPException("HP nesmí být menší než 0");
+            }
+            this.HP = HP;
+            this.MaxHP = HP;
+        }
         #endregion
 
         /// <summary>
@@ -125,6 +144,15 @@ namespace KnihovnaRPG
             return $"{Jmeno}\nLV{LV}\nHP:{HP}/{MaxHP}\n{Staty}";
         }
 
+        /// <summary>
+        /// string sloužící k ukládání aktualniho stavu
+        /// </summary>
+        public virtual string SaveStream()
+        {
+            char nezr = nezranitelny ? 'T' : 'F';
+            string staty = (Staty is null)?"-": Staty.SaveStream();
+            return $"{Jmeno};{LV};{HP}/{MaxHP};{staty};{nezr}";
+        }
 
 
         /// <summary>

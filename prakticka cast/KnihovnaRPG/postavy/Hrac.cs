@@ -31,6 +31,22 @@ namespace KnihovnaRPG
 
         }
 
+        ///<summary>vytvoří nového hráče</summary>
+        /// <param name="jmeno">jméno postavy</param>
+        /// <param name="lv">level postavy</param>
+        /// <param name="HP">aktualní HP=maxHP</param>
+        /// <param name="maxHP">maximalní počet HP</param>
+        /// <param name="statList">staty postavy</param>
+        /// <param name="exp">aktualni počet EXP</param>
+        /// <param name="penez">aktualné stav penez</param>
+        /// <exception cref="PostavaHPException">HP menší než 0</exception>
+        public Hrac(string jmeno, int lv, int HP, int maxHP, StatList statList,int exp,int penez) : this(jmeno, lv, HP, statList)
+        {
+            this.MaxHP = maxHP;
+            this.Exp = exp;
+            this.Penize = penez;
+        }
+
         /// <summary>
         /// počet zkušeností
         /// </summary>
@@ -64,6 +80,14 @@ namespace KnihovnaRPG
                 Exp -= LvUp;
                 LV++;
             }
+        }
+
+        /// <summary>
+        /// string sloužící k ukládání aktualniho stavu
+        /// </summary>
+        public override string SaveStream()
+        {
+            return $"{base.SaveStream()};{Exp};{Penize}";
         }
     }
 }
