@@ -38,6 +38,12 @@ namespace KnihovnaRPG
         /// </summary>
         public Point4D[] PolohaPostav { get; set; }
 
+        public Ulozeni(string jmeno,Mapa mapa)
+        {
+            this.Nazev = jmeno;
+            this.Mapa = mapa;
+        }
+
         /// <summary>
         /// uložení postupu na disk či server
         /// </summary>

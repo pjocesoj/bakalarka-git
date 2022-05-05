@@ -20,6 +20,9 @@ namespace TestovaniCastiKnihovny
         private void button1_Click(object sender, EventArgs e)
         {
             GM.SpustHru(2);
+            MapaKomp m = new MapaKomp(GM.Mapa,250);
+            pictureBox1.Image=m.ObrMapy(pictureBox1.Width,pictureBox1.Height);
+
             GM.Uloz();
         }
     }

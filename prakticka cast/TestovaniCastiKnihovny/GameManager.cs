@@ -108,8 +108,7 @@ namespace TestovaniCastiKnihovny
 
         public override void Uloz()
         {
-            UlozenyPostup save = new UlozenyPostup();
-            save.Mapa = Mapa;
+            UlozenyPostup save = new UlozenyPostup("save1",Mapa);
 
             save.Uloz();
         }
