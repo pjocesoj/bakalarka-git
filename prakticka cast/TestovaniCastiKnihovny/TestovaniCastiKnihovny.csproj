@@ -89,6 +89,12 @@
     <Compile Include="Formy\GMPostavyForm.Designer.cs">
       <DependentUpon>GMPostavyForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formy\GMUkldaniForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formy\GMUkldaniForm.Designer.cs">
+      <DependentUpon>GMUkldaniForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formy\InventarForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -140,6 +146,7 @@
     <Compile Include="Formy\VypisPostava.Designer.cs">
       <DependentUpon>VypisPostava.cs</DependentUpon>
     </Compile>
+    <Compile Include="UlozenyPostup.cs" />
     <EmbeddedResource Include="Formy\BuffForm.resx">
       <DependentUpon>BuffForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -154,6 +161,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formy\GMPostavyForm.resx">
       <DependentUpon>GMPostavyForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formy\GMUkldaniForm.resx">
+      <DependentUpon>GMUkldaniForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formy\InventarForm.resx">
       <DependentUpon>InventarForm.cs</DependentUpon>

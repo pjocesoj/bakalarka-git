@@ -41,6 +41,11 @@ namespace KnihovnaRPG
         public Mapa Mapa { get; protected set; }
 
         /// <summary>
+        /// kde se na mapě nachází všichna NPC
+        /// </summary>
+        public List<Point4D> PolohaNPC { get; protected set; }
+
+        /// <summary>
         /// kde se na mapě nachází všichni hráči
         /// <br/> pro více než 1 hráčskou postavu
         /// </summary>
@@ -88,6 +93,8 @@ namespace KnihovnaRPG
             PolohaHracu = new Point4D[postav];
             PolohaHracu[0] = conf.Spawn;
             conf.Spawn = null;
+
+            PolohaNPC = new List<Point4D>();
         }
         /// <summary>
         /// pouze deklarace pro načtení uložené hry
@@ -346,5 +353,11 @@ namespace KnihovnaRPG
             nastaveni.Add("mapa", new MapaConfig(MX, MY, CX, CY, renderVzdalenost, lokace, smx, smy, scx, scy));
         }
         #endregion
+
+        /// <summary>
+        /// uložení herního postupu
+        /// </summary>
+        public abstract void Uloz();
+
     }
 }

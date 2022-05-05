@@ -15,6 +15,7 @@ prakticka
 |7.1.2022 | hotový quest |
 |19.4.2022 | nastavení |
 |20.4.2022 | vytváření postav přes GM |
+|21.4.2022 | generovani mapy podle polohy hráče |
 
 
 resersni

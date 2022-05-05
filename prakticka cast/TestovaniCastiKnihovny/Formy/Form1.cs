@@ -73,5 +73,10 @@ namespace TestovaniCastiKnihovny
         {
             new GMMapaForm().Show();
         }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            new GMUkldaniForm().Show();
+        }
     }
 }

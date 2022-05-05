@@ -105,5 +105,13 @@ namespace TestovaniCastiKnihovny
         }
 
         #endregion
+
+        public override void Uloz()
+        {
+            UlozenyPostup save = new UlozenyPostup();
+            save.Mapa = Mapa;
+
+            save.Uloz();
+        }
     }
 }

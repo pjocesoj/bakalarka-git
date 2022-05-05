@@ -394,6 +394,20 @@ namespace KnihovnaRPG
             }
             return sb.ToString();
         }
+
+        /// <summary>
+        /// string sloužící k ukládání vygenerovaného chunku
+        /// </summary>
+        public virtual string SaveStream()
+        {
+            StringBuilder sb = new StringBuilder();
+            foreach( Lokace l in lokace)
+            {
+                sb.Append(l.Symbol());
+                //při refaktorizaci nahradit symbol ID
+            }
+            return sb.ToString();
+        }
     }
 
     class FOR

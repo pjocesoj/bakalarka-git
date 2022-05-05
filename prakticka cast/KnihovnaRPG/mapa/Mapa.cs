@@ -233,5 +233,24 @@ namespace KnihovnaRPG
             return vygenerovano[X, Y];
         }
 
+        /// <summary>
+        /// string sloužící k ukládání vygenerované mapy
+        /// </summary>
+        public virtual string SaveStream()
+        {
+            StringBuilder sb = new StringBuilder();           
+            foreach (Chunk c in chunky)
+            {
+                if (c == null)
+                {
+                    sb.Append("ø");
+                }
+                else
+                {
+                    sb.Append(c.SaveStream());
+                }
+            }
+            return sb.ToString();
+        }
     }
 }
