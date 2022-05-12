@@ -98,6 +98,18 @@ namespace KnihovnaRPG
 
         #endregion
 
+        /// <summary>
+        /// konstruktor pro ukladani
+        /// </summary>
+        /// <param name="zaklad">základní hodnota statu</param>
+        /// <param name="zkratka">"defence"-> "DEF" | "fire defence"-> "fDEF"></param>
+        /// <param name="boostKonst">hodnota přičtená k základní hodnotě postavy při použití</param>
+        /// <param name="boostProc">procentuální navýšení hodnoty postavy při použití</param>
+        /// <exception cref="StatZkratkaJeMocDlouhaException"></exception>
+        public Stat(string zkratka,double zaklad, double boostKonst, float boostProc):this(zkratka,zkratka,zaklad,boostKonst,boostProc)
+        {
+        }
+
         #region get+set
         /// <summary>
         /// celý název statu

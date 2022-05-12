@@ -171,7 +171,7 @@ namespace KnihovnaRPG
             StringBuilder sb = new StringBuilder();
             foreach (Stat s in list)
             {
-                sb.Append($"{s.SaveStream()}|");
+                sb.Append($"{s.SaveStream()};");
             }
             return sb.ToString();
         }

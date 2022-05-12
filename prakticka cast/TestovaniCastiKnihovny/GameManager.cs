@@ -118,9 +118,9 @@ namespace TestovaniCastiKnihovny
             PolohaNPC.Add(new Point4D(2,2,2,3));
             NPC.Add(new Postava("NPC"));
         }
-        public override void Uloz()
+        public override void Uloz(string nazev)
         {
-            UlozenyPostup save = new UlozenyPostup("save1",Mapa,Hraci,PolohaHracu,NPC.ToArray(),PolohaNPC.ToArray());
+            UlozenyPostup save = new UlozenyPostup(nazev,Mapa,Hraci,PolohaHracu,NPC.ToArray(),PolohaNPC.ToArray());
 
             save.Uloz();
         }

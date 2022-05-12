@@ -373,7 +373,7 @@ namespace KnihovnaRPG
         /// <summary>
         /// uložení herního postupu
         /// </summary>
-        public abstract void Uloz();
+        public abstract void Uloz(string nazev);
 
         /// <summary>
         /// načte herního postupu

@@ -122,8 +122,9 @@ namespace KnihovnaRPG
         /// <param name="HP">aktualní HP</param>
         /// <param name="maxHP">maximalní počet HP</param>
         /// <param name="statList">staty postavy</param>
+        /// <param name="nezranitelny">zda je možno postavu zranit</param>
         /// <exception cref="PostavaHPException">HP menší než 0</exception>
-        public Postava(string jmeno, int lv, int HP, int maxHP, StatList statList)
+        public Postava(string jmeno, int lv, int HP, int maxHP, StatList statList,bool nezranitelny)
         {
             this.Jmeno = jmeno;
             this.LV = lv;
@@ -133,6 +134,8 @@ namespace KnihovnaRPG
             }
             this.HP = HP;
             this.MaxHP = HP;
+
+            this.nezranitelny = nezranitelny;
         }
         #endregion
 
