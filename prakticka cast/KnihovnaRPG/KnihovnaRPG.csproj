@@ -82,10 +82,15 @@
   <ItemGroup>
     <None Include="UML\Legacy_invent.cd" />
     <None Include="UML\UML_Buffy.cd" />
+    <None Include="UML\UML_GM.cd" />
     <None Include="UML\UML_inventy.cd" />
+    <None Include="UML\UML_Kouzla.cd" />
+    <None Include="UML\UML_Mapa.cd" />
+    <None Include="UML\UML_Nastaveni.cd" />
     <None Include="UML\UML_Postavy.cd" />
     <None Include="UML\UML_predmety.cd" />
     <None Include="UML\UML_Staty.cd" />
+    <None Include="UML\UML_Ukoly.cd" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

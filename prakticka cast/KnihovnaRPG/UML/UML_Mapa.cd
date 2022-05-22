@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
+  <Class Name="KnihovnaRPG.Chunk">
+    <Position X="0.5" Y="5.25" Width="6.5" />
+    <NestedTypes>
+      <Enum Name="KnihovnaRPG.Chunk.poradi" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>mapa\Chunk.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAACAAAAAAAAAESAAAAAAARABAAAACAAAAAAAAZAI=</HashCode>
+      <FileName>mapa\Chunk.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KnihovnaRPG.FOR" Collapsed="true">
+    <Position X="14" Y="9.75" Width="1.5" />
+    <NestedTypes>
+      <Enum Name="KnihovnaRPG.FOR.Smer" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>mapa\Chunk.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAIAgAgAAAAAIAAAgCAAAAAAAAAAAAAA=</HashCode>
+      <FileName>mapa\Chunk.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KnihovnaRPG.LoadUnloadEventArg">
+    <Position X="7.25" Y="5.25" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAAAgACAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAYAA=</HashCode>
+      <FileName>mapa\LoadUnloadEventArg.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KnihovnaRPG.Lokace">
+    <Position X="7" Y="0.5" Width="3.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAASAAAAEAAAAEAAACAIAAAAgAAAAAAAAAAAAACAA=</HashCode>
+      <FileName>mapa\Lokace.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KnihovnaRPG.Mapa">
+    <Position X="0.5" Y="0.5" Width="6.25" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAAABBAAAAECAAEAAAAAABAAAACAAAAAAAAYAA=</HashCode>
+      <FileName>mapa\Mapa.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="KnihovnaRPG.LoadUnloadAkce">
+    <Position X="7.25" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>mapa\LoadUnloadEventArg.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
