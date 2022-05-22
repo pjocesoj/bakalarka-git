@@ -34,7 +34,7 @@ namespace TestovaniCastiKnihovny
             this.Controls.Add(ukol.UI.pozadi);
 
             hrac = new HracKomp("hrac", 2, 100, null, null);
-            hrac.Postava.Zabil += Zabil; ;
+            hrac.Postava.Zabil += Zabil;
             label1.Text = hrac.ToString();
 
             inventar = new InventarKompV2(20.0, button4.Right + 50, 0);

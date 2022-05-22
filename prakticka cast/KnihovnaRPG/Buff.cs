@@ -86,7 +86,6 @@ namespace KnihovnaRPG
             Efekt = new Stat(typ, dmg);
             this.Doba = doba;
             this.Sesilatel = sesilatel;
-            this.Sesilatel = sesilatel;
 
             this.Druh = BuffType.Zraneni;
             this.ZpusobZmeny = BuffZpusobZmeny.Zaklad;
@@ -97,7 +96,10 @@ namespace KnihovnaRPG
         /// </summary>
         public void ZkratDobu()
         {
-            Doba--;
+            if (Doba > 0)
+            {
+                Doba--;
+            }
         }
 
         /// <summary>
