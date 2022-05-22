@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
-  <Class Name="KnihovnaRPG.InventarV2">
+  <Class Name="KnihovnaRPG.Inventar">
     <Position X="0.5" Y="0.5" Width="2.75" />
     <TypeIdentifier>
       <HashCode>CAAgAAAAIAAAAACUCAAAAAAAAAIAAAAAgBgACABEAAA=</HashCode>
-      <FileName>inventare\InventarV2.cs</FileName>
+      <FileName>inventare\Inventar.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="KnihovnaRPG.InventarPocet">
@@ -14,11 +14,11 @@
       <FileName>inventare\InventarPocet.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="KnihovnaRPG.InventarHmotnostV2">
+  <Class Name="KnihovnaRPG.InventarHmotnost">
     <Position X="6" Y="2.75" Width="2.75" />
     <TypeIdentifier>
       <HashCode>AAAgAAAQAAAAAAAQAAAAAAAAAAAAAAAAAAgAAIAAAAA=</HashCode>
-      <FileName>inventare\InventarHmotnostV2.cs</FileName>
+      <FileName>inventare\InventarHmotnost.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />

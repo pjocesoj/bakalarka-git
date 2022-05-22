@@ -9,7 +9,7 @@ namespace KnihovnaRPG
     /// <summary>
     /// inventář s kapacitou určovanou hmotností
     /// </summary>
-    public class InventarHmotnostV2:InventarV2
+    public class InventarHmotnost:Inventar
     {
         /// <summary>
         /// maximální celková hmotnost předmětů v inventáři
@@ -25,7 +25,7 @@ namespace KnihovnaRPG
         /// vytvoří inventář s kapacitou určenou hmotností
         /// </summary>
         /// <param name="kapacita">maximální celková hmotnost předmětů v inventáři</param>
-        public InventarHmotnostV2(double kapacita)
+        public InventarHmotnost(double kapacita)
         {
             Kapacita = kapacita;
         }

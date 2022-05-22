@@ -10,11 +10,11 @@ namespace TestovaniCastiKnihovny
     class InventarKompV2
     {
         protected UI grafika;
-        protected InventarV2 invent;
+        protected Inventar invent;
 
         public InventarKompV2() { }//protože úplný konstruktor potomka nemá co předat
 
-        public InventarKompV2(UI GFX, InventarV2 logika)
+        public InventarKompV2(UI GFX, Inventar logika)
         {
             this.grafika = GFX;
             this.invent = logika;
@@ -23,20 +23,20 @@ namespace TestovaniCastiKnihovny
         public InventarKompV2(int left = 0, int top = 0, int sirka = 100, int vyska = 400)
         {
             grafika = new UIVypis(left, top, sirka, vyska);
-            invent = new InventarV2();
+            invent = new Inventar();
         }
 
         public InventarKompV2(double kapacita,int left = 0, int top = 0, int sirka = 100, int vyska = 400)
         {
             grafika = new UIVypis(left, top, sirka, vyska);
-            invent = new InventarHmotnostV2(kapacita);
+            invent = new InventarHmotnost(kapacita);
         }
 
         public UI GFX
         {
             get { return grafika; }
         }
-        public InventarV2 Invent
+        public Inventar Invent
         {
             get { return invent; }
         }

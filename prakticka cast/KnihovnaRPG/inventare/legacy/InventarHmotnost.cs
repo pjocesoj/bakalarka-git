@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace KnihovnaRPG
+namespace KnihovnaRPG.Legacy
 {
     /// <summary>
     /// inventář s kapacitou určovanou hmotností

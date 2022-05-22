@@ -9,7 +9,7 @@ namespace KnihovnaRPG
     /// <summary>
     /// inventář s kapacitou určovanou počtem předmětů (stackovatelne stejného typu počítany jako 1)
     /// </summary>
-    public class InventarPocet : InventarV2
+    public class InventarPocet : Inventar
     {
         /// <summary>
         /// maximální počet předmětů v inventáři (stackovatelne počítány jako 1)

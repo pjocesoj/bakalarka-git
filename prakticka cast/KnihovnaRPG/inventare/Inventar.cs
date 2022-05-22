@@ -9,7 +9,7 @@ namespace KnihovnaRPG
     /// <summary>
     /// inventář s neomezenou kapacitou (rodič pro omezenou kapacitu)
     /// </summary>
-    public class InventarV2
+    public class Inventar
     {
         #region eventy
         /// <summary>
@@ -37,7 +37,7 @@ namespace KnihovnaRPG
         /// <summary>
         /// vytvoří nový inventář s neomezenou kapacitou
         /// </summary>
-        public InventarV2()
+        public Inventar()
         {
             obsah = new List<IPredmet>();
         }
