@@ -21,8 +21,9 @@ prakticka
 resersni
 |stav ke dni| - |
 |-|-|
-|zkouškové|kap3-z hlavy|
-|léto|přepis kap3 podle zdroju + žánry|
-|tábor|MSIL|
-|září|3/4 dop lit|
-|vánoce | rešeršní více méně hotova |
+|zkouškové 21|kap3-z hlavy|
+|léto 21|přepis kap3 podle zdroju + žánry|
+|tábor 21|MSIL|
+|září 21|3/4 dop lit|
+|vánoce 21| rešeršní více méně hotova |
+|léto 22|UML|
