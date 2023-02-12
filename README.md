@@ -27,3 +27,4 @@ resersni
 |září 21|3/4 dop lit|
 |vánoce 21| rešeršní více méně hotova |
 |léto 22|UML|
+|zkouškové 22|rozdělení 3.1-3.3 na podkapitoly|
