@@ -138,6 +138,12 @@ namespace TestovaniCastiKnihovny
             }
             UlozenyPostup load = new UlozenyPostup();
             load.Nacti(saveStream);
+
+            Mapa=load.Mapa;
+            Hraci=load.Hraci;
+            PolohaHracu=load.PolohaHracu;
+            NPC = load.Postavy.ToList();
+            PolohaNPC = load.PolohaPostav.ToList();
         }
     }
 }

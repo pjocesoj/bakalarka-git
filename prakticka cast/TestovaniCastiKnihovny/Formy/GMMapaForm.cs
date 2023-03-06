@@ -80,8 +80,6 @@ namespace TestovaniCastiKnihovny
                 hrac.Top += y * policko;
             }
             catch { }
-
-
         }
     }
 }
