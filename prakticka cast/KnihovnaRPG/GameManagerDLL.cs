@@ -96,7 +96,8 @@ namespace KnihovnaRPG
         }
 
         /// <summary>
-        /// vygeneruje mapu podle MapaConfig a přidá polohu hráče1
+        /// vygeneruje mapu podle MapaConfig a přidá polohu hráče1 
+        /// <br/>(pokud je stejnaPoloha true tak i ostatních)
         /// </summary>
         /// <param name="postav">kolik postav hráč má</param>
         /// <param name="stejnaPoloha">zda v případě více postav všechny začínají na stejné souřadnici</param>
@@ -108,6 +109,14 @@ namespace KnihovnaRPG
             Hraci = new Hrac[postav];
             PolohaHracu = new Point4D[postav];
             PolohaHracu[0] = conf.Spawn;
+
+            if(stejnaPoloha)
+            {
+                for(int i=1;i<postav;i++)
+                {
+                    PolohaHracu[i]=conf.Spawn;
+                }
+            }
 
             NPC = new List<Postava>();
             PolohaNPC = new List<Point4D>();

@@ -112,9 +112,12 @@ namespace TestovaniCastiKnihovny
             base.SpustHru(postav,stejnaPoloha);
            
             Hraci[0] = new Hrac("hrac1", 1,40, 50,new StatList(staty["combat"]), 20, 100);
-            //Hraci[1] = new Hrac("hrac2", 2, 60, 100, new StatList(staty["combat"]), 120, 1000);
-            PolohaHracu[0] = new Point4D(2, 2, 2, 1);
 
+            if (postav > 1)//aby bylo možné testovat mapu i ukládání
+            {
+                Hraci[1] = new Hrac("hrac2", 2, 60, 100, new StatList(staty["combat"]), 120, 1000);
+                PolohaHracu[1] = new Point4D(2, 2, 2, 1);
+            }
             PolohaNPC.Add(new Point4D(2,2,2,3));
             NPC.Add(new Postava("NPC"));
         }
