@@ -107,7 +107,6 @@ namespace KnihovnaRPG
             Hraci = new Hrac[postav];
             PolohaHracu = new Point4D[postav];
             PolohaHracu[0] = conf.Spawn;
-            conf.Spawn = null;
 
             NPC = new List<Postava>();
             PolohaNPC = new List<Point4D>();

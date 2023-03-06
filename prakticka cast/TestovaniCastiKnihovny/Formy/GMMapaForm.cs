@@ -25,7 +25,10 @@ namespace TestovaniCastiKnihovny
             int lok = chunk / x;
 
             GameManager gm = GameManager.Singleton;
-            gm.SpustHru(1);
+            if (gm.Mapa == null)
+            {
+                gm.SpustHru(1);
+            }
             mapa = new MapaKomp(gm.Mapa, 0, 0, chunk, chunk);
             this.Controls.Add(mapa.GFX.pozadi);
             mapa.vykresli();
