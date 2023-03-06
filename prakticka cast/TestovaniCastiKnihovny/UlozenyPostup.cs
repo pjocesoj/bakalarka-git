@@ -107,6 +107,7 @@ namespace TestovaniCastiKnihovny
                     i++;
                 }
             }
+            i--;
             return new Chunk(CX, CY, lokace);
         }
 

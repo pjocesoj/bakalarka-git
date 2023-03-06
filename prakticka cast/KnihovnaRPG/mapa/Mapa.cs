@@ -238,18 +238,24 @@ namespace KnihovnaRPG
         /// </summary>
         public virtual string SaveStream()
         {
-            StringBuilder sb = new StringBuilder();           
-            foreach (Chunk c in chunky)
+            StringBuilder sb = new StringBuilder();
+
+            for (int y = 0; y < Y; y++)
             {
-                if (c == null)
+                for (int x = 0; x < X; x++)
                 {
-                    sb.Append("ø");
-                }
-                else
-                {
-                    sb.Append(c.SaveStream());
+                    Chunk c = chunky[x, y];
+                    if (c == null)
+                    {
+                        sb.Append("ø");
+                    }
+                    else
+                    {
+                        sb.Append(c.SaveStream());
+                    }
                 }
             }
+
             return sb.ToString();
         }
     }
