@@ -401,11 +401,15 @@ namespace KnihovnaRPG
         public virtual string SaveStream()
         {
             StringBuilder sb = new StringBuilder();
-            foreach( Lokace l in lokace)
+            for (int y = 0; y < Y; y++)
             {
-                sb.Append(l.Symbol());
-                //při refaktorizaci nahradit symbol ID
+                for (int x = 0; x < X; x++)
+                {
+                    sb.Append(lokace[x,y].Symbol());
+                    //při refaktorizaci nahradit symbol ID
+                }
             }
+
             return sb.ToString();
         }
     }
