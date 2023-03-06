@@ -32,6 +32,11 @@ namespace KnihovnaRPG
         #endregion
 
         /// <summary>
+        /// getter seznamu všech lokací vyskytujících se ve hře 
+        /// </summary>
+        public List<Lokace> Lokace { get { return lokace; } }
+
+        /// <summary>
         /// seznam všech lokací vyskytujících se ve hře
         /// </summary>
         protected List<Lokace> lokace = new List<Lokace>();

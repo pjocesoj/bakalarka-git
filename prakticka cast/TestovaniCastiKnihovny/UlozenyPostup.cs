@@ -102,7 +102,8 @@ namespace TestovaniCastiKnihovny
             {
                 for (int x = 0; x < CX; x++)
                 {
-                    //lokace[x, y] = GM.Lokace[lok[stream[i]]];
+                    char key = stream[i];
+                    lokace[x, y] = GM.Lokace[lok[key]];
                     i++;
                 }
             }
