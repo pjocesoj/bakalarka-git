@@ -107,9 +107,9 @@ namespace TestovaniCastiKnihovny
 
         #endregion
 
-        public override void SpustHru(int postav)
+        public override void SpustHru(int postav, bool stejnaPoloha = true)
         {
-            base.SpustHru(postav);
+            base.SpustHru(postav,stejnaPoloha);
            
             Hraci[0] = new Hrac("hrac1", 1,40, 50,new StatList(staty["combat"]), 20, 100);
             //Hraci[1] = new Hrac("hrac2", 2, 60, 100, new StatList(staty["combat"]), 120, 1000);

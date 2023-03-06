@@ -19,7 +19,7 @@ namespace TestovaniCastiKnihovny
         GameManager GM = GameManager.Singleton;
         private void button1_Click(object sender, EventArgs e)
         {
-            GM.SpustHru(2);
+            GM.SpustHru(2,false);
             MapaKomp m = new MapaKomp(GM.Mapa,250);
             pictureBox1.Image=m.ObrMapy(pictureBox1.Width,pictureBox1.Height);
 

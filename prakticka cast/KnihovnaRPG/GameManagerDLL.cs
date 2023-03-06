@@ -50,7 +50,7 @@ namespace KnihovnaRPG
         /// <summary>
         /// všichna NPC
         /// </summary>
-        public List<Postava>NPC { get; protected set; }
+        public List<Postava> NPC { get; protected set; }
         #endregion
         #region hraci
         /// <summary>
@@ -99,7 +99,8 @@ namespace KnihovnaRPG
         /// vygeneruje mapu podle MapaConfig a přidá polohu hráče1
         /// </summary>
         /// <param name="postav">kolik postav hráč má</param>
-        public virtual void SpustHru(int postav)
+        /// <param name="stejnaPoloha">zda v případě více postav všechny začínají na stejné souřadnici</param>
+        public virtual void SpustHru(int postav, bool stejnaPoloha = true)
         {
             MapaConfig conf = (MapaConfig)nastaveni["mapa"];
             Mapa = Mapa.Vygeneruj(conf);
@@ -165,13 +166,13 @@ namespace KnihovnaRPG
         {
             if (X < Mapa.X && Y < Mapa.Y)
             {
-                if (X >=0 && Y>=0)
+                if (X >= 0 && Y >= 0)
                 {
                     if (Mapa[X, Y] == null)
                     {
                         if (Mapa.Vygeneovano(X, Y))
                         {
-                            ChunkLoadUnload?.Invoke(Mapa,LoadUnloadEventArg.Load(X,Y));
+                            ChunkLoadUnload?.Invoke(Mapa, LoadUnloadEventArg.Load(X, Y));
                         }
                         else
                         {
