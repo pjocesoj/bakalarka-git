@@ -101,14 +101,32 @@ namespace KnihovnaRPG
             if (CY >= y)
             {
                 MY++;
-                CY = 0;
-                DalsiChunk = true;
+                if (MY >= conf.Mapa.Y)
+                {
+                    CY -= Y;
+                    MY--;
+                    throw new IndexOutOfRangeException("mimo mapu");
+                }
+                else
+                {
+                    CY = 0;
+                    DalsiChunk = true;
+                }
             }
             else if (CY < 0)
             {
                 MY--;
-                CY = y - 1;
-                DalsiChunk = true;
+                if (MY <0)
+                {
+                    CY -= Y;
+                    MY++;
+                    throw new IndexOutOfRangeException("mimo mapu");
+                }
+                else
+                {
+                    CY = y - 1;
+                    DalsiChunk = true;
+                }
             }
         }
 
