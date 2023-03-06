@@ -59,23 +59,29 @@ namespace TestovaniCastiKnihovny
         private void GMMapaForm_KeyUp(object sender, KeyEventArgs e)
         {
             NastaveniOvladani ovladani = (NastaveniOvladani)GameManager.Singleton.Nastaveni["ovladani"];
-            if (e.KeyCode == ovladani.Nahoru) { krok(0,-1); }
+            if (e.KeyCode == ovladani.Nahoru) { krok(0, -1); }
             if (e.KeyCode == ovladani.Dolu) { krok(0, 1); }
             if (e.KeyCode == ovladani.Doleva) { krok(-1, 0); }
             if (e.KeyCode == ovladani.Doprava) { krok(1, 0); }
         }
 
-        void krok(int x,int y)
+        void krok(int x, int y)
         {
-            hrac.Left += x * policko;
-            hrac.Top += y * policko;
-            KnihovnaRPG.Point4D poloha = GameManager.Singleton.PolohaHrac;
+            try
+            {
+                KnihovnaRPG.Point4D poloha = GameManager.Singleton.PolohaHrac;
+                KnihovnaRPG.MapaConfig conf = (KnihovnaRPG.MapaConfig)GameManager.Singleton.Nastaveni["mapa"];
+                poloha.Pohyb(x, y, conf);
+                //GameManager.Singleton.PohybHrace.Invoke(hrac,poloha);
+                GameManager.Singleton.KrokHnadler(0, poloha);
+                mapa.vykresli();
 
-            KnihovnaRPG.MapaConfig conf = (KnihovnaRPG.MapaConfig)GameManager.Singleton.Nastaveni["mapa"];
-            poloha.Pohyb(x, y,conf);
-            //GameManager.Singleton.PohybHrace.Invoke(hrac,poloha);
-            GameManager.Singleton.KrokHnadler(0, poloha);
-            mapa.vykresli();
+                hrac.Left += x * policko;
+                hrac.Top += y * policko;
+            }
+            catch { }
+
+
         }
     }
 }
