@@ -81,7 +81,7 @@ namespace KnihovnaRPG
         /// </summary>
         public override string ToString()
         {
-            return $"{Jmeno}\nLV{LV}\nExp{Exp}/{100*LV}\nHP:{HP}/{MaxHP}\n{Staty}\n{Penize}G";
+            return $"{Jmeno}\nLV{LV}\nExp{Exp}/{100*LV}\nHP:{HP}/{MaxHP}\n{Staty}\n{Penize}G\n";
         }
 
         /// <summary>

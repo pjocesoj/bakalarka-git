@@ -1,4 +1,5 @@
-﻿using System;
+﻿using KnihovnaRPG;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -20,8 +21,8 @@ namespace TestovaniCastiKnihovny
         private void button1_Click(object sender, EventArgs e)
         {
             GM.SpustHru(2,false);
-            MapaKomp m = new MapaKomp(GM.Mapa,250);
-            pictureBox1.Image=m.ObrMapy(pictureBox1.Width,pictureBox1.Height);
+
+            vypis();
 
             GM.Uloz("save1");
         }
@@ -30,8 +31,26 @@ namespace TestovaniCastiKnihovny
         {
             GM.Nacti("save1");
 
+            vypis();
+        }
+
+        void vypis()
+        {
             MapaKomp m = new MapaKomp(GM.Mapa, 250);
             pictureBox1.Image = m.ObrMapy(pictureBox1.Width, pictureBox1.Height);
+
+            label1.Text = postavyToString(GM.NPC, GM.PolohaNPC);
+            label2.Text = postavyToString(GM.Hraci, GM.PolohaHracu);
+        }
+
+        string postavyToString(IList<Postava> postavy,IList<Point4D> polohy)
+        {            
+            StringBuilder sb = new StringBuilder();
+            for(int i=0;i< postavy.Count;i++) 
+            {
+                sb.AppendLine($"{{{polohy[i].SaveStream()}}}\n{postavy[i]}----------");
+            }
+            return sb.ToString();
         }
     }
 }
