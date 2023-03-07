@@ -76,7 +76,7 @@ namespace TestovaniCastiKnihovny
 
         private void button11_Click(object sender, EventArgs e)
         {
-            new GMUkldaniForm().Show();
+            new GMUkladaniForm().Show();
         }
     }
 }

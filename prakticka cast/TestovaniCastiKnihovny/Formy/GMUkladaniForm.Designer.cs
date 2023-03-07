@@ -1,7 +1,7 @@
 ﻿
 namespace TestovaniCastiKnihovny
 {
-    partial class GMUkldaniForm
+    partial class GMUkladaniForm
     {
         /// <summary>
         /// Required designer variable.

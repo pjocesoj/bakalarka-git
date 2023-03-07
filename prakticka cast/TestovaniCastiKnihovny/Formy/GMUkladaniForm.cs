@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace TestovaniCastiKnihovny
 {
-    public partial class GMUkldaniForm : Form
+    public partial class GMUkladaniForm : Form
     {
-        public GMUkldaniForm()
+        public GMUkladaniForm()
         {
             InitializeComponent();
         }
