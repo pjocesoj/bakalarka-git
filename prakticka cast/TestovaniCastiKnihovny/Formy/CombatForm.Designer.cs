@@ -1,6 +1,6 @@
 ﻿namespace TestovaniCastiKnihovny
 {
-    partial class Combat
+    partial class CombatForm
     {
         /// <summary>
         /// Required designer variable.

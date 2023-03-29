@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace TestovaniCastiKnihovny
 {
-    public partial class Combat : Form
+    public partial class CombatForm : Form
     {
-        public Combat()
+        public CombatForm()
         {
             InitializeComponent();
         }

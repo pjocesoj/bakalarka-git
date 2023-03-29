@@ -65,17 +65,17 @@
     <Compile Include="Formy\BuffForm.Designer.cs">
       <DependentUpon>BuffForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formy\Combat.cs">
+    <Compile Include="Formy\CombatForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formy\Combat.Designer.cs">
-      <DependentUpon>Combat.cs</DependentUpon>
+    <Compile Include="Formy\CombatForm.Designer.cs">
+      <DependentUpon>CombatForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formy\Form1.cs">
+    <Compile Include="Formy\MenuForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formy\Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Formy\MenuForm.Designer.cs">
+      <DependentUpon>MenuForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Formy\GMMapaForm.cs">
       <SubType>Form</SubType>
@@ -150,11 +150,11 @@
     <EmbeddedResource Include="Formy\BuffForm.resx">
       <DependentUpon>BuffForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formy\Combat.resx">
-      <DependentUpon>Combat.cs</DependentUpon>
+    <EmbeddedResource Include="Formy\CombatForm.resx">
+      <DependentUpon>CombatForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formy\Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="Formy\MenuForm.resx">
+      <DependentUpon>MenuForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formy\GMMapaForm.resx">
       <DependentUpon>GMMapaForm.cs</DependentUpon>

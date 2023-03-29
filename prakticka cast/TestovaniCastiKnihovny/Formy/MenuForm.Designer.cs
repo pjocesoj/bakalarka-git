@@ -1,6 +1,6 @@
 ﻿namespace TestovaniCastiKnihovny
 {
-    partial class Form1
+    partial class MenuForm
     {
         /// <summary>
         /// Vyžaduje se proměnná návrháře.

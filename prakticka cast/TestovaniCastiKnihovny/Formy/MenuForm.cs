@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace TestovaniCastiKnihovny
 {
-    public partial class Form1 : Form
+    public partial class MenuForm : Form
     {
-        public Form1()
+        public MenuForm()
         {
             InitializeComponent();
         }
@@ -25,7 +25,7 @@ namespace TestovaniCastiKnihovny
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Combat f3 = new Combat();
+            CombatForm f3 = new CombatForm();
             f3.Show();
         }
 
