@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['kapacita_0',['Kapacita',['../class_knihovna_r_p_g_1_1_inventar_hmotnost.html#a6b3e3d1404a926518f0c7b28b211230c',1,'KnihovnaRPG.InventarHmotnost.Kapacita()'],['../class_knihovna_r_p_g_1_1_inventar_pocet.html#aef1f00df25901e997cca34acdb75e3ac',1,'KnihovnaRPG.InventarPocet.Kapacita()'],['../class_knihovna_r_p_g_1_1_legacy_1_1_inventar_hmotnost.html#a6c05528446ec84ed35d4c284fe4eaca0',1,'KnihovnaRPG.Legacy.InventarHmotnost.Kapacita()']]],
+  ['kapacita_0',['Kapacita',['../class_knihovna_r_p_g_1_1_inventar_hmotnost.html#a6b3e3d1404a926518f0c7b28b211230c',1,'KnihovnaRPG.InventarHmotnost.Kapacita()'],['../class_knihovna_r_p_g_1_1_inventar_pocet.html#aef1f00df25901e997cca34acdb75e3ac',1,'KnihovnaRPG.InventarPocet.Kapacita()']]],
   ['knihovnarpg_1',['KnihovnaRPG',['../namespace_knihovna_r_p_g.html',1,'']]],
   ['konstanta_2',['Konstanta',['../namespace_knihovna_r_p_g.html#a3acdc7c6dd5db3d2722965040321d57daf154fe5a83a052628d078dfd3c722290',1,'KnihovnaRPG']]],
   ['konzumovatelne_3',['Konzumovatelne',['../class_knihovna_r_p_g_1_1_konzumovatelne.html',1,'KnihovnaRPG.Konzumovatelne'],['../class_knihovna_r_p_g_1_1_konzumovatelne.html#a70cf4b611a46bf445f3a732c71454ed2',1,'KnihovnaRPG.Konzumovatelne.Konzumovatelne()']]],
@@ -13,6 +13,5 @@ var searchData=
   ['kouzloleceni_2ecs_10',['KouzloLeceni.cs',['../_kouzlo_leceni_8cs.html',1,'']]],
   ['kouzloutok_11',['KouzloUtok',['../class_knihovna_r_p_g_1_1_kouzlo_utok.html',1,'KnihovnaRPG.KouzloUtok'],['../class_knihovna_r_p_g_1_1_kouzlo_utok.html#a8a884ee05a5dac6bbebad7b141a2f355',1,'KnihovnaRPG.KouzloUtok.KouzloUtok()']]],
   ['kouzloutok_2ecs_12',['KouzloUtok.cs',['../_kouzlo_utok_8cs.html',1,'']]],
-  ['krokhnadler_13',['KrokHnadler',['../class_knihovna_r_p_g_1_1_game_manager_d_l_l.html#a371f1865a2e879df9a8d4e76d908e709',1,'KnihovnaRPG::GameManagerDLL']]],
-  ['legacy_14',['Legacy',['../namespace_knihovna_r_p_g_1_1_legacy.html',1,'KnihovnaRPG']]]
+  ['krokhnadler_13',['KrokHnadler',['../class_knihovna_r_p_g_1_1_game_manager_d_l_l.html#a371f1865a2e879df9a8d4e76d908e709',1,'KnihovnaRPG::GameManagerDLL']]]
 ];

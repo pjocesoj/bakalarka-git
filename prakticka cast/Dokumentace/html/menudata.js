@@ -23,18 +23,18 @@
  @licend  The above is the entire license notice for the JavaScript code in this file
 */
 var menudata={children:[
-{text:"Main Page",url:"index.html"},
-{text:"Packages",url:"namespaces.html",children:[
-{text:"Package List",url:"namespaces.html"},
-{text:"Package Members",url:"namespacemembers.html",children:[
-{text:"All",url:"namespacemembers.html"},
-{text:"Enumerations",url:"namespacemembers_enum.html"}]}]},
-{text:"Classes",url:"annotated.html",children:[
-{text:"Class List",url:"annotated.html"},
-{text:"Class Index",url:"classes.html"},
-{text:"Class Hierarchy",url:"hierarchy.html"},
-{text:"Class Members",url:"functions.html",children:[
-{text:"All",url:"functions.html",children:[
+{text:"Hlavní stránka",url:"index.html"},
+{text:"Balíky",url:"namespaces.html",children:[
+{text:"Seznam balíků",url:"namespaces.html"},
+{text:"Členy v balíku",url:"namespacemembers.html",children:[
+{text:"Vše",url:"namespacemembers.html"},
+{text:"Výčty",url:"namespacemembers_enum.html"}]}]},
+{text:"Třídy",url:"annotated.html",children:[
+{text:"Seznam tříd",url:"annotated.html"},
+{text:"Rejstřík tříd",url:"classes.html"},
+{text:"Hierarchie tříd",url:"hierarchy.html"},
+{text:"Seznam členů tříd",url:"functions.html",children:[
+{text:"Vše",url:"functions.html",children:[
 {text:"a",url:"functions.html#index_a"},
 {text:"b",url:"functions_b.html#index_b"},
 {text:"c",url:"functions_c.html#index_c"},
@@ -59,7 +59,7 @@ var menudata={children:[
 {text:"x",url:"functions_x.html#index_x"},
 {text:"y",url:"functions_y.html#index_y"},
 {text:"z",url:"functions_z.html#index_z"}]},
-{text:"Functions",url:"functions_func.html",children:[
+{text:"Funkce",url:"functions_func.html",children:[
 {text:"a",url:"functions_func.html#index_a"},
 {text:"b",url:"functions_func.html#index_b"},
 {text:"c",url:"functions_func.html#index_c"},
@@ -80,9 +80,9 @@ var menudata={children:[
 {text:"u",url:"functions_func.html#index_u"},
 {text:"v",url:"functions_func.html#index_v"},
 {text:"z",url:"functions_func.html#index_z"}]},
-{text:"Variables",url:"functions_vars.html"},
-{text:"Enumerations",url:"functions_enum.html"},
-{text:"Properties",url:"functions_prop.html",children:[
+{text:"Proměnné",url:"functions_vars.html"},
+{text:"Výčty",url:"functions_enum.html"},
+{text:"Vlastnosti",url:"functions_prop.html",children:[
 {text:"a",url:"functions_prop.html#index_a"},
 {text:"b",url:"functions_prop.html#index_b"},
 {text:"c",url:"functions_prop.html#index_c"},
@@ -102,10 +102,10 @@ var menudata={children:[
 {text:"x",url:"functions_prop.html#index_x"},
 {text:"y",url:"functions_prop.html#index_y"},
 {text:"z",url:"functions_prop.html#index_z"}]},
-{text:"Events",url:"functions_evnt.html"}]}]},
-{text:"Files",url:"files.html",children:[
-{text:"File List",url:"files.html"},
-{text:"File Members",url:"globals.html",children:[
-{text:"All",url:"globals.html"},
-{text:"Functions",url:"globals_func.html"},
-{text:"Variables",url:"globals_vars.html"}]}]}]}
+{text:"Události",url:"functions_evnt.html"}]}]},
+{text:"Soubory",url:"files.html",children:[
+{text:"Seznam souborů",url:"files.html"},
+{text:"Symboly v souborech",url:"globals.html",children:[
+{text:"Vše",url:"globals.html"},
+{text:"Funkce",url:"globals_func.html"},
+{text:"Proměnné",url:"globals_vars.html"}]}]}]}

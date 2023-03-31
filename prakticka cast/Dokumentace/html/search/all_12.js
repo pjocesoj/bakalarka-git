@@ -25,7 +25,7 @@ var searchData=
   ['predmet_2ecs_22',['Predmet.cs',['../_predmet_8cs.html',1,'']]],
   ['pridan_23',['Pridan',['../class_knihovna_r_p_g_1_1_inventar.html#aa8378c024e547256bfe175a210d6cefc',1,'KnihovnaRPG::Inventar']]],
   ['pridej_24',['pridej',['../class_knihovna_r_p_g_1_1_inventar.html#a682828ccba5d6267af1b7689acd55f93',1,'KnihovnaRPG.Inventar.pridej()'],['../class_knihovna_r_p_g_1_1_inventar_hmotnost.html#a453a4043290dd4307f61409c11a7d415',1,'KnihovnaRPG.InventarHmotnost.pridej()'],['../class_knihovna_r_p_g_1_1_inventar_pocet.html#a732246f2b61e77f5654471ef0848d28e',1,'KnihovnaRPG.InventarPocet.pridej()']]],
-  ['pridej_25',['Pridej',['../class_knihovna_r_p_g_1_1_inventar.html#a42ae514d4026fce4230034ea1b4f78ce',1,'KnihovnaRPG.Inventar.Pridej()'],['../class_knihovna_r_p_g_1_1_legacy_1_1_inventar.html#a43b161c7ceb4f32e1a46410cba68fee4',1,'KnihovnaRPG.Legacy.Inventar.Pridej()'],['../class_knihovna_r_p_g_1_1_legacy_1_1_inventar_hmotnost.html#ae66a69727aff723054bda6c3a27f78a4',1,'KnihovnaRPG.Legacy.InventarHmotnost.Pridej()']]],
+  ['pridej_25',['Pridej',['../class_knihovna_r_p_g_1_1_inventar.html#a42ae514d4026fce4230034ea1b4f78ce',1,'KnihovnaRPG::Inventar']]],
   ['pridejbuff_26',['PridejBuff',['../class_knihovna_r_p_g_1_1_postava.html#acc637f8763f3e0ceb6723a6a16dc7c5f',1,'KnihovnaRPG::Postava']]],
   ['pridejexp_27',['PridejExp',['../class_knihovna_r_p_g_1_1_hrac.html#a6b32ce528762da1a39d90e6b36b1b4e9',1,'KnihovnaRPG::Hrac']]],
   ['pridejhp_28',['PridejHP',['../class_knihovna_r_p_g_1_1_postava.html#adbee0ec7c02f43940e57cb04d77723f9',1,'KnihovnaRPG::Postava']]],

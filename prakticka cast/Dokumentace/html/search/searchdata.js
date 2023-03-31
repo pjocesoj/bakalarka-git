@@ -28,15 +28,15 @@ var indexSectionNames =
 
 var indexSectionLabels =
 {
-  0: "All",
-  1: "Classes",
-  2: "Namespaces",
-  3: "Files",
-  4: "Functions",
-  5: "Variables",
-  6: "Enumerations",
-  7: "Enumerator",
-  8: "Properties",
-  9: "Events"
+  0: "Vše",
+  1: "Třídy",
+  2: "Jmenné prostory",
+  3: "Soubory",
+  4: "Funkce",
+  5: "Proměnné",
+  6: "Výčty",
+  7: "Hodnoty výčtu",
+  8: "Vlastnosti",
+  9: "Události"
 };
 
