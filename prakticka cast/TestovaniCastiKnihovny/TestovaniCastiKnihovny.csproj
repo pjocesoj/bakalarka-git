@@ -127,10 +127,6 @@
     </Compile>
     <Compile Include="GameManager.cs" />
     <Compile Include="grafika\GFX.cs" />
-    <Compile Include="grafika\legacy\postavy\HracGFX.cs" />
-    <Compile Include="grafika\legacy\postavy\PostavaGFXv3.cs" />
-    <Compile Include="grafika\legacy\item\PredmetGFX.cs" />
-    <Compile Include="grafika\legacy\item\VybaveniGFX.cs" />
     <Compile Include="compose\postavy\HracKomp.cs" />
     <Compile Include="compose\postavy\PostavaKomp.cs" />
     <Compile Include="grafika\UI.cs" />

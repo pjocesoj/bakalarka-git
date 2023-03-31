@@ -60,8 +60,6 @@
     <Compile Include="Point4D.cs" />
     <Compile Include="postavy\Hrac.cs" />
     <Compile Include="Exceptions\PostavaExceptions.cs" />
-    <Compile Include="inventare\legacy\Inventar.cs" />
-    <Compile Include="inventare\legacy\InventarHmotnost.cs" />
     <Compile Include="inventare\Inventar.cs" />
     <Compile Include="predmety\Konzumovatelne.cs" />
     <Compile Include="postavy\Postava.cs" />
@@ -80,7 +78,6 @@
     <Compile Include="Ulozeni.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="UML\Legacy_invent.cd" />
     <None Include="UML\UML_Buffy.cd" />
     <None Include="UML\UML_GM.cd" />
     <None Include="UML\UML_inventy.cd" />
