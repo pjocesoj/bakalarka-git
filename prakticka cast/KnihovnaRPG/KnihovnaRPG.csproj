@@ -21,6 +21,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\KnihovnaRPG.xml</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -33,6 +34,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -41,18 +43,51 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Buff.cs" />
     <Compile Include="Exceptions\StatExceptions.cs" />
     <Compile Include="Exceptions\StatListExceptions.cs" />
     <Compile Include="GameManagerDLL.cs" />
-    <Compile Include="Hrac.cs" />
+    <Compile Include="mapa\LoadUnloadEventArg.cs" />
+    <Compile Include="nastaveni\INastaveni.cs" />
+    <Compile Include="inventare\InventarHmotnost.cs" />
+    <Compile Include="inventare\InventarPocet.cs" />
+    <Compile Include="Kouzla\KouzloBuff.cs" />
+    <Compile Include="Kouzla\KouzloLeceni.cs" />
+    <Compile Include="nastaveni\MapaConfig.cs" />
+    <Compile Include="mapa\Chunk.cs" />
+    <Compile Include="mapa\Lokace.cs" />
+    <Compile Include="mapa\Mapa.cs" />
+    <Compile Include="Point4D.cs" />
+    <Compile Include="postavy\Hrac.cs" />
     <Compile Include="Exceptions\PostavaExceptions.cs" />
-    <Compile Include="Inventar.cs" />
-    <Compile Include="Postava.cs" />
-    <Compile Include="Predmet.cs" />
+    <Compile Include="inventare\Inventar.cs" />
+    <Compile Include="predmety\Konzumovatelne.cs" />
+    <Compile Include="postavy\Postava.cs" />
+    <Compile Include="predmety\Predmet.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Stat.cs" />
-    <Compile Include="StatList.cs" />
-    <Compile Include="Vybaveni.cs" />
+    <Compile Include="predmety\IPredmet.cs" />
+    <Compile Include="Kouzla\KouzloUtok.cs" />
+    <Compile Include="Ukoly\IUkolOdmena.cs" />
+    <Compile Include="Ukoly\Ukol.cs" />
+    <Compile Include="Kouzla\Kouzlo.cs" />
+    <Compile Include="staty\Stat.cs" />
+    <Compile Include="staty\StatList.cs" />
+    <Compile Include="predmety\Vybaveni.cs" />
+    <Compile Include="Ukoly\UkolOdmena.cs" />
+    <Compile Include="Ukoly\UkolPolozka.cs" />
+    <Compile Include="Ulozeni.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UML\UML_Buffy.cd" />
+    <None Include="UML\UML_GM.cd" />
+    <None Include="UML\UML_inventy.cd" />
+    <None Include="UML\UML_Kouzla.cd" />
+    <None Include="UML\UML_Mapa.cd" />
+    <None Include="UML\UML_Nastaveni.cd" />
+    <None Include="UML\UML_Postavy.cd" />
+    <None Include="UML\UML_predmety.cd" />
+    <None Include="UML\UML_Staty.cd" />
+    <None Include="UML\UML_Ukoly.cd" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

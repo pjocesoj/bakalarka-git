@@ -9,11 +9,19 @@
 namespace KnihovnaRPG
 {
     /// <summary>
-    /// chyba při vytvaření postavy s HP<0 nebo HPmaxHP
+    /// chyba při vytvaření postavy s HP nižším než 0 nebo vyšším než maxHP
     /// </summary>
     public class PostavaHPException : Exception
     {
+        /// <summary>
+        /// 
+        /// </summary>
         public PostavaHPException(){ }
+        
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="msg">zobrazená zpráva</param>
         public PostavaHPException(string msg) : base(msg) { }
     }
 

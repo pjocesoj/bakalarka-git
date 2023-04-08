@@ -44,19 +44,56 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Formy\Combat.cs">
+    <Compile Include="compose\inventare\InventarGridKomp.cs" />
+    <Compile Include="compose\inventare\InventarKomp.cs" />
+    <Compile Include="compose\inventare\InventarKompV2.cs" />
+    <Compile Include="compose\itemy\KonzumovatelneKomp.cs" />
+    <Compile Include="compose\itemy\PredmetKomp.cs" />
+    <Compile Include="compose\itemy\VybaveniKomp.cs" />
+    <Compile Include="compose\KouzloKomp.cs" />
+    <Compile Include="compose\mapa\ChunkKomp.cs" />
+    <Compile Include="compose\mapa\LokaceGFX.cs" />
+    <Compile Include="compose\mapa\LokaceKomp.cs" />
+    <Compile Include="compose\mapa\MapaKomp.cs" />
+    <Compile Include="compose\UkolKomp.cs" />
+    <Compile Include="Formy\BuffForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formy\Combat.Designer.cs">
-      <DependentUpon>Combat.cs</DependentUpon>
+    <Compile Include="Formy\BuffForm.Designer.cs">
+      <DependentUpon>BuffForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formy\Form1.cs">
+    <Compile Include="Formy\CombatForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formy\Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Formy\CombatForm.Designer.cs">
+      <DependentUpon>CombatForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formy\MenuForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formy\MenuForm.Designer.cs">
+      <DependentUpon>MenuForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formy\GMMapaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formy\GMMapaForm.Designer.cs">
+      <DependentUpon>GMMapaForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formy\GMPostavyForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formy\GMPostavyForm.Designer.cs">
+      <DependentUpon>GMPostavyForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formy\GMUkladaniForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formy\GMUkladaniForm.Designer.cs">
+      <DependentUpon>GMUkladaniForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Formy\InventarForm.cs">
       <SubType>Form</SubType>
@@ -64,12 +101,39 @@
     <Compile Include="Formy\InventarForm.Designer.cs">
       <DependentUpon>InventarForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="GFX\GFX.cs" />
-    <Compile Include="GFX\HracGFX.cs" />
-    <Compile Include="GFX\PostavaGFX.cs" />
-    <Compile Include="GFX\PostavaGFXv2.cs" />
-    <Compile Include="GFX\PostavaGFXv3.cs" />
-    <Compile Include="GFX\PredmetGFX.cs" />
+    <Compile Include="Formy\ChunkForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formy\ChunkForm.Designer.cs">
+      <DependentUpon>ChunkForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formy\MapaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formy\MapaForm.Designer.cs">
+      <DependentUpon>MapaForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formy\NastaveniForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formy\NastaveniForm.Designer.cs">
+      <DependentUpon>NastaveniForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formy\UkolForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formy\UkolForm.Designer.cs">
+      <DependentUpon>UkolForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GameManager.cs" />
+    <Compile Include="grafika\GFX.cs" />
+    <Compile Include="compose\postavy\HracKomp.cs" />
+    <Compile Include="compose\postavy\PostavaKomp.cs" />
+    <Compile Include="grafika\UI.cs" />
+    <Compile Include="grafika\UIGrid.cs" />
+    <Compile Include="grafika\UIVypis.cs" />
+    <Compile Include="nastaveni\NastaveniGrafika.cs" />
+    <Compile Include="nastaveni\NastaveniOvladani.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Formy\VypisPostava.cs">
@@ -78,14 +142,39 @@
     <Compile Include="Formy\VypisPostava.Designer.cs">
       <DependentUpon>VypisPostava.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Formy\Combat.resx">
-      <DependentUpon>Combat.cs</DependentUpon>
+    <Compile Include="UlozenyPostup.cs" />
+    <EmbeddedResource Include="Formy\BuffForm.resx">
+      <DependentUpon>BuffForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formy\Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="Formy\CombatForm.resx">
+      <DependentUpon>CombatForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formy\MenuForm.resx">
+      <DependentUpon>MenuForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formy\GMMapaForm.resx">
+      <DependentUpon>GMMapaForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formy\GMPostavyForm.resx">
+      <DependentUpon>GMPostavyForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formy\GMUkladaniForm.resx">
+      <DependentUpon>GMUkladaniForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formy\InventarForm.resx">
       <DependentUpon>InventarForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formy\ChunkForm.resx">
+      <DependentUpon>ChunkForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formy\MapaForm.resx">
+      <DependentUpon>MapaForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formy\NastaveniForm.resx">
+      <DependentUpon>NastaveniForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formy\UkolForm.resx">
+      <DependentUpon>UkolForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

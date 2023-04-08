@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
+  <Class Name="KnihovnaRPG.Kouzlo">
+    <Position X="0.5" Y="0.5" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>BAAAAQAAAAAAAAAEBAAAAABAAAAAAAIAAAAAIAAAAAA=</HashCode>
+      <FileName>Kouzla\Kouzlo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KnihovnaRPG.KouzloBuff">
+    <Position X="0.5" Y="3.75" Width="4" />
+    <InheritanceLine Type="KnihovnaRPG.Kouzlo" FixedFromPoint="true">
+      <Path>
+        <Point X="3.75" Y="1.75" />
+        <Point X="4.125" Y="1.75" />
+        <Point X="4.125" Y="3.375" />
+        <Point X="2.5" Y="3.375" />
+        <Point X="2.5" Y="3.75" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>BAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAQAAAAAA=</HashCode>
+      <FileName>Kouzla\KouzloBuff.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KnihovnaRPG.KouzloLeceni">
+    <Position X="5.25" Y="3.75" Width="4" />
+    <InheritanceLine Type="KnihovnaRPG.Kouzlo" FixedFromPoint="true">
+      <Path>
+        <Point X="3.75" Y="1.75" />
+        <Point X="4.125" Y="1.75" />
+        <Point X="4.125" Y="3.375" />
+        <Point X="7.25" Y="3.375" />
+        <Point X="7.25" Y="3.75" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>BAAAAAAAAAAAAAAEAAAAAAAAQAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Kouzla\KouzloLeceni.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KnihovnaRPG.KouzloUtok">
+    <Position X="5" Y="0.5" Width="5.75" />
+    <InheritanceLine Type="KnihovnaRPG.Kouzlo" FixedFromPoint="true">
+      <Path>
+        <Point X="3.75" Y="1.75" />
+        <Point X="4.125" Y="1.75" />
+        <Point X="4.125" Y="1.125" />
+        <Point X="5" Y="1.125" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>BAAAAAAAAAAIAAAEAAMAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Kouzla\KouzloUtok.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

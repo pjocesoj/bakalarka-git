@@ -20,21 +20,23 @@ namespace TestovaniCastiKnihovny
         private void VypisPostava_Load(object sender, EventArgs e)
         {
             Bitmap obr = (Bitmap)Image.FromFile("obrazky//stickman.png");
-            PostavaGFX zakladni = new PostavaGFX("base",obr);
+            PostavaKomp zakladni = new PostavaKomp(obr,"base");
             Zobraz(zakladni, 0);
 
             List<KnihovnaRPG.Stat> temp = new List<KnihovnaRPG.Stat>();
             temp.Add(new KnihovnaRPG.Stat("kinetic defence", 2));
-            //temp.Add(new KnihovnaRPG.Stat("kinetic defence", 4));
             temp.Add(new KnihovnaRPG.Stat("kinetic damage","kDMG", 4));
             temp.Add(new KnihovnaRPG.Stat("damage", "DMG", 6));
             KnihovnaRPG.StatList list = new KnihovnaRPG.StatList(temp);
 
-            PostavaGFX zakladni2 = new PostavaGFX("base+staty",1,10,list, obr);
+            PostavaKomp zakladni2 = new PostavaKomp("base+staty",1,10,list,obr);
             Zobraz(zakladni2, 100);
+
+            HracKomp hrac = new HracKomp("player1", 1, 10, list, obr);
+            Zobraz(hrac, 200);
         }
 
-        void Zobraz(PostavaGFX postava,int left)
+        void Zobraz(PostavaKomp postava, int left)
         {
             #region vytvoreni controls
             Panel p = new Panel();
@@ -58,7 +60,7 @@ namespace TestovaniCastiKnihovny
             p.Left = left;
             #endregion
 
-            pb.Image = postava.vzhled;
+            pb.Image = postava.GFX.grafika.Image;
             lab.Text = postava.ToString();
         }
     }

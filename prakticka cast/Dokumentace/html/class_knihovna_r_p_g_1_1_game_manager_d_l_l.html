@@ -1,0 +1,1434 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="cs">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.6"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Bakalářská Práce Martin Novák: Dokumentace třídy KnihovnaRPG.GameManagerDLL</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Bakalářská Práce Martin Novák
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Vygenerováno programem Doxygen 1.9.6 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Hledat');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Načítám...</div>
+<div class="SRStatus" id="Searching">Vyhledávám...</div>
+<div class="SRStatus" id="NoMatches">Nebylo nic nalezeno</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespace_knihovna_r_p_g.html">KnihovnaRPG</a></li><li class="navelem"><a class="el" href="class_knihovna_r_p_g_1_1_game_manager_d_l_l.html">GameManagerDLL</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Veřejné metody</a> &#124;
+<a href="#pub-attribs">Veřejné atributy</a> &#124;
+<a href="#pro-methods">Chráněné metody</a> &#124;
+<a href="#pro-attribs">Chráněné atributy</a> &#124;
+<a href="#properties">Vlastnosti</a> &#124;
+<a href="#events">Události</a> &#124;
+<a href="class_knihovna_r_p_g_1_1_game_manager_d_l_l-members.html">Seznam všech členů</a>  </div>
+  <div class="headertitle"><div class="title">Dokumentace třídy KnihovnaRPG.GameManagerDLL<span class="mlabels"><span class="mlabel">abstract</span></span></div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>správce starající se vytváření postav a obsahující všechny globální hodnoty  
+ <a href="class_knihovna_r_p_g_1_1_game_manager_d_l_l.html#details">...</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Veřejné metody</h2></td></tr>
+<tr class="memitem:aaecc55146cc02b8f42839646d3f8cfa0"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_knihovna_r_p_g_1_1_game_manager_d_l_l.html#aaecc55146cc02b8f42839646d3f8cfa0">SpustHru</a> (int postav, bool stejnaPoloha=true)</td></tr>
+<tr class="memdesc:aaecc55146cc02b8f42839646d3f8cfa0"><td class="mdescLeft">&#160;</td><td class="mdescRight">vygeneruje mapu podle MapaConfig a přidá polohu hráče1 <br  />
+(pokud je stejnaPoloha true tak i ostatních)  <br /></td></tr>
+<tr class="separator:aaecc55146cc02b8f42839646d3f8cfa0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a379b2fbd54b864b62264f4d713c8fed8"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_knihovna_r_p_g_1_1_game_manager_d_l_l.html#a379b2fbd54b864b62264f4d713c8fed8">SpustHru</a> (<a class="el" href="class_knihovna_r_p_g_1_1_ulozeni.html">Ulozeni</a> ulozeni)</td></tr>
+<tr class="memdesc:a379b2fbd54b864b62264f4d713c8fed8"><td class="mdescLeft">&#160;</td><td class="mdescRight">pouze deklarace pro načtení uložené hry  <br /></td></tr>
+<tr class="separator:a379b2fbd54b864b62264f4d713c8fed8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a371f1865a2e879df9a8d4e76d908e709"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_knihovna_r_p_g_1_1_game_manager_d_l_l.html#a371f1865a2e879df9a8d4e76d908e709">KrokHnadler</a> (int hrac, <a class="el" href="class_knihovna_r_p_g_1_1_point4_d.html">Point4D</a> nova)</td></tr>
+<tr class="memdesc:a371f1865a2e879df9a8d4e76d908e709"><td class="mdescLeft">&#160;</td><td class="mdescRight">při kroku hráče vyhodnocuje zda je třeba načíst či uvolnit chunk  <br /></td></tr>
+<tr class="separator:a371f1865a2e879df9a8d4e76d908e709"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad344137f5ee37e2a23b0372614d60299"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_knihovna_r_p_g_1_1_stat_list.html">StatList</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_knihovna_r_p_g_1_1_game_manager_d_l_l.html#ad344137f5ee37e2a23b0372614d60299">GetStatListy</a> (string[] skupiny)</td></tr>
+<tr class="memdesc:ad344137f5ee37e2a23b0372614d60299"><td class="mdescLeft">&#160;</td><td class="mdescRight">spoji všechny statlisty zvolenych skupin a vrátí je jako 1 seznam <br  />
+(pro LV1)  <br /></td></tr>
+<tr class="separator:ad344137f5ee37e2a23b0372614d60299"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:addd1fa8167db85c017c65657f560d5dd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_knihovna_r_p_g_1_1_stat_list.html">StatList</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_knihovna_r_p_g_1_1_game_manager_d_l_l.html#addd1fa8167db85c017c65657f560d5dd">GetstatList</a> (string skupina)</td></tr>
+<tr class="memdesc:addd1fa8167db85c017c65657f560d5dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">vrátí zvolenou skupinu statů <br  />
+(pro LV1)  <br /></td></tr>
+<tr class="separator:addd1fa8167db85c017c65657f560d5dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a99f8bb03179a1544657f46fb41190d69"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_knihovna_r_p_g_1_1_stat_list.html">StatList</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_knihovna_r_p_g_1_1_game_manager_d_l_l.html#a99f8bb03179a1544657f46fb41190d69">GetStatList</a> (string skupina, int lv)</td></tr>
+<tr class="memdesc:a99f8bb03179a1544657f46fb41190d69"><td class="mdescLeft">&#160;</td><td class="mdescRight">vrátí zvolenou skupinu statů pro příslušný LV  <br /></td></tr>
+<tr class="separator:a99f8bb03179a1544657f46fb41190d69"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adef72d81d0d5d0b68c1f908bed7e88ce"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_knihovna_r_p_g_1_1_stat_list.html">StatList</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_knihovna_r_p_g_1_1_game_manager_d_l_l.html#adef72d81d0d5d0b68c1f908bed7e88ce">GetStatList</a> (string[] skupiny, int lv)</td></tr>
+<tr class="memdesc:adef72d81d0d5d0b68c1f908bed7e88ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">spoji všechny zvolené skupiny statů do 1 StatListu pro příslušný LV  <br /></td></tr>
+<tr class="separator:adef72d81d0d5d0b68c1f908bed7e88ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3563bb8d31eacbea52cdf23f0a25488d"><td class="memItemLeft" align="right" valign="top">abstract void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_knihovna_r_p_g_1_1_game_manager_d_l_l.html#a3563bb8d31eacbea52cdf23f0a25488d">Uloz</a> (string nazev)</td></tr>
+<tr class="memdesc:a3563bb8d31eacbea52cdf23f0a25488d"><td class="mdescLeft">&#160;</td><td class="mdescRight">uložení herního postupu  <br /></td></tr>
+<tr class="separator:a3563bb8d31eacbea52cdf23f0a25488d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5c2a67ea14ae0151f2b5b4a4484ccb2f"><td class="memItemLeft" align="right" valign="top">abstract void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_knihovna_r_p_g_1_1_game_manager_d_l_l.html#a5c2a67ea14ae0151f2b5b4a4484ccb2f">Nacti</a> (string nazev)</td></tr>
+<tr class="memdesc:a5c2a67ea14ae0151f2b5b4a4484ccb2f"><td class="mdescLeft">&#160;</td><td class="mdescRight">načte herního postupu  <br /></td></tr>
+<tr class="separator:a5c2a67ea14ae0151f2b5b4a4484ccb2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Veřejné atributy</h2></td></tr>
+<tr class="memitem:ab209350b1429bb987602dcf76619f79f"><td class="memItemLeft" align="right" valign="top">string[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_knihovna_r_p_g_1_1_game_manager_d_l_l.html#ab209350b1429bb987602dcf76619f79f">ZkratkyStatu</a></td></tr>
+<tr class="memdesc:ab209350b1429bb987602dcf76619f79f"><td class="mdescLeft">&#160;</td><td class="mdescRight">seznam zkratek statů vyskytujících se ve hře  <br /></td></tr>
+<tr class="separator:ab209350b1429bb987602dcf76619f79f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a92bcb2f731bf8f28cffb30cf49533de1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_knihovna_r_p_g_1_1_hrac.html">Hrac</a>[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_knihovna_r_p_g_1_1_game_manager_d_l_l.html#a92bcb2f731bf8f28cffb30cf49533de1">Hraci</a></td></tr>
+<tr class="memdesc:a92bcb2f731bf8f28cffb30cf49533de1"><td class="mdescLeft">&#160;</td><td class="mdescRight">všichni hráči  <br /></td></tr>
+<tr class="separator:a92bcb2f731bf8f28cffb30cf49533de1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
+Chráněné metody</h2></td></tr>
+<tr class="memitem:a2d6758089a0bc5c03af8940cb5cbfd0f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_knihovna_r_p_g_1_1_game_manager_d_l_l.html#a2d6758089a0bc5c03af8940cb5cbfd0f">GameManagerDLL</a> ()</td></tr>
+<tr class="memdesc:a2d6758089a0bc5c03af8940cb5cbfd0f"><td class="mdescLeft">&#160;</td><td class="mdescRight">inicializace hry (nastavení, staty, lokace)  <br /></td></tr>
+<tr class="separator:a2d6758089a0bc5c03af8940cb5cbfd0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a47ac73f1187209d52d7cf3d866cd4c6c"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_knihovna_r_p_g_1_1_game_manager_d_l_l.html#a47ac73f1187209d52d7cf3d866cd4c6c">NactiChunk</a> (int X, int Y, <a class="el" href="struct_knihovna_r_p_g_1_1_mapa_config_1_1_velikost.html">MapaConfig.Velikost</a> chunk)</td></tr>
+<tr class="memdesc:a47ac73f1187209d52d7cf3d866cd4c6c"><td class="mdescLeft">&#160;</td><td class="mdescRight">pokud je chunk jich vygenerovaný načte ho do paměti, v opačném případě vygeneruje nový  <br /></td></tr>
+<tr class="separator:a47ac73f1187209d52d7cf3d866cd4c6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1e86d903ef4164b6880a639063cd967a"><td class="memItemLeft" align="right" valign="top">abstract void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_knihovna_r_p_g_1_1_game_manager_d_l_l.html#a1e86d903ef4164b6880a639063cd967a">VytvorNastaveni</a> ()</td></tr>
+<tr class="memdesc:a1e86d903ef4164b6880a639063cd967a"><td class="mdescLeft">&#160;</td><td class="mdescRight">vytvoří slovník všech nastavení [nazev,INastaveni]  <br /></td></tr>
+<tr class="separator:a1e86d903ef4164b6880a639063cd967a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a152b908ad892e8fa4d53c9af34b23f3f"><td class="memItemLeft" align="right" valign="top">abstract void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_knihovna_r_p_g_1_1_game_manager_d_l_l.html#a152b908ad892e8fa4d53c9af34b23f3f">VytvorSezanamZkratekStatu</a> ()</td></tr>
+<tr class="memdesc:a152b908ad892e8fa4d53c9af34b23f3f"><td class="mdescLeft">&#160;</td><td class="mdescRight">vytvoří seznam všech zkratek statů vyskytujících se ve hře  <br /></td></tr>
+<tr class="separator:a152b908ad892e8fa4d53c9af34b23f3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acabff6ecf723d62e257efbe3e2f2e70f"><td class="memItemLeft" align="right" valign="top">abstract void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_knihovna_r_p_g_1_1_game_manager_d_l_l.html#acabff6ecf723d62e257efbe3e2f2e70f">VytvorStatListy</a> ()</td></tr>
+<tr class="memdesc:acabff6ecf723d62e257efbe3e2f2e70f"><td class="mdescLeft">&#160;</td><td class="mdescRight">vytvoří StatListy a seskupí do skupin (boj, obchod, ...)  <br /></td></tr>
+<tr class="separator:acabff6ecf723d62e257efbe3e2f2e70f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca32c340c0e2f226d68f3856f273be8b"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_knihovna_r_p_g_1_1_game_manager_d_l_l.html#aca32c340c0e2f226d68f3856f273be8b">vypocetStatZaklad</a> (<a class="el" href="class_knihovna_r_p_g_1_1_stat.html">Stat</a> stat, int lv)</td></tr>
+<tr class="memdesc:aca32c340c0e2f226d68f3856f273be8b"><td class="mdescLeft">&#160;</td><td class="mdescRight">podle LV vypočítá základní hodnotu stat <br  />
+využívána metodou GetStatList() <br  />
+výchozí: zaklad(lv)=zaklad(1)*lv  <br /></td></tr>
+<tr class="separator:aca32c340c0e2f226d68f3856f273be8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7bc31f4de2c063964f7b103b72e3f815"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="class_knihovna_r_p_g_1_1_postava.html">Postava</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_knihovna_r_p_g_1_1_game_manager_d_l_l.html#a7bc31f4de2c063964f7b103b72e3f815">NovaPostava</a> (string jmeno, int lv, int HP, string[] skupinaStatu)</td></tr>
+<tr class="memdesc:a7bc31f4de2c063964f7b103b72e3f815"><td class="mdescLeft">&#160;</td><td class="mdescRight">vytvoří novou postavu na základě požadavků  <br /></td></tr>
+<tr class="separator:a7bc31f4de2c063964f7b103b72e3f815"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8f8434e89220094c97800ef1ef72b0b5"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="class_knihovna_r_p_g_1_1_postava.html">Postava</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_knihovna_r_p_g_1_1_game_manager_d_l_l.html#a8f8434e89220094c97800ef1ef72b0b5">NovaNezranitelnaPostava</a> (string jmeno, int lv, string[] skupinaStatu)</td></tr>
+<tr class="memdesc:a8f8434e89220094c97800ef1ef72b0b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">vytvoří novou nezranitelnou postavu na základě požadavků  <br /></td></tr>
+<tr class="separator:a8f8434e89220094c97800ef1ef72b0b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0c41295f168abc3e699e3afcf8fbc516"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="class_knihovna_r_p_g_1_1_hrac.html">Hrac</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_knihovna_r_p_g_1_1_game_manager_d_l_l.html#a0c41295f168abc3e699e3afcf8fbc516">NovyHrac</a> (string jmeno, int lv, int HP, string[] skupinaStatu)</td></tr>
+<tr class="memdesc:a0c41295f168abc3e699e3afcf8fbc516"><td class="mdescLeft">&#160;</td><td class="mdescRight">vytvoří nového hráče na základě požadavků  <br /></td></tr>
+<tr class="separator:a0c41295f168abc3e699e3afcf8fbc516"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a13517c8ebe04e1253cbc73ca0f51d387"><td class="memItemLeft" align="right" valign="top">abstract void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_knihovna_r_p_g_1_1_game_manager_d_l_l.html#a13517c8ebe04e1253cbc73ca0f51d387">VytvorLokace</a> ()</td></tr>
+<tr class="memdesc:a13517c8ebe04e1253cbc73ca0f51d387"><td class="mdescLeft">&#160;</td><td class="mdescRight">vytvoří seznam všech lokací ve hře a jejich vazeb, které spolu mohou sousedit  <br /></td></tr>
+<tr class="separator:a13517c8ebe04e1253cbc73ca0f51d387"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a81cfc596b1724319d32e2db285f3de24"><td class="memItemLeft" align="right" valign="top">abstract void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_knihovna_r_p_g_1_1_game_manager_d_l_l.html#a81cfc596b1724319d32e2db285f3de24">MapaConf</a> ()</td></tr>
+<tr class="memdesc:a81cfc596b1724319d32e2db285f3de24"><td class="mdescLeft">&#160;</td><td class="mdescRight">metoda volaná konstruktorem, ve které je třeba zavolat mapaConf s požadoanými hodnotami  <br /></td></tr>
+<tr class="separator:a81cfc596b1724319d32e2db285f3de24"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a47f20818681af9bb5e6c5ba7b8b81933"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_knihovna_r_p_g_1_1_game_manager_d_l_l.html#a47f20818681af9bb5e6c5ba7b8b81933">mapaConf</a> (int MX, int MY, int CX, int CY, int renderVzdalenost, <a class="el" href="class_knihovna_r_p_g_1_1_lokace.html">Lokace</a> <a class="el" href="class_knihovna_r_p_g_1_1_game_manager_d_l_l.html#a4f0c36bb2d6dde6424ee49156dcb59f3">lokace</a>)</td></tr>
+<tr class="memdesc:a47f20818681af9bb5e6c5ba7b8b81933"><td class="mdescLeft">&#160;</td><td class="mdescRight">vytvoří instanci MapaConfig a přidá ji do nastavení <br  />
+spawn=random  <br /></td></tr>
+<tr class="separator:a47f20818681af9bb5e6c5ba7b8b81933"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a10ba85554a5c793f06f905c9455284ba"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_knihovna_r_p_g_1_1_game_manager_d_l_l.html#a10ba85554a5c793f06f905c9455284ba">mapaConf</a> (int MX, int MY, int CX, int CY, int renderVzdalenost, <a class="el" href="class_knihovna_r_p_g_1_1_lokace.html">Lokace</a> <a class="el" href="class_knihovna_r_p_g_1_1_game_manager_d_l_l.html#a4f0c36bb2d6dde6424ee49156dcb59f3">lokace</a>, int smx, int smy, int scx, int scy)</td></tr>
+<tr class="memdesc:a10ba85554a5c793f06f905c9455284ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">vytvoří instanci MapaConfig a přidá ji do nastavení <br  />
+spawn=[smx,smy,scx,scy]  <br /></td></tr>
+<tr class="separator:a10ba85554a5c793f06f905c9455284ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
+Chráněné atributy</h2></td></tr>
+<tr class="memitem:a1e5e806afb88ccb1ccbbb25aaaf1a9ec"><td class="memItemLeft" align="right" valign="top">Dictionary&lt; string, List&lt; <a class="el" href="class_knihovna_r_p_g_1_1_stat.html">Stat</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_knihovna_r_p_g_1_1_game_manager_d_l_l.html#a1e5e806afb88ccb1ccbbb25aaaf1a9ec">staty</a> = new Dictionary&lt;string, List&lt;<a class="el" href="class_knihovna_r_p_g_1_1_stat.html">Stat</a>&gt;&gt;()</td></tr>
+<tr class="memdesc:a1e5e806afb88ccb1ccbbb25aaaf1a9ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">kategorie statListů (např souboj, obchod,...)  <br /></td></tr>
+<tr class="separator:a1e5e806afb88ccb1ccbbb25aaaf1a9ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4f0c36bb2d6dde6424ee49156dcb59f3"><td class="memItemLeft" align="right" valign="top">List&lt; <a class="el" href="class_knihovna_r_p_g_1_1_lokace.html">Lokace</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_knihovna_r_p_g_1_1_game_manager_d_l_l.html#a4f0c36bb2d6dde6424ee49156dcb59f3">lokace</a> = new List&lt;<a class="el" href="class_knihovna_r_p_g_1_1_lokace.html">Lokace</a>&gt;()</td></tr>
+<tr class="memdesc:a4f0c36bb2d6dde6424ee49156dcb59f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">seznam všech lokací vyskytujících se ve hře  <br /></td></tr>
+<tr class="separator:a4f0c36bb2d6dde6424ee49156dcb59f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="properties" name="properties"></a>
+Vlastnosti</h2></td></tr>
+<tr class="memitem:aa49b4e29ff495d7afba293689dce326f"><td class="memItemLeft" align="right" valign="top">Dictionary&lt; string, <a class="el" href="interface_knihovna_r_p_g_1_1_i_nastaveni.html">INastaveni</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_knihovna_r_p_g_1_1_game_manager_d_l_l.html#aa49b4e29ff495d7afba293689dce326f">Nastaveni</a><code> [get]</code></td></tr>
+<tr class="memdesc:aa49b4e29ff495d7afba293689dce326f"><td class="mdescLeft">&#160;</td><td class="mdescRight">veškerá nastavení hry, jako je ovládání, zvuk, grafika, ...  <br /></td></tr>
+<tr class="separator:aa49b4e29ff495d7afba293689dce326f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a56c2da916fdae78ddd28485725993a86"><td class="memItemLeft" align="right" valign="top">List&lt; <a class="el" href="class_knihovna_r_p_g_1_1_lokace.html">Lokace</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_knihovna_r_p_g_1_1_game_manager_d_l_l.html#a56c2da916fdae78ddd28485725993a86">Lokace</a><code> [get]</code></td></tr>
+<tr class="memdesc:a56c2da916fdae78ddd28485725993a86"><td class="mdescLeft">&#160;</td><td class="mdescRight">getter seznamu všech lokací vyskytujících se ve hře  <br /></td></tr>
+<tr class="separator:a56c2da916fdae78ddd28485725993a86"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac9e86378a578b289f94cc1b41713236f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_knihovna_r_p_g_1_1_mapa.html">Mapa</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_knihovna_r_p_g_1_1_game_manager_d_l_l.html#ac9e86378a578b289f94cc1b41713236f">Mapa</a><code> [get, protected set]</code></td></tr>
+<tr class="memdesc:ac9e86378a578b289f94cc1b41713236f"><td class="mdescLeft">&#160;</td><td class="mdescRight">herní mapa (logická část)  <br /></td></tr>
+<tr class="separator:ac9e86378a578b289f94cc1b41713236f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae86faf242482b849fb5b962c6e1b92a3"><td class="memItemLeft" align="right" valign="top">List&lt; <a class="el" href="class_knihovna_r_p_g_1_1_point4_d.html">Point4D</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_knihovna_r_p_g_1_1_game_manager_d_l_l.html#ae86faf242482b849fb5b962c6e1b92a3">PolohaNPC</a><code> [get, protected set]</code></td></tr>
+<tr class="memdesc:ae86faf242482b849fb5b962c6e1b92a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">kde se na mapě nachází všichna NPC  <br /></td></tr>
+<tr class="separator:ae86faf242482b849fb5b962c6e1b92a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6575dcb7395e44ce672a2c6e8e490095"><td class="memItemLeft" align="right" valign="top">List&lt; <a class="el" href="class_knihovna_r_p_g_1_1_postava.html">Postava</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_knihovna_r_p_g_1_1_game_manager_d_l_l.html#a6575dcb7395e44ce672a2c6e8e490095">NPC</a><code> [get, protected set]</code></td></tr>
+<tr class="memdesc:a6575dcb7395e44ce672a2c6e8e490095"><td class="mdescLeft">&#160;</td><td class="mdescRight">všichna NPC  <br /></td></tr>
+<tr class="separator:a6575dcb7395e44ce672a2c6e8e490095"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa93a68326d3acaecb2dac0356f5d29cf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_knihovna_r_p_g_1_1_point4_d.html">Point4D</a>[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_knihovna_r_p_g_1_1_game_manager_d_l_l.html#aa93a68326d3acaecb2dac0356f5d29cf">PolohaHracu</a><code> [get, protected set]</code></td></tr>
+<tr class="memdesc:aa93a68326d3acaecb2dac0356f5d29cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">kde se na mapě nachází všichni hráči <br  />
+ pro více než 1 hráčskou postavu  <br /></td></tr>
+<tr class="separator:aa93a68326d3acaecb2dac0356f5d29cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6abf7003a24480e167f774a0e402b0da"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_knihovna_r_p_g_1_1_point4_d.html">Point4D</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_knihovna_r_p_g_1_1_game_manager_d_l_l.html#a6abf7003a24480e167f774a0e402b0da">PolohaHrac</a><code> [get]</code></td></tr>
+<tr class="memdesc:a6abf7003a24480e167f774a0e402b0da"><td class="mdescLeft">&#160;</td><td class="mdescRight">kde se na mapě nachází hráč <br  />
+ pro 1 hráčskou postavu  <br /></td></tr>
+<tr class="separator:a6abf7003a24480e167f774a0e402b0da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="events" name="events"></a>
+Události</h2></td></tr>
+<tr class="memitem:acccbc8a47e9b84608384bb1dcbcef417"><td class="memItemLeft" align="right" valign="top">EventHandler&lt; <a class="el" href="class_knihovna_r_p_g_1_1_load_unload_event_arg.html">LoadUnloadEventArg</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_knihovna_r_p_g_1_1_game_manager_d_l_l.html#acccbc8a47e9b84608384bb1dcbcef417">ChunkLoadUnload</a></td></tr>
+<tr class="memdesc:acccbc8a47e9b84608384bb1dcbcef417"><td class="mdescLeft">&#160;</td><td class="mdescRight">zpráva do implementace, že je třeba načíst či uvolnit chunk z paměti  <br /></td></tr>
+<tr class="separator:acccbc8a47e9b84608384bb1dcbcef417"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailní popis</h2>
+<div class="textblock"><p>správce starající se vytváření postav a obsahující všechny globální hodnoty </p>
+</div><h2 class="groupheader">Dokumentace konstruktoru a destruktoru</h2>
+<a id="a2d6758089a0bc5c03af8940cb5cbfd0f" name="a2d6758089a0bc5c03af8940cb5cbfd0f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2d6758089a0bc5c03af8940cb5cbfd0f">&#9670;&#160;</a></span>GameManagerDLL()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">KnihovnaRPG.GameManagerDLL.GameManagerDLL </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>inicializace hry (nastavení, staty, lokace) </p>
+
+</div>
+</div>
+<h2 class="groupheader">Dokumentace členských funkcí</h2>
+<a id="addd1fa8167db85c017c65657f560d5dd" name="addd1fa8167db85c017c65657f560d5dd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#addd1fa8167db85c017c65657f560d5dd">&#9670;&#160;</a></span>GetstatList()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_knihovna_r_p_g_1_1_stat_list.html">StatList</a> KnihovnaRPG.GameManagerDLL.GetstatList </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>skupina</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>vrátí zvolenou skupinu statů <br  />
+(pro LV1) </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">skupina</td><td>skupina, kterou chcete</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a99f8bb03179a1544657f46fb41190d69" name="a99f8bb03179a1544657f46fb41190d69"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a99f8bb03179a1544657f46fb41190d69">&#9670;&#160;</a></span>GetStatList() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_knihovna_r_p_g_1_1_stat_list.html">StatList</a> KnihovnaRPG.GameManagerDLL.GetStatList </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>skupina</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>lv</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>vrátí zvolenou skupinu statů pro příslušný LV </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">skupina</td><td>skupina, kterou chcete</td></tr>
+    <tr><td class="paramname">lv</td><td>pro jaký lv má přepočítat hodnotu</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="adef72d81d0d5d0b68c1f908bed7e88ce" name="adef72d81d0d5d0b68c1f908bed7e88ce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adef72d81d0d5d0b68c1f908bed7e88ce">&#9670;&#160;</a></span>GetStatList() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_knihovna_r_p_g_1_1_stat_list.html">StatList</a> KnihovnaRPG.GameManagerDLL.GetStatList </td>
+          <td>(</td>
+          <td class="paramtype">string[]&#160;</td>
+          <td class="paramname"><em>skupiny</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>lv</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>spoji všechny zvolené skupiny statů do 1 StatListu pro příslušný LV </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">skupiny</td><td>názvy skupin, které chcete</td></tr>
+    <tr><td class="paramname">lv</td><td>pro jaký lv má přepočítat hodnotu</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ad344137f5ee37e2a23b0372614d60299" name="ad344137f5ee37e2a23b0372614d60299"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad344137f5ee37e2a23b0372614d60299">&#9670;&#160;</a></span>GetStatListy()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_knihovna_r_p_g_1_1_stat_list.html">StatList</a> KnihovnaRPG.GameManagerDLL.GetStatListy </td>
+          <td>(</td>
+          <td class="paramtype">string[]&#160;</td>
+          <td class="paramname"><em>skupiny</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>spoji všechny statlisty zvolenych skupin a vrátí je jako 1 seznam <br  />
+(pro LV1) </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">skupiny</td><td>názvy skupin, které chcete</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a371f1865a2e879df9a8d4e76d908e709" name="a371f1865a2e879df9a8d4e76d908e709"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a371f1865a2e879df9a8d4e76d908e709">&#9670;&#160;</a></span>KrokHnadler()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void KnihovnaRPG.GameManagerDLL.KrokHnadler </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>hrac</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_knihovna_r_p_g_1_1_point4_d.html">Point4D</a>&#160;</td>
+          <td class="paramname"><em>nova</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>při kroku hráče vyhodnocuje zda je třeba načíst či uvolnit chunk </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">hrac</td><td>hráč který udělal krok</td></tr>
+    <tr><td class="paramname">nova</td><td>nová poloha</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a81cfc596b1724319d32e2db285f3de24" name="a81cfc596b1724319d32e2db285f3de24"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a81cfc596b1724319d32e2db285f3de24">&#9670;&#160;</a></span>MapaConf()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">abstract void KnihovnaRPG.GameManagerDLL.MapaConf </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>metoda volaná konstruktorem, ve které je třeba zavolat mapaConf s požadoanými hodnotami </p>
+
+</div>
+</div>
+<a id="a47f20818681af9bb5e6c5ba7b8b81933" name="a47f20818681af9bb5e6c5ba7b8b81933"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a47f20818681af9bb5e6c5ba7b8b81933">&#9670;&#160;</a></span>mapaConf() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void KnihovnaRPG.GameManagerDLL.mapaConf </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>MX</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>MY</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>CX</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>CY</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>renderVzdalenost</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_knihovna_r_p_g_1_1_lokace.html">Lokace</a>&#160;</td>
+          <td class="paramname"><em>lokace</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>vytvoří instanci MapaConfig a přidá ji do nastavení <br  />
+spawn=random </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">MX</td><td>X rozměr mapy</td></tr>
+    <tr><td class="paramname">MY</td><td>Y rozměr mapy</td></tr>
+    <tr><td class="paramname">CX</td><td>X rozměr chunků</td></tr>
+    <tr><td class="paramname">CY</td><td>Y rozměr chunků</td></tr>
+    <tr><td class="paramname">renderVzdalenost</td><td>jak velké okolí chunku bude načítáno do paměti</td></tr>
+    <tr><td class="paramname">lokace</td><td>v jaké lokaci se hráč spawne(les, město,...)</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a10ba85554a5c793f06f905c9455284ba" name="a10ba85554a5c793f06f905c9455284ba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a10ba85554a5c793f06f905c9455284ba">&#9670;&#160;</a></span>mapaConf() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void KnihovnaRPG.GameManagerDLL.mapaConf </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>MX</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>MY</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>CX</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>CY</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>renderVzdalenost</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_knihovna_r_p_g_1_1_lokace.html">Lokace</a>&#160;</td>
+          <td class="paramname"><em>lokace</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>smx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>smy</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>scx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>scy</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>vytvoří instanci MapaConfig a přidá ji do nastavení <br  />
+spawn=[smx,smy,scx,scy] </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">MX</td><td>X rozměr mapy</td></tr>
+    <tr><td class="paramname">MY</td><td>Y rozměr mapy</td></tr>
+    <tr><td class="paramname">CX</td><td>X rozměr chunků</td></tr>
+    <tr><td class="paramname">CY</td><td>Y rozměr chunků</td></tr>
+    <tr><td class="paramname">renderVzdalenost</td><td>jak velké okolí chunku bude načítáno do paměti</td></tr>
+    <tr><td class="paramname">lokace</td><td>v jaké lokaci se hráč spawne(les, město,...)</td></tr>
+    <tr><td class="paramname">smx</td><td>spawn mapa X</td></tr>
+    <tr><td class="paramname">smy</td><td>spawn mapa Y</td></tr>
+    <tr><td class="paramname">scx</td><td>spawn chunk X</td></tr>
+    <tr><td class="paramname">scy</td><td>spawn chunk Y</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a5c2a67ea14ae0151f2b5b4a4484ccb2f" name="a5c2a67ea14ae0151f2b5b4a4484ccb2f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5c2a67ea14ae0151f2b5b4a4484ccb2f">&#9670;&#160;</a></span>Nacti()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">abstract void KnihovnaRPG.GameManagerDLL.Nacti </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>nazev</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>načte herního postupu </p>
+
+</div>
+</div>
+<a id="a47ac73f1187209d52d7cf3d866cd4c6c" name="a47ac73f1187209d52d7cf3d866cd4c6c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a47ac73f1187209d52d7cf3d866cd4c6c">&#9670;&#160;</a></span>NactiChunk()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void KnihovnaRPG.GameManagerDLL.NactiChunk </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>X</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>Y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_knihovna_r_p_g_1_1_mapa_config_1_1_velikost.html">MapaConfig::Velikost</a>&#160;</td>
+          <td class="paramname"><em>chunk</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>pokud je chunk jich vygenerovaný načte ho do paměti, v opačném případě vygeneruje nový </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">X</td><td>X souřadnice</td></tr>
+    <tr><td class="paramname">Y</td><td>XY souřadnice</td></tr>
+    <tr><td class="paramname">chunk</td><td>rozměry chunků (nastaveni["mapa"].Chunk)</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a8f8434e89220094c97800ef1ef72b0b5" name="a8f8434e89220094c97800ef1ef72b0b5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8f8434e89220094c97800ef1ef72b0b5">&#9670;&#160;</a></span>NovaNezranitelnaPostava()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="class_knihovna_r_p_g_1_1_postava.html">Postava</a> KnihovnaRPG.GameManagerDLL.NovaNezranitelnaPostava </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>jmeno</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>lv</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string[]&#160;</td>
+          <td class="paramname"><em>skupinaStatu</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>vytvoří novou nezranitelnou postavu na základě požadavků </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">jmeno</td><td>jméno nové postavy</td></tr>
+    <tr><td class="paramname">lv</td><td>level postavy</td></tr>
+    <tr><td class="paramname">skupinaStatu</td><td>jaké skupiny statů postava bude mít (combat, obchod, ...)</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Návratová hodnota</dt><dd>instance <a class="el" href="class_knihovna_r_p_g_1_1_postava.html" title="logika pro postavy (rodičovská třída)">KnihovnaRPG.Postava</a></dd></dl>
+<p><br  />
+ </p>
+
+</div>
+</div>
+<a id="a7bc31f4de2c063964f7b103b72e3f815" name="a7bc31f4de2c063964f7b103b72e3f815"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7bc31f4de2c063964f7b103b72e3f815">&#9670;&#160;</a></span>NovaPostava()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="class_knihovna_r_p_g_1_1_postava.html">Postava</a> KnihovnaRPG.GameManagerDLL.NovaPostava </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>jmeno</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>lv</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>HP</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string[]&#160;</td>
+          <td class="paramname"><em>skupinaStatu</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>vytvoří novou postavu na základě požadavků </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">jmeno</td><td>jméno nové postavy</td></tr>
+    <tr><td class="paramname">lv</td><td>level postavy</td></tr>
+    <tr><td class="paramname">HP</td><td>počet životů postavy</td></tr>
+    <tr><td class="paramname">skupinaStatu</td><td>jaké skupiny statů postava bude mít (combat, obchod, ...)</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Návratová hodnota</dt><dd>instance <a class="el" href="class_knihovna_r_p_g_1_1_postava.html" title="logika pro postavy (rodičovská třída)">KnihovnaRPG.Postava</a></dd></dl>
+<p><br  />
+ </p>
+
+</div>
+</div>
+<a id="a0c41295f168abc3e699e3afcf8fbc516" name="a0c41295f168abc3e699e3afcf8fbc516"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0c41295f168abc3e699e3afcf8fbc516">&#9670;&#160;</a></span>NovyHrac()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="class_knihovna_r_p_g_1_1_hrac.html">Hrac</a> KnihovnaRPG.GameManagerDLL.NovyHrac </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>jmeno</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>lv</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>HP</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string[]&#160;</td>
+          <td class="paramname"><em>skupinaStatu</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>vytvoří nového hráče na základě požadavků </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">jmeno</td><td>jméno hráče</td></tr>
+    <tr><td class="paramname">lv</td><td>level hráče</td></tr>
+    <tr><td class="paramname">HP</td><td>počet životů hráče</td></tr>
+    <tr><td class="paramname">skupinaStatu</td><td>jaké skupiny statů hráč bude mít (combat, obchod, ...)</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Návratová hodnota</dt><dd>instance <a class="el" href="class_knihovna_r_p_g_1_1_hrac.html" title="hráčovi postavy">KnihovnaRPG.Hrac</a></dd></dl>
+<p><br  />
+ </p>
+
+</div>
+</div>
+<a id="aaecc55146cc02b8f42839646d3f8cfa0" name="aaecc55146cc02b8f42839646d3f8cfa0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaecc55146cc02b8f42839646d3f8cfa0">&#9670;&#160;</a></span>SpustHru() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void KnihovnaRPG.GameManagerDLL.SpustHru </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>postav</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>stejnaPoloha</em> = <code>true</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>vygeneruje mapu podle MapaConfig a přidá polohu hráče1 <br  />
+(pokud je stejnaPoloha true tak i ostatních) </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">postav</td><td>kolik postav hráč má</td></tr>
+    <tr><td class="paramname">stejnaPoloha</td><td>zda v případě více postav všechny začínají na stejné souřadnici</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a379b2fbd54b864b62264f4d713c8fed8" name="a379b2fbd54b864b62264f4d713c8fed8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a379b2fbd54b864b62264f4d713c8fed8">&#9670;&#160;</a></span>SpustHru() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void KnihovnaRPG.GameManagerDLL.SpustHru </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_knihovna_r_p_g_1_1_ulozeni.html">Ulozeni</a>&#160;</td>
+          <td class="paramname"><em>ulozeni</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>pouze deklarace pro načtení uložené hry </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ulozeni</td><td>kolik postav hráč má</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a3563bb8d31eacbea52cdf23f0a25488d" name="a3563bb8d31eacbea52cdf23f0a25488d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3563bb8d31eacbea52cdf23f0a25488d">&#9670;&#160;</a></span>Uloz()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">abstract void KnihovnaRPG.GameManagerDLL.Uloz </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>nazev</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>uložení herního postupu </p>
+
+</div>
+</div>
+<a id="aca32c340c0e2f226d68f3856f273be8b" name="aca32c340c0e2f226d68f3856f273be8b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aca32c340c0e2f226d68f3856f273be8b">&#9670;&#160;</a></span>vypocetStatZaklad()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual double KnihovnaRPG.GameManagerDLL.vypocetStatZaklad </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_knihovna_r_p_g_1_1_stat.html">Stat</a>&#160;</td>
+          <td class="paramname"><em>stat</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>lv</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>podle LV vypočítá základní hodnotu stat <br  />
+využívána metodou GetStatList() <br  />
+výchozí: zaklad(lv)=zaklad(1)*lv </p>
+
+</div>
+</div>
+<a id="a13517c8ebe04e1253cbc73ca0f51d387" name="a13517c8ebe04e1253cbc73ca0f51d387"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a13517c8ebe04e1253cbc73ca0f51d387">&#9670;&#160;</a></span>VytvorLokace()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">abstract void KnihovnaRPG.GameManagerDLL.VytvorLokace </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>vytvoří seznam všech lokací ve hře a jejich vazeb, které spolu mohou sousedit </p>
+
+</div>
+</div>
+<a id="a1e86d903ef4164b6880a639063cd967a" name="a1e86d903ef4164b6880a639063cd967a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1e86d903ef4164b6880a639063cd967a">&#9670;&#160;</a></span>VytvorNastaveni()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">abstract void KnihovnaRPG.GameManagerDLL.VytvorNastaveni </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>vytvoří slovník všech nastavení [nazev,INastaveni] </p>
+
+</div>
+</div>
+<a id="a152b908ad892e8fa4d53c9af34b23f3f" name="a152b908ad892e8fa4d53c9af34b23f3f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a152b908ad892e8fa4d53c9af34b23f3f">&#9670;&#160;</a></span>VytvorSezanamZkratekStatu()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">abstract void KnihovnaRPG.GameManagerDLL.VytvorSezanamZkratekStatu </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>vytvoří seznam všech zkratek statů vyskytujících se ve hře </p>
+<dl class="exception"><dt>Výjimky</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">NotImplementedException</td><td>virtualní metoda, která musí mít implementaci</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="acabff6ecf723d62e257efbe3e2f2e70f" name="acabff6ecf723d62e257efbe3e2f2e70f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acabff6ecf723d62e257efbe3e2f2e70f">&#9670;&#160;</a></span>VytvorStatListy()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">abstract void KnihovnaRPG.GameManagerDLL.VytvorStatListy </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>vytvoří StatListy a seskupí do skupin (boj, obchod, ...) </p>
+
+</div>
+</div>
+<h2 class="groupheader">Dokumentace datových členů</h2>
+<a id="a92bcb2f731bf8f28cffb30cf49533de1" name="a92bcb2f731bf8f28cffb30cf49533de1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a92bcb2f731bf8f28cffb30cf49533de1">&#9670;&#160;</a></span>Hraci</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_knihovna_r_p_g_1_1_hrac.html">Hrac</a> [] KnihovnaRPG.GameManagerDLL.Hraci</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>všichni hráči </p>
+
+</div>
+</div>
+<a id="a4f0c36bb2d6dde6424ee49156dcb59f3" name="a4f0c36bb2d6dde6424ee49156dcb59f3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4f0c36bb2d6dde6424ee49156dcb59f3">&#9670;&#160;</a></span>lokace</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">List&lt;<a class="el" href="class_knihovna_r_p_g_1_1_lokace.html">Lokace</a>&gt; KnihovnaRPG.GameManagerDLL.lokace = new List&lt;<a class="el" href="class_knihovna_r_p_g_1_1_lokace.html">Lokace</a>&gt;()</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>seznam všech lokací vyskytujících se ve hře </p>
+
+</div>
+</div>
+<a id="a1e5e806afb88ccb1ccbbb25aaaf1a9ec" name="a1e5e806afb88ccb1ccbbb25aaaf1a9ec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1e5e806afb88ccb1ccbbb25aaaf1a9ec">&#9670;&#160;</a></span>staty</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Dictionary&lt;string, List&lt;<a class="el" href="class_knihovna_r_p_g_1_1_stat.html">Stat</a>&gt; &gt; KnihovnaRPG.GameManagerDLL.staty = new Dictionary&lt;string, List&lt;<a class="el" href="class_knihovna_r_p_g_1_1_stat.html">Stat</a>&gt;&gt;()</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>kategorie statListů (např souboj, obchod,...) </p>
+
+</div>
+</div>
+<a id="ab209350b1429bb987602dcf76619f79f" name="ab209350b1429bb987602dcf76619f79f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab209350b1429bb987602dcf76619f79f">&#9670;&#160;</a></span>ZkratkyStatu</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">string [] KnihovnaRPG.GameManagerDLL.ZkratkyStatu</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>seznam zkratek statů vyskytujících se ve hře </p>
+
+</div>
+</div>
+<h2 class="groupheader">Dokumentace vlastností</h2>
+<a id="a56c2da916fdae78ddd28485725993a86" name="a56c2da916fdae78ddd28485725993a86"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a56c2da916fdae78ddd28485725993a86">&#9670;&#160;</a></span>Lokace</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">List&lt;<a class="el" href="class_knihovna_r_p_g_1_1_lokace.html">Lokace</a>&gt; KnihovnaRPG.GameManagerDLL.Lokace</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>getter seznamu všech lokací vyskytujících se ve hře </p>
+
+</div>
+</div>
+<a id="ac9e86378a578b289f94cc1b41713236f" name="ac9e86378a578b289f94cc1b41713236f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac9e86378a578b289f94cc1b41713236f">&#9670;&#160;</a></span>Mapa</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_knihovna_r_p_g_1_1_mapa.html">Mapa</a> KnihovnaRPG.GameManagerDLL.Mapa</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">protected set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>herní mapa (logická část) </p>
+
+</div>
+</div>
+<a id="aa49b4e29ff495d7afba293689dce326f" name="aa49b4e29ff495d7afba293689dce326f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa49b4e29ff495d7afba293689dce326f">&#9670;&#160;</a></span>Nastaveni</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Dictionary&lt;string, <a class="el" href="interface_knihovna_r_p_g_1_1_i_nastaveni.html">INastaveni</a>&gt; KnihovnaRPG.GameManagerDLL.Nastaveni</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>veškerá nastavení hry, jako je ovládání, zvuk, grafika, ... </p>
+
+</div>
+</div>
+<a id="a6575dcb7395e44ce672a2c6e8e490095" name="a6575dcb7395e44ce672a2c6e8e490095"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6575dcb7395e44ce672a2c6e8e490095">&#9670;&#160;</a></span>NPC</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">List&lt;<a class="el" href="class_knihovna_r_p_g_1_1_postava.html">Postava</a>&gt; KnihovnaRPG.GameManagerDLL.NPC</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">protected set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>všichna NPC </p>
+
+</div>
+</div>
+<a id="a6abf7003a24480e167f774a0e402b0da" name="a6abf7003a24480e167f774a0e402b0da"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6abf7003a24480e167f774a0e402b0da">&#9670;&#160;</a></span>PolohaHrac</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_knihovna_r_p_g_1_1_point4_d.html">Point4D</a> KnihovnaRPG.GameManagerDLL.PolohaHrac</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>kde se na mapě nachází hráč <br  />
+ pro 1 hráčskou postavu </p>
+
+</div>
+</div>
+<a id="aa93a68326d3acaecb2dac0356f5d29cf" name="aa93a68326d3acaecb2dac0356f5d29cf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa93a68326d3acaecb2dac0356f5d29cf">&#9670;&#160;</a></span>PolohaHracu</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_knihovna_r_p_g_1_1_point4_d.html">Point4D</a> [] KnihovnaRPG.GameManagerDLL.PolohaHracu</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">protected set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>kde se na mapě nachází všichni hráči <br  />
+ pro více než 1 hráčskou postavu </p>
+
+</div>
+</div>
+<a id="ae86faf242482b849fb5b962c6e1b92a3" name="ae86faf242482b849fb5b962c6e1b92a3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae86faf242482b849fb5b962c6e1b92a3">&#9670;&#160;</a></span>PolohaNPC</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">List&lt;<a class="el" href="class_knihovna_r_p_g_1_1_point4_d.html">Point4D</a>&gt; KnihovnaRPG.GameManagerDLL.PolohaNPC</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">protected set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>kde se na mapě nachází všichna NPC </p>
+
+</div>
+</div>
+<h2 class="groupheader">Dokumentace událostí</h2>
+<a id="acccbc8a47e9b84608384bb1dcbcef417" name="acccbc8a47e9b84608384bb1dcbcef417"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acccbc8a47e9b84608384bb1dcbcef417">&#9670;&#160;</a></span>ChunkLoadUnload</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">EventHandler&lt;<a class="el" href="class_knihovna_r_p_g_1_1_load_unload_event_arg.html">LoadUnloadEventArg</a>&gt; KnihovnaRPG.GameManagerDLL.ChunkLoadUnload</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>zpráva do implementace, že je třeba načíst či uvolnit chunk z paměti </p>
+
+</div>
+</div>
+<hr/>Dokumentace pro tuto třídu byla vygenerována z následujícího souboru:<ul>
+<li>C:/Users/marti/Desktop/bakalarka-git/prakticka cast/KnihovnaRPG/<a class="el" href="_game_manager_d_l_l_8cs.html">GameManagerDLL.cs</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Vygenerováno programem&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
+</small></address>
+</body>
+</html>

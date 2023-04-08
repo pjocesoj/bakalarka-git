@@ -30,14 +30,16 @@
         {
             this.SuspendLayout();
             // 
-            // Inventar
+            // InventarForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Name = "Inventar";
+            this.KeyPreview = true;
+            this.Name = "InventarForm";
             this.Text = "Inventar";
             this.Load += new System.EventHandler(this.Inventar_Load);
+            this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.InventarForm_KeyUp);
             this.ResumeLayout(false);
 
         }
